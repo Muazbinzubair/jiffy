@@ -1,0 +1,2105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Office Shifting Services | Jiffy Logistics - Premium Logistics & Supply Chain Solutions</title>
+    <meta name="description" content="Professional office relocation services with nationwide coverage. We ensure minimal business disruption with secure, efficient office shifting solutions across Pakistan.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* Modern Color Scheme */
+        :root {
+            --primary-color: #000000;
+            --primary-dark: #113f5a;
+            --primary-light: #3498DB;
+            --secondary-color: #0f275e6c;
+            --secondary-light: #EC7063;
+            --accent-color: #F39C12;
+            --accent-dark: #D35400;
+            --light-color: #ECF0F1;
+            --dark-color: #2C3E50;
+            --text-color: #647C95;
+            --text-light:#113f5a ;
+            --success-color: #27AE60;
+            --warning-color: #F1C40F;
+            --danger-color: #E74C3C;
+            --border-color: #BDC3C7;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 25px rgba(0,0,0,0.1);
+            --shadow-xl: 0 20px 40px rgba(0,0,0,0.15);
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --border-radius: 8px;
+            --border-radius-lg: 12px;
+            --border-radius-xl: 16px;
+        }
+
+        /* Header Styles */
+        .jiffy-header {
+            background-color: #1b355c;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+        }
+
+        .jiffy-header.scrolled {
+            background-color: rgba(44, 62, 80, 0.98);
+            backdrop-filter: blur(10px);
+        }
+
+        .nav__logo a {
+            color: white;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .nav__logo i {
+            color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .nav__logo:hover i {
+            transform: rotate(15deg);
+        }
+
+        .nav__link {
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 500;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav__link::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .nav__link:hover::before,
+        .nav__link--active::before {
+            width: 100%;
+        }
+
+        .nav__link:hover,
+        .nav__link--active {
+            color: white;
+        }
+
+        .nav__phone {
+            color: white;
+            transition: var(--transition);
+        }
+
+        .nav__phone:hover {
+            color: rgb(0, 122, 230);
+        }
+
+        .nav__phone i {
+            color: inherit;
+        }
+
+        /* Hero Section */
+        .office-hero {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-dark) 100%);
+            position: relative;
+            overflow: hidden;
+            padding: 120px 0 80px;
+            color: white;
+        }
+
+        .office-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+            opacity: 0.15;
+            z-index: -1;
+        }
+
+        .office-hero__container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .office-hero__content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .office-hero__text {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .office-hero__icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            margin-bottom: 1.5rem;
+            box-shadow: var(--shadow-md);
+        }
+
+        .office-hero__title {
+            font-size: 2.75rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+
+        .office-hero__title--highlight {
+            color: white;
+            display: inline-block;
+            position: relative;
+        }
+
+        .office-hero__title--highlight::after {
+            content: '';
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            right: 0;
+            height: 8px;
+            background-color: var(--primary-color);
+            z-index: -1;
+            transform: skewX(-15deg);
+        }
+
+        .office-hero__description {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .office-hero__features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .feature-item i {
+            color: var(--primary-color);
+            font-size: 1.1rem;
+        }
+
+        .office-hero__cta {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .btn--hero {
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .btn--hero:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .office-hero__image {
+            position: relative;
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-xl);
+            animation: fadeInUp 0.8s ease 0.2s forwards;
+            opacity: 0;
+        }
+
+        .office-hero__image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            background-color: var(--light-color);
+            padding: 1rem 0;
+            margin-top: 80px;
+        }
+
+        .breadcrumb__nav {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-color);
+        }
+
+        .breadcrumb__nav a {
+            color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .breadcrumb__nav a:hover {
+            color: var(--primary-dark);
+        }
+
+        .breadcrumb__separator {
+            color: var(--text-color);
+        }
+
+        .breadcrumb__current {
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+
+        /* Service Details */
+        .service-details {
+            padding: 5rem 0;
+            background-color: white;
+        }
+
+        .service-details__container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .service-details__content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+        }
+
+        .service-details__main h2 {
+            font-size: 2rem;
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.75rem;
+        }
+
+        .service-details__main h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            border-radius: 2px;
+        }
+
+        .service-details__main p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .service-details__main h3 {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            margin: 2rem 0 1rem;
+        }
+
+        /* Process Steps */
+        .process-steps {
+            display: grid;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .process-step {
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+            padding: 1.5rem;
+            background: rgba(15, 39, 94, 0.05);
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+        }
+
+        .process-step:hover {
+            background: rgba(15, 39, 94, 0.1);
+            transform: translateY(-3px);
+        }
+
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .step-content h4 {
+            font-size: 1.25rem;
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .step-content p {
+            color: var(--text-light);
+            margin: 0;
+        }
+
+        /* Service Sidebar */
+        .service-info-card {
+            background: white;
+            border-radius: var(--border-radius-lg);
+            padding: 2rem;
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 2rem;
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+
+        .service-info-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-5px);
+        }
+
+        .service-info-card h3 {
+            font-size: 1.25rem;
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.75rem;
+        }
+
+        .service-info-card h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            border-radius: 2px;
+        }
+
+        .service-highlights {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .service-highlights li {
+            padding: 0.75rem 0;
+            border-bottom: 1px dashed var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--text-light);
+        }
+
+        .service-highlights li:last-child {
+            border-bottom: none;
+        }
+
+        .service-highlights li i {
+            color: var(--primary-color);
+            width: 20px;
+            text-align: center;
+        }
+
+        .btn--full {
+            width: 100%;
+            justify-content: center;
+        }
+
+        /* Service Benefits */
+        .service-benefits {
+            padding: 5rem 0;
+            background-color: var(--light-color);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-benefits::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(52, 152, 219, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+            z-index: 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.25rem;
+            color: var(--secondary-color);
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            border-radius: 2px;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .benefit-item {
+            background: white;
+            border-radius: var(--border-radius-lg);
+            padding: 2rem;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+
+        .benefit-item:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--primary-color);
+        }
+
+        .benefit-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+        }
+
+        .benefit-item:hover .benefit-icon {
+            transform: rotate(15deg) scale(1.1);
+            background: linear-gradient(135deg, var(--accent-color), var(--accent-dark));
+        }
+
+        .benefit-item h3 {
+            font-size: 1.25rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .benefit-item p {
+            color: var(--text-light);
+            margin: 0;
+        }
+
+        /* Office Types */
+        .office-types {
+            padding: 5rem 0;
+            background-color: white;
+        }
+
+        .office-types-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .office-type {
+            background: white;
+            border-radius: var(--border-radius-lg);
+            padding: 2rem;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            text-align: center;
+            border: 1px solid var(--border-color);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .office-type::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 0;
+            background: linear-gradient(to bottom, var(--primary-color), var(--accent-color));
+            transition: var(--transition);
+        }
+
+        .office-type:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .office-type:hover::before {
+            height: 100%;
+        }
+
+        .office-type__icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 1.5rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+            color: white;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+        }
+
+        .office-type:hover .office-type__icon {
+            transform: scale(1.1);
+            background: linear-gradient(135deg, var(--accent-color), var(--accent-dark));
+        }
+
+        .office-type h3 {
+            font-size: 1.25rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .office-type p {
+            color: var(--text-light);
+            margin: 0;
+        }
+
+        /* FAQs */
+        .service-faqs {
+            padding: 5rem 0;
+            background-color: var(--light-color);
+        }
+
+        .faqs-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: var(--border-radius);
+            margin-bottom: 1rem;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            font-weight: 600;
+            color: var(--secondary-color);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
+        }
+
+        .faq-question:hover {
+            color: var(--primary-color);
+        }
+
+        .faq-question i {
+            transition: var(--transition);
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            color: var(--text-light);
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 1.5rem 1.5rem;
+            max-height: 500px;
+        }
+
+        /* Related Services */
+        .related-services {
+            padding: 5rem 0;
+            background-color: white;
+        }
+
+        .related-services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .related-service {
+            background: white;
+            border-radius: var(--border-radius-lg);
+            padding: 2rem;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+
+        .related-service:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-color);
+        }
+
+        .related-service__icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 1.5rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+            color: white;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+        }
+
+        .related-service:hover .related-service__icon {
+            transform: scale(1.1);
+            background: linear-gradient(135deg, var(--accent-color), var(--accent-dark));
+        }
+
+        .related-service h3 {
+            font-size: 1.25rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .related-service p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
+
+        .btn--outline {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .btn--outline:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* CTA Section */
+        .jiffy-cta {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            color: white;
+            text-align: center;
+            padding: 5rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .jiffy-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+
+        .cta-description {
+            font-size: 1.25rem;
+            margin-bottom: 2.5rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .cta-actions {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .btn--cta {
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            min-width: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+        }
+
+        .btn--cta:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn--cta-primary {
+            background-color: white;
+            color: var(--primary-color);
+        }
+
+        .btn--cta-primary:hover {
+            background-color: var(--light-color);
+            color: var(--primary-dark);
+        }
+
+        .btn--cta-secondary {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn--cta-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Footer */
+        .jiffy-footer {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 4rem 0 1rem;
+            position: relative;
+        }
+
+        .jiffy-footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+        }
+
+        .footer__content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+        }
+
+        .footer__logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+
+        .footer__logo i {
+            color: var(--primary-color);
+            font-size: 2rem;
+        }
+
+        .footer__description {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .footer__social {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .footer__social-link {
+            width: 45px;
+            height: 45px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: var(--transition);
+            font-size: 1.1rem;
+        }
+
+        .footer__social-link:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        .footer__title {
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+            color: white;
+            position: relative;
+            padding-bottom: 0.75rem;
+        }
+
+        .footer__title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+        }
+
+        .footer__links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer__links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer__links a {
+            color: rgba(255, 255, 255, 0.8);
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .footer__links a:hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+        }
+
+        .footer__links a i {
+            font-size: 0.8rem;
+            color: var(--primary-color);
+        }
+
+        .footer__contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.25rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .footer__contact-item i {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            margin-top: 0.25rem;
+        }
+
+        .footer__contact-text {
+            line-height: 1.6;
+        }
+
+        .footer__bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 3rem;
+            padding-top: 2rem;
+        }
+
+        .footer__bottom-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            .footer__bottom-content {
+                flex-direction: row;
+                justify-content: space-between;
+                text-align: left;
+            }
+        }
+
+        .footer__copyright {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+
+        .footer__legal {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .footer__legal a {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .footer__legal a:hover {
+            color: var(--primary-color);
+        }
+
+        /* WhatsApp Float Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+        }
+
+        .whatsapp-float__btn {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            background-color: #25d366;
+            color: white;
+            padding: 1rem 1.75rem;
+            border-radius: 50px;
+            box-shadow: var(--shadow-lg);
+            transition: var(--transition);
+            font-weight: 600;
+            text-decoration: none;
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-float__btn:hover {
+            background-color: #128c7e;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.5);
+        }
+
+        .whatsapp-float__btn i {
+            font-size: 1.5rem;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 999;
+            box-shadow: var(--shadow-md);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background-color: var(--primary-dark);
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
+            }
+            50% {
+                box-shadow: 0 5px 30px rgba(37, 211, 102, 0.6);
+            }
+            100% {
+                box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
+            }
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .office-hero__content {
+                grid-template-columns: 1fr;
+            }
+
+            .office-hero__image {
+                order: -1;
+                max-width: 600px;
+                margin: 0 auto;
+            }
+
+            .service-details__content {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-actions {
+                flex-direction: column;
+            }
+
+            .btn--cta {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .office-hero__title {
+                font-size: 2.25rem;
+            }
+
+            .office-hero__description {
+                font-size: 1.1rem;
+            }
+
+            .office-hero__features {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .office-hero__title {
+                font-size: 2rem;
+            }
+
+            .office-hero__cta {
+                flex-direction: column;
+            }
+
+            .btn--hero {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+        /* Mobile Navigation Enhancements */
+@media (max-width: 992px) {
+    .nav__menu {
+        background-color: var(--secondary-color);
+        top: 70px;
+        padding: 1rem;
+        width: 100%;
+    }
+
+    .nav__list {
+        gap: 0.5rem;
+    }
+
+    .nav__link {
+        color: white;
+        padding: 1rem;
+        border-radius: var(--border-radius);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav__link:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .nav__item--dropdown .nav__link {
+        padding-right: 0.5rem;
+    }
+
+    .nav__dropdown {
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: var(--border-radius);
+        margin-top: 0.5rem;
+        padding: 0;
+        display: none;
+    }
+
+    .nav__item--dropdown.active .nav__dropdown {
+        display: block;
+    }
+
+    .nav__dropdown a {
+        color: white;
+        padding: 0.75rem 1.5rem;
+        display: block;
+    }
+
+    .nav__dropdown a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        padding-left: 1.75rem;
+    }
+
+    .dropdown-toggle {
+        padding: 0.5rem;
+        margin-left: auto;
+        transition: transform 0.3s ease;
+    }
+
+    .nav__item--dropdown.active .dropdown-toggle {
+        transform: rotate(180deg);
+    }
+
+    .nav__actions--mobile {
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .nav__actions--mobile .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Header height adjustment for mobile */
+.jiffy-header {
+    padding: 0.5rem 0;
+}
+
+.nav__toggle {
+    color: white;
+}
+
+.nav__toggle-line {
+    background-color: white;
+}
+
+/* Enhanced Mobile Dropdown Styles */
+@media (max-width: 992px) {
+    .nav__dropdown {
+        background-color: var(--primary-dark) !important;
+        border-radius: var(--border-radius) !important;
+        margin-top: 0.5rem !important;
+        padding: 0.5rem 0 !important;
+        box-shadow: var(--shadow-md) !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+    
+    .nav__dropdown a {
+        color: rgba(255, 255, 255, 0.9) !important;
+        padding: 0.75rem 1.5rem !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+    }
+    
+    .nav__dropdown a:hover {
+        background-color: rgba(255, 255, 255, 0.1) !important;
+        color: white !important;
+        padding-left: 1.75rem !important;
+    }
+    
+    .nav__dropdown li:last-child a {
+        border-bottom: none !important;
+    }
+    
+    .dropdown-toggle {
+        color: white !important;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+    }
+    
+    .nav__item--dropdown.active .dropdown-toggle {
+        background: rgba(255, 255, 255, 0.2);
+    }
+}
+
+/* Mobile Navigation Enhancements */
+@media (max-width: 992px) {
+    .nav__menu {
+        background-color: var(--secondary-color);
+        top: 70px;
+        padding: 1rem;
+        width: 100%;
+    }
+
+    .nav__list {
+        gap: 0.5rem;
+    }
+
+    .nav__link {
+        color: white;
+        padding: 1rem;
+        border-radius: var(--border-radius);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav__link:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .nav__item--dropdown .nav__link {
+        padding-right: 0.5rem;
+    }
+
+    .nav__dropdown {
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: var(--border-radius);
+        margin-top: 0.5rem;
+        padding: 0;
+        display: none;
+    }
+
+    .nav__item--dropdown.active .nav__dropdown {
+        display: block;
+    }
+
+    .nav__dropdown a {
+        color: white;
+        padding: 0.75rem 1.5rem;
+        display: block;
+    }
+
+    .nav__dropdown a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        padding-left: 1.75rem;
+    }
+
+    .dropdown-toggle {
+        padding: 0.5rem;
+        margin-left: auto;
+        transition: transform 0.3s ease;
+    }
+
+    .nav__item--dropdown.active .dropdown-toggle {
+        transform: rotate(180deg);
+    }
+
+    .nav__actions--mobile {
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .nav__actions--mobile .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Header height adjustment for mobile */
+.jiffy-header {
+    padding: 0.5rem 0;
+}
+
+.nav__toggle {
+    color: white;
+}
+
+.nav__toggle-line {
+    background-color: white;
+}
+
+/* Enhanced Mobile Dropdown Styles */
+@media (max-width: 992px) {
+    .nav__dropdown {
+        background-color: var(--primary-dark) !important;
+        border-radius: var(--border-radius) !important;
+        margin-top: 0.5rem !important;
+        padding: 0.5rem 0 !important;
+        box-shadow: var(--shadow-md) !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+    
+    .nav__dropdown a {
+        color: rgba(255, 255, 255, 0.9) !important;
+        padding: 0.75rem 1.5rem !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+    }
+    
+    .nav__dropdown a:hover {
+        background-color: rgba(255, 255, 255, 0.1) !important;
+        color: white !important;
+        padding-left: 1.75rem !important;
+    }
+    
+    .nav__dropdown li:last-child a {
+        border-bottom: none !important;
+    }
+    
+    .dropdown-toggle {
+        color: white !important;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+    }
+    
+    .nav__item--dropdown.active .dropdown-toggle {
+        background: rgba(255, 255, 255, 0.2);
+    }
+}
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header jiffy-header">
+        <nav class="nav">
+            <div class="nav__container">
+                <div class="nav__logo">
+                    <a href="index.html">
+                        <i class="fas fa-truck-fast"></i>
+                        <span>Jiffy Logistics</span>
+                    </a>
+                </div>
+                
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="index.html" class="nav__link">Home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="about.html" class="nav__link">About</a>
+                        </li>
+<!-- In your header section, update the dropdown part to this: -->
+<li class="nav__item nav__item--dropdown">
+    <a href="services.html" class="nav__link">
+        <span>Services</span>
+        <i class="fas fa-chevron-down dropdown-toggle"></i>
+    </a>
+    <ul class="nav__dropdown">
+        <li><a href="home-relocation.html">Home Relocation</a></li>
+        <li><a href="office-shifting.html">Office Shifting</a></li>
+        <li><a href="furniture-moving.html">Furniture & Appliance Moving</a></li>
+        <li><a href="packing-services.html">Packing Services</a></li>
+        <li><a href="long-distance.html">Long Distance Moves (City-to-City)</a></li>
+        <li><a href="storage.html">Storage & Warehousing</a></li>
+        <li><a href="loading-unloading.html">Loading & Unloading</a></li>
+        <li><a href="international.html">International Moving</a></li>
+    </ul>
+</li>
+                        <li class="nav__item">
+                            <a href="gallery.html" class="nav__link">Gallery</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="faqs.html" class="nav__link">FAQs</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="contact.html" class="nav__link">Contact</a>
+                        </li>
+                    </ul>
+                    
+                    <!-- Mobile Contact Buttons -->
+                    <div class="nav__actions nav__actions--mobile">
+                        <a style="color: white;" href="tel:+923013127332" class="btn btn--primary btn--small">
+                            <i class="fas fa-phone"></i> Call Us
+                        </a>
+                        <a href="get-quote.html" class="btn btn--secondary btn--small">
+                            <i class="fas fa-calculator"></i> Get Quote
+                        </a>
+                    </div>
+                </div>
+
+                <div class="nav__actions nav__actions--desktop">
+                    <a href="tel:+923013127332" class="nav__phone">
+                        <i class="fas fa-phone"></i>
+                        +92 301 3127332
+                    </a>
+                    <a href="get-quote.html" class="btn btn--primary btn--small">Get Quote</a>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <span class="nav__toggle-line"></span>
+                    <span class="nav__toggle-line"></span>
+                    <span class="nav__toggle-line"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="office-hero">
+        <div class="office-hero__container">
+            <div class="office-hero__content">
+                <div class="office-hero__text">
+                    <div class="office-hero__icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h1 class="office-hero__title">
+                        Professional <span class="office-hero__title--highlight">Office Shifting</span> Services
+                    </h1>
+                    <p class="office-hero__description">
+                        Minimize business disruption with our comprehensive office relocation solutions. We handle everything from packing to setup, ensuring a smooth transition to your new workspace.
+                    </p>
+                    <div class="office-hero__features">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Minimal Downtime</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>IT Equipment Specialists</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>After-Hours Moving</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Secure Document Handling</span>
+                        </div>
+                    </div>
+                    <div class="office-hero__cta">
+                        <a href="get-quote.html" class="btn btn--primary btn--hero">
+                            <i class="fas fa-calculator"></i>
+                            Get Free Quote
+                        </a>
+                        <a href="tel:+923013127332" class="btn btn--secondary btn--hero">
+                            <i class="fas fa-phone"></i>
+                            Call Now
+                        </a>
+                    </div>
+                </div>
+                <div class="office-hero__image">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Professional Office Shifting Services">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="container">
+            <nav class="breadcrumb__nav">
+                <a href="index.html">Home</a>
+                <span class="breadcrumb__separator">/</span>
+                <a href="services.html">Services</a>
+                <span class="breadcrumb__separator">/</span>
+                <span class="breadcrumb__current">Office Shifting</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Service Details -->
+    <section class="service-details">
+        <div class="service-details__container">
+            <div class="service-details__content">
+                <div class="service-details__main">
+                    <h2>Complete Office Relocation Solutions</h2>
+                    <p>
+                        Moving your office is a complex operation that requires careful planning and execution to minimize business disruption. 
+                        Our professional office shifting services are designed to handle all aspects of your commercial move, from initial planning 
+                        to final setup at your new location.
+                    </p>
+                    <p>
+                        We specialize in moving businesses of all sizes, from small startups to large corporate offices. Our team understands the 
+                        importance of maintaining business continuity during the transition, which is why we offer flexible scheduling options 
+                        including after-hours and weekend moves.
+                    </p>
+                    <p>
+                        With years of experience in office relocations across Pakistan, we've developed efficient systems for packing, transporting, 
+                        and setting up office equipment, furniture, and sensitive documents. Our trained staff handles your office assets with the 
+                        utmost care, ensuring everything arrives safely at your new location.
+                    </p>
+
+                    <h3>Our Comprehensive Office Moving Process</h3>
+                    <div class="process-steps">
+                        <div class="process-step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Pre-Move Consultation</h4>
+                                <p>We conduct a thorough assessment of your current office space and new location to develop a customized moving plan that meets your specific requirements.</p>
+                            </div>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Inventory & Labeling</h4>
+                                <p>Our team creates a detailed inventory of all items to be moved and implements a systematic labeling system for easy identification and placement.</p>
+                            </div>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Specialized Packing</h4>
+                                <p>We use high-quality packing materials and techniques specifically designed for office equipment, furniture, and sensitive documents.</p>
+                            </div>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>Secure Transportation</h4>
+                                <p>Our fleet of modern vehicles equipped with GPS tracking ensures safe and timely transportation of your office assets.</p>
+                            </div>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h4>Efficient Unpacking & Setup</h4>
+                                <p>We carefully unpack and arrange your office according to your floor plan, ensuring everything is ready for business.</p>
+                            </div>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">6</div>
+                            <div class="step-content">
+                                <h4>Post-Move Support</h4>
+                                <p>Our service doesn't end with the move - we provide follow-up support to address any concerns and ensure complete satisfaction.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>Specialized Office Moving Services</h3>
+                    <p>
+                        We understand that different businesses have unique moving requirements. That's why we offer specialized services tailored 
+                        to specific office environments:
+                    </p>
+                    <p>
+                        <strong>IT Equipment Handling:</strong> Our trained technicians carefully disconnect, pack, transport, and reconnect 
+                        computers, servers, and networking equipment to ensure they arrive in perfect working condition.
+                    </p>
+                    <p>
+                        <strong>Document Security:</strong> We implement strict protocols for handling confidential documents and sensitive 
+                        information, including secure packing and transportation methods.
+                    </p>
+                    <p>
+                        <strong>Furniture Disassembly/Reassembly:</strong> Our team efficiently disassembles and reassembles office furniture 
+                        to ensure safe transport and quick setup at your new location.
+                    </p>
+                </div>
+
+                <div class="service-details__sidebar">
+                    <div class="service-info-card">
+                        <h3>Office Moving Specialties</h3>
+                        <ul class="service-highlights">
+                            <li><i class="fas fa-desktop"></i> IT Equipment & Servers</li>
+                            <li><i class="fas fa-file-alt"></i> Document Management</li>
+                            <li><i class="fas fa-chair"></i> Office Furniture</li>
+                            <li><i class="fas fa-clock"></i> After-hours Moving</li>
+                            <li><i class="fas fa-calendar-weekend"></i> Weekend Service</li>
+                            <li><i class="fas fa-tools"></i> Equipment Reconnection</li>
+                            <li><i class="fas fa-warehouse"></i> Temporary Storage</li>
+                            <li><i class="fas fa-shield-alt"></i> Insurance Coverage</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-info-card">
+                        <h3>Get a Business Quote</h3>
+                        <p>Receive a customized estimate for your office relocation project based on your specific requirements.</p>
+                        <a href="get-quote.html" class="btn btn--primary btn--full">
+                            <i class="fas fa-calculator"></i> Request Quote
+                        </a>
+                    </div>
+
+                    <div class="service-info-card">
+                        <h3>Need Immediate Assistance?</h3>
+                        <p>Our office moving specialists are available to answer your questions and schedule your relocation.</p>
+                        <a href="tel:+923013127332" class="btn btn--secondary btn--full">
+                            <i class="fas fa-phone"></i> Call +92 301 3127332
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Benefits -->
+    <section class="service-benefits">
+        <div class="container">
+            <h2 class="section-title">Why Choose Our Office Shifting Services?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-business-time"></i>
+                    </div>
+                    <h3>Minimal Downtime</h3>
+                    <p>Our efficient processes and flexible scheduling ensure your business operations experience minimal interruption.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>IT Specialists</h3>
+                    <p>Technicians trained in handling sensitive computer systems, servers, and networking equipment.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h3>Document Security</h3>
+                    <p>Secure handling protocols for confidential files and sensitive business information.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Flexible Scheduling</h3>
+                    <p>After-hours and weekend moving options to suit your business schedule.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-truck-loading"></i>
+                    </div>
+                    <h3>Modern Fleet</h3>
+                    <p>Well-maintained vehicles equipped with GPS tracking and climate control when needed.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Dedicated Support</h3>
+                    <p>Personalized account management and 24/7 customer service throughout your move.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Office Types -->
+    <section class="office-types">
+        <div class="container">
+            <h2 class="section-title">Office Types We Handle</h2>
+            <div class="office-types-grid">
+                <div class="office-type">
+                    <div class="office-type__icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3>Startups & Small Offices</h3>
+                    <p>Affordable, efficient moving solutions for small businesses and growing startups with limited budgets.</p>
+                </div>
+                <div class="office-type">
+                    <div class="office-type__icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Corporate Offices</h3>
+                    <p>Comprehensive relocation services for large corporate offices with multiple departments and floors.</p>
+                </div>
+                <div class="office-type">
+                    <div class="office-type__icon">
+                        <i class="fas fa-laptop-medical"></i>
+                    </div>
+                    <h3>Medical Practices</h3>
+                    <p>Specialized moving for clinics and medical offices with sensitive equipment and patient records.</p>
+                </div>
+                <div class="office-type">
+                    <div class="office-type__icon">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                    <h3>Law Firms</h3>
+                    <p>Secure handling of confidential legal documents and professional library collections.</p>
+                </div>
+                <div class="office-type">
+                    <div class="office-type__icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>Tech Companies</h3>
+                    <p>Expert relocation of IT infrastructure, servers, and specialized technical equipment.</p>
+                </div>
+                <div class="office-type">
+                    <div class="office-type__icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3>Educational Institutions</h3>
+                    <p>Moving solutions for schools, training centers, and educational administrative offices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQs -->
+    <section class="service-faqs">
+        <div class="container">
+            <h2 class="section-title">Office Moving FAQs</h2>
+            <div class="faqs-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How far in advance should we plan our office move?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We recommend planning at least 8-12 weeks in advance for small to medium offices, and 3-6 months for larger corporate moves. This allows time for proper planning, employee communication, and coordination with building management at both locations.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do you provide packing materials for office moves?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we supply all necessary packing materials including boxes, bubble wrap, packing paper, furniture pads, and specialized containers for IT equipment. These can be included in your moving package or provided as a separate service.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do you handle sensitive IT equipment during the move?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our IT moving specialists use anti-static packing materials, climate-controlled transportation when needed, and proper padding for all sensitive equipment. We document all connections before disassembly and provide comprehensive reconnection services at your new location.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can you help with furniture layout planning at our new office?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! We offer space planning services to help optimize your new office layout. Our team can work with your floor plans to create an efficient workspace design and ensure all furniture is placed according to your specifications.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What happens if something gets damaged during the move?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>All our moves include basic insurance coverage, with options to upgrade for more valuable items. In the rare event of damage, we have a straightforward claims process and work with trusted repair specialists to resolve any issues quickly.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do you provide storage solutions if there's a gap between move-out and move-in dates?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we offer secure, climate-controlled storage facilities for short or long-term needs. Our warehouses are monitored 24/7 and can accommodate everything from file boxes to office furniture and equipment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Services -->
+    <section class="related-services">
+        <div class="container">
+            <h2 class="section-title">Related Business Services</h2>
+            <div class="related-services-grid">
+                <div class="related-service">
+                    <div class="related-service__icon">
+                        <i class="fas fa-warehouse"></i>
+                    </div>
+                    <h3>Commercial Storage</h3>
+                    <p>Secure, climate-controlled storage solutions for office furniture, equipment, and documents during transitions.</p>
+                    <a href="services/warehousing.html" class="btn btn--outline">Learn More</a>
+                </div>
+                <div class="related-service">
+                    <div class="related-service__icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Home Relocation</h3>
+                    <p>Professional moving services for residential clients with careful handling of personal belongings.</p>
+                    <a href="services/home-relocation.html" class="btn btn--outline">Learn More</a>
+                </div>
+                <div class="related-service">
+                    <div class="related-service__icon">
+                        <i class="fas fa-boxes"></i>
+                    </div>
+                    <h3>Packing Services</h3>
+                    <p>Expert packing using high-quality materials to protect your items during transportation.</p>
+                    <a href="services/packing-services.html" class="btn btn--outline">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="jiffy-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Plan Your Office Move?</h2>
+                <p class="cta-description">
+                    Get a free consultation and customized quote from our office moving specialists today.
+                </p>
+                <div class="cta-actions">
+                    <a href="get-quote.html" class="btn btn--cta btn--cta-primary">
+                        <i class="fas fa-calculator"></i>
+                        Get Free Quote
+                    </a>
+                    <a href="tel:+923013127332" class="btn btn--cta btn--cta-secondary">
+                        <i class="fas fa-phone"></i>
+                        Call +92 301 3127332
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer jiffy-footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <div class="footer__logo">
+                        <i class="fas fa-truck-fast"></i>
+                        <span>Jiffy Logistics</span>
+                    </div>
+                    <p class="footer__description">
+                        Pakistan's leading logistics provider offering reliable, secure, and timely transportation solutions nationwide since 2010.
+                    </p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="footer__social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="footer__social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://wa.me/923013127332" class="footer__social-link"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="footer__social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer__section">
+                    <h3 class="footer__title">Quick Links</h3>
+                    <ul class="footer__links">
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="tracking.html"><i class="fas fa-chevron-right"></i> Tracking</a></li>
+                        <li><a href="testimonials.html"><i class="fas fa-chevron-right"></i> Reviews</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__section">
+                    <h3 class="footer__title">Services</h3>
+                    <ul class="footer__links">
+                        <li><a href="services/local-delivery.html"><i class="fas fa-chevron-right"></i> Local Delivery</a></li>
+                        <li><a href="services/national-shipping.html"><i class="fas fa-chevron-right"></i> National Shipping</a></li>
+                        <li><a href="services/warehousing.html"><i class="fas fa-chevron-right"></i> Warehousing</a></li>
+                        <li><a href="services/office-shifting.html"><i class="fas fa-chevron-right"></i> Office Shifting</a></li>
+                        <li><a href="services/home-relocation.html"><i class="fas fa-chevron-right"></i> Home Relocation</a></li>
+                        <li><a href="services/cold-chain.html"><i class="fas fa-chevron-right"></i> Cold Chain Logistics</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__section">
+                    <h3 class="footer__title">Contact Info</h3>
+                    <div class="footer__contact">
+                        <div class="footer__contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="footer__contact-text">
+                                <strong>Head Office:</strong> 123 Logistics Plaza, Main Boulevard, Lahore, Pakistan
+                            </div>
+                        </div>
+                        <div class="footer__contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div class="footer__contact-text">
+                                <strong>Phone:</strong> +92 301 3127332
+                            </div>
+                        </div>
+                        <div class="footer__contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div class="footer__contact-text">
+                                <strong>Email:</strong> info@jiffylogistics.pk
+                            </div>
+                        </div>
+                        <div class="footer__contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div class="footer__contact-text">
+                                <strong>Hours:</strong> Mon-Sat: 8AM - 8PM
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <div class="footer__bottom-content">
+                    <p class="footer__copyright">
+                        © 2024 Jiffy Logistics. All rights reserved.
+                    </p>
+                    <div class="footer__legal">
+                        <a href="terms.html">Terms of Service</a>
+                        <a href="privacy.html">Privacy Policy</a>
+                        <a href="sitemap.html">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/923013127332" target="_blank" class="whatsapp-float__btn">
+            <i class="fab fa-whatsapp"></i>
+            <span>Chat Now</span>
+        </a>
+    </div>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script>
+        // Mobile Navigation Toggle
+        const navToggle = document.getElementById('nav-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+            navToggle.classList.toggle('active');
+        });
+        
+        // Dropdown for mobile
+        const dropdownItems = document.querySelectorAll('.nav__item--dropdown');
+        
+        dropdownItems.forEach(item => {
+            const link = item.querySelector('.nav__link');
+            
+            link.addEventListener('click', (e) => {
+                if (window.innerWidth <= 992) {
+                    e.preventDefault();
+                    item.classList.toggle('active');
+                }
+            });
+        });
+        
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            
+            question.addEventListener('click', () => {
+                item.classList.toggle('active');
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.jiffy-header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+
+            // Back to top button
+// Back to top button
+    const backToTop = document.getElementById('back-to-top');
+    if (window.scrollY > 300) {
+        backToTop.classList.add('visible');
+    } else {
+        backToTop.classList.remove('visible');
+    }
+});
+
+const backToTop = document.getElementById('back-to-top');
+backToTop.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Animation on scroll
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.process-step, .benefit-item, .office-type, .related-service');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.2;
+                
+                if (elementPosition < screenPosition) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        };
+
+        // Set initial state for animated elements
+        document.querySelectorAll('.process-step, .benefit-item, .office-type, .related-service').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        });
+
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
+    </script>
+</body>
+</html>

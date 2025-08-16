@@ -1,0 +1,1841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Loading & Unloading Services | Jiffy Logistics</title>
+    <meta name="description" content="Professional loading and unloading services with trained specialists. Safe, efficient handling of your goods with proper equipment and techniques. Get a free quote today.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    
+    <style>
+        /* Modern Color Scheme */
+        :root {
+            --primary-color: #000000;
+            --primary-dark: #113f5a;
+            --primary-light: #3498DB;
+            --secondary-color: #0f275e6c;
+            --secondary-light: #EC7063;
+            --accent-color: #F39C12;
+            --accent-dark: #D35400;
+            --light-color: #ECF0F1;
+            --dark-color: #2C3E50;
+            --text-color: #647C95;
+            --text-light:#113f5a ;
+            --success-color: #27AE60;
+            --warning-color: #F1C40F;
+            --danger-color: #E74C3C;
+            --border-color: #BDC3C7;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 25px rgba(0,0,0,0.1);
+            --shadow-xl: 0 20px 40px rgba(0,0,0,0.15);
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --border-radius: 8px;
+            --border-radius-lg: 12px;
+            --border-radius-xl: 16px;
+        }
+
+        .nav__phone {
+            color: white;
+            transition: var(--transition);
+        }
+
+        .nav__phone:hover {
+            color: rgb(0, 122, 230);
+        }
+
+        .nav__phone i {
+            color: inherit;
+        }
+
+        /* Improved Typography */
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-dark) 100%);
+            margin: 0;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            line-height: 1.3;
+            color: var(--secondary-color);
+        }
+
+        h1 { font-size: 2.75rem; }
+        h2 { font-size: 2.25rem; }
+        h3 { font-size: 1.75rem; }
+        h4 { font-size: 1.5rem; }
+        h5 { font-size: 1.25rem; }
+        h6 { font-size: 1.125rem; }
+
+        @media (min-width: 992px) {
+            h1 { font-size: 3.5rem; }
+            h2 { font-size: 2.75rem; }
+            h3 { font-size: 2rem; }
+        }
+
+        /* Enhanced Header */
+        .jiffy-header {
+            background-color: #1b355c;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+        }
+
+        .jiffy-header.scrolled {
+            background-color: rgba(44, 62, 80, 0.98);
+            backdrop-filter: blur(10px);
+        }
+
+        .nav__logo a {
+            color: white;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .nav__logo i {
+            color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .nav__logo:hover i {
+            transform: rotate(15deg);
+        }
+
+        .nav__link {
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 500;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav__link::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .nav__link:hover::before,
+        .nav__link--active::before {
+            width: 100%;
+        }
+
+        .nav__link:hover,
+        .nav__link--active {
+            color: white;
+        }
+
+        /* Hero Section for Service Page */
+        .service-hero {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-dark) 100%);
+            padding: 6rem 0 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+            opacity: 0.15;
+            z-index: -1;
+        }
+
+        .service-hero__container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-6);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .service-hero__content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .service-hero__icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            margin-bottom: 1.5rem;
+            box-shadow: var(--shadow-md);
+        }
+
+        .service-hero__title {
+            font-size: 2.75rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .service-hero__description {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2rem;
+            max-width: 600px;
+        }
+
+        .service-hero__features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: white;
+            font-weight: 500;
+        }
+
+        .feature-item i {
+            color: var(--accent-color);
+            font-size: 1.25rem;
+        }
+
+        .service-hero__cta {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .btn--hero {
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+        }
+
+        .btn--hero:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .service-hero__image {
+            position: relative;
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-xl);
+        }
+
+        .service-hero__image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            background-color: var(--light-color);
+            padding: 1rem 0;
+            margin-top: 80px;
+        }
+
+        .breadcrumb__nav {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .breadcrumb__nav a {
+            color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .breadcrumb__nav a:hover {
+            color: var(--primary-dark);
+        }
+
+        .breadcrumb__separator {
+            color: var(--text-light);
+        }
+
+        .breadcrumb__current {
+            color: var(--text-color);
+        }
+
+        /* Service Details Section */
+        .service-details {
+            padding: 4rem 0;
+            background-color: white;
+        }
+
+        .service-details__container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-6);
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+        }
+
+        .service-details__content h2 {
+            font-size: 2.25rem;
+            color: var(--dark-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .service-details__content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .service-details__sidebar {
+            position: relative;
+        }
+
+        .service-info-card {
+            background-color: var(--light-color);
+            border-radius: var(--border-radius-lg);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color);
+        }
+
+        .service-info-card h3 {
+            color: var(--dark-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .service-highlights {
+            list-style: none;
+            padding: 0;
+        }
+
+        .service-highlights li {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--text-light);
+        }
+
+        .service-highlights i {
+            color: var(--primary-color);
+            width: 20px;
+            text-align: center;
+        }
+
+        .btn--full {
+            width: 100%;
+            text-align: center;
+            justify-content: center;
+        }
+
+        /* Loading Services Grid */
+        .loading-services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .loading-service {
+            background-color: white;
+            border-radius: var(--border-radius-lg);
+            padding: 2.5rem;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            border: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        .loading-service:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--primary-color);
+        }
+
+        .loading-service__icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            transition: var(--transition);
+        }
+
+        .loading-service:hover .loading-service__icon {
+            transform: rotate(15deg) scale(1.1);
+            background: linear-gradient(135deg, var(--accent-color), var(--accent-dark));
+        }
+
+        .loading-service h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark-color);
+        }
+
+        .loading-service p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
+
+        .loading-service ul {
+            text-align: left;
+            padding-left: 1.5rem;
+            color: var(--text-light);
+        }
+
+        .loading-service li {
+            margin-bottom: 0.75rem;
+            position: relative;
+        }
+
+        .loading-service li::before {
+            content: '';
+            position: absolute;
+            left: -1.5rem;
+            top: 0.6rem;
+            width: 8px;
+            height: 8px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+        }
+
+        /* Equipment Grid */
+        .equipment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .equipment-item {
+            text-align: center;
+            padding: 2rem 1.5rem;
+            background-color: var(--light-color);
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+        }
+
+        .equipment-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .equipment-item i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .equipment-item h4 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            color: var(--dark-color);
+        }
+
+        .equipment-item p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Process Steps */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+            counter-reset: step-counter;
+        }
+
+        .process-step {
+            position: relative;
+            padding-left: 4rem;
+        }
+
+        .process-step::before {
+            counter-increment: step-counter;
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 3rem;
+            height: 3rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .process-step h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: var(--dark-color);
+        }
+
+        .process-step p {
+            color: var(--text-light);
+        }
+
+        /* Benefits Grid */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .benefit-item {
+            background-color: white;
+            border-radius: var(--border-radius-lg);
+            padding: 2rem;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            border: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        .benefit-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .benefit-icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 1.5rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+            color: white;
+            transition: var(--transition);
+        }
+
+        .benefit-item:hover .benefit-icon {
+            transform: scale(1.1);
+            background: linear-gradient(135deg, var(--accent-color), var(--accent-dark));
+        }
+
+        .benefit-item h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            color: var(--dark-color);
+        }
+
+        .benefit-item p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* FAQs Section */
+        .faqs-list {
+            margin: 3rem 0;
+        }
+
+        .faq-item {
+            background-color: white;
+            border-radius: var(--border-radius);
+            margin-bottom: 1rem;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            font-weight: 600;
+            color: var(--dark-color);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
+        }
+
+        .faq-question:hover {
+            color: var(--primary-color);
+        }
+
+        .faq-question i {
+            transition: var(--transition);
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            color: var(--text-light);
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 1.5rem 1.5rem;
+            max-height: 500px;
+        }
+
+        /* Related Services */
+        .related-services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .related-service {
+            background-color: white;
+            border-radius: var(--border-radius-lg);
+            padding: 2rem;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            border: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        .related-service:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .related-service__icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 1.5rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+            color: white;
+            transition: var(--transition);
+        }
+
+        .related-service:hover .related-service__icon {
+            transform: scale(1.1);
+            background: linear-gradient(135deg, var(--accent-color), var(--accent-dark));
+        }
+
+        .related-service h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            color: var(--dark-color);
+        }
+
+        .related-service p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            color: white;
+            text-align: center;
+            padding: 5rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+
+        .cta-description {
+            font-size: 1.25rem;
+            margin-bottom: 2.5rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .cta-actions {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .btn--cta {
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            min-width: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+        }
+
+        .btn--cta:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn--cta-primary {
+            background-color: white;
+            color: var(--primary-color);
+        }
+
+        .btn--cta-primary:hover {
+            background-color: var(--light-color);
+            color: var(--primary-dark);
+        }
+
+        .btn--cta-secondary {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn--cta-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .service-hero__container {
+                grid-template-columns: 1fr;
+            }
+            
+            .service-details__container {
+                grid-template-columns: 1fr;
+            }
+            
+            .service-hero__title {
+                font-size: 2.25rem;
+            }
+            
+            .service-hero__features {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .service-hero__title {
+                font-size: 2rem;
+            }
+            
+            .service-hero__description {
+                font-size: 1.1rem;
+            }
+            
+            .service-hero__cta {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .btn--hero {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .service-hero__title {
+                font-size: 1.75rem;
+            }
+            
+            .cta-title {
+                font-size: 2rem;
+            }
+            
+            .cta-description {
+                font-size: 1.1rem;
+            }
+        }
+        /* Mobile Navigation Enhancements */
+@media (max-width: 992px) {
+    .nav__menu {
+        background-color: var(--secondary-color);
+        top: 70px;
+        padding: 1rem;
+        width: 100%;
+    }
+
+    .nav__list {
+        gap: 0.5rem;
+    }
+
+    .nav__link {
+        color: white;
+        padding: 1rem;
+        border-radius: var(--border-radius);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav__link:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .nav__item--dropdown .nav__link {
+        padding-right: 0.5rem;
+    }
+
+    .nav__dropdown {
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: var(--border-radius);
+        margin-top: 0.5rem;
+        padding: 0;
+        display: none;
+    }
+
+    .nav__item--dropdown.active .nav__dropdown {
+        display: block;
+    }
+
+    .nav__dropdown a {
+        color: white;
+        padding: 0.75rem 1.5rem;
+        display: block;
+    }
+
+    .nav__dropdown a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        padding-left: 1.75rem;
+    }
+
+    .dropdown-toggle {
+        padding: 0.5rem;
+        margin-left: auto;
+        transition: transform 0.3s ease;
+    }
+
+    .nav__item--dropdown.active .dropdown-toggle {
+        transform: rotate(180deg);
+    }
+
+    .nav__actions--mobile {
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .nav__actions--mobile .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Header height adjustment for mobile */
+.jiffy-header {
+    padding: 0.5rem 0;
+}
+
+.nav__toggle {
+    color: white;
+}
+
+.nav__toggle-line {
+    background-color: white;
+}
+
+/* Enhanced Mobile Dropdown Styles */
+@media (max-width: 992px) {
+    .nav__dropdown {
+        background-color: var(--primary-dark) !important;
+        border-radius: var(--border-radius) !important;
+        margin-top: 0.5rem !important;
+        padding: 0.5rem 0 !important;
+        box-shadow: var(--shadow-md) !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+    
+    .nav__dropdown a {
+        color: rgba(255, 255, 255, 0.9) !important;
+        padding: 0.75rem 1.5rem !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+    }
+    
+    .nav__dropdown a:hover {
+        background-color: rgba(255, 255, 255, 0.1) !important;
+        color: white !important;
+        padding-left: 1.75rem !important;
+    }
+    
+    .nav__dropdown li:last-child a {
+        border-bottom: none !important;
+    }
+    
+    .dropdown-toggle {
+        color: white !important;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+    }
+    
+    .nav__item--dropdown.active .dropdown-toggle {
+        background: rgba(255, 255, 255, 0.2);
+    }
+}
+
+/* Mobile Navigation Enhancements */
+@media (max-width: 992px) {
+    .nav__menu {
+        background-color: var(--secondary-color);
+        top: 70px;
+        padding: 1rem;
+        width: 100%;
+    }
+
+    .nav__list {
+        gap: 0.5rem;
+    }
+
+    .nav__link {
+        color: white;
+        padding: 1rem;
+        border-radius: var(--border-radius);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav__link:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .nav__item--dropdown .nav__link {
+        padding-right: 0.5rem;
+    }
+
+    .nav__dropdown {
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: var(--border-radius);
+        margin-top: 0.5rem;
+        padding: 0;
+        display: none;
+    }
+
+    .nav__item--dropdown.active .nav__dropdown {
+        display: block;
+    }
+
+    .nav__dropdown a {
+        color: white;
+        padding: 0.75rem 1.5rem;
+        display: block;
+    }
+
+    .nav__dropdown a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        padding-left: 1.75rem;
+    }
+
+    .dropdown-toggle {
+        padding: 0.5rem;
+        margin-left: auto;
+        transition: transform 0.3s ease;
+    }
+
+    .nav__item--dropdown.active .dropdown-toggle {
+        transform: rotate(180deg);
+    }
+
+    .nav__actions--mobile {
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .nav__actions--mobile .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Header height adjustment for mobile */
+.jiffy-header {
+    padding: 0.5rem 0;
+}
+
+.nav__toggle {
+    color: white;
+}
+
+.nav__toggle-line {
+    background-color: white;
+}
+
+/* Enhanced Mobile Dropdown Styles */
+@media (max-width: 992px) {
+    .nav__dropdown {
+        background-color: var(--primary-dark) !important;
+        border-radius: var(--border-radius) !important;
+        margin-top: 0.5rem !important;
+        padding: 0.5rem 0 !important;
+        box-shadow: var(--shadow-md) !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+    
+    .nav__dropdown a {
+        color: rgba(255, 255, 255, 0.9) !important;
+        padding: 0.75rem 1.5rem !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+    }
+    
+    .nav__dropdown a:hover {
+        background-color: rgba(255, 255, 255, 0.1) !important;
+        color: white !important;
+        padding-left: 1.75rem !important;
+    }
+    
+    .nav__dropdown li:last-child a {
+        border-bottom: none !important;
+    }
+    
+    .dropdown-toggle {
+        color: white !important;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+    }
+    
+    .nav__item--dropdown.active .dropdown-toggle {
+        background: rgba(255, 255, 255, 0.2);
+    }
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 90px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+    box-shadow: var(--shadow-md);
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Mobile version adjustments */
+@media (max-width: 768px) {
+    .back-to-top {
+        width: 45px;
+        height: 45px;
+        bottom: 70px;
+        right: 20px;
+        font-size: 1rem;
+    }
+}
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header jiffy-header">
+        <nav class="nav">
+            <div class="nav__container">
+                <div class="nav__logo">
+                    <a href="index.html">
+                        <i class="fas fa-truck-fast"></i>
+                        <span>Jiffy Logistics</span>
+                    </a>
+                </div>
+                
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="index.html" class="nav__link">Home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="about.html" class="nav__link">About</a>
+                        </li>
+<!-- In your header section, update the dropdown part to this: -->
+<li class="nav__item nav__item--dropdown">
+    <a href="services.html" class="nav__link">
+        <span>Services</span>
+        <i class="fas fa-chevron-down dropdown-toggle"></i>
+    </a>
+    <ul class="nav__dropdown">
+        <li><a href="home-relocation.html">Home Relocation</a></li>
+        <li><a href="office-shifting.html">Office Shifting</a></li>
+        <li><a href="furniture-moving.html">Furniture & Appliance Moving</a></li>
+        <li><a href="packing-services.html">Packing Services</a></li>
+        <li><a href="long-distance.html">Long Distance Moves (City-to-City)</a></li>
+        <li><a href="storage.html">Storage & Warehousing</a></li>
+        <li><a href="loading-unloading.html">Loading & Unloading</a></li>
+        <li><a href="international.html">International Moving</a></li>
+    </ul>
+</li>
+                        <li class="nav__item">
+                            <a href="gallery.html" class="nav__link">Gallery</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="faqs.html" class="nav__link">FAQs</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="contact.html" class="nav__link">Contact</a>
+                        </li>
+                    </ul>
+                    
+                    <!-- Mobile Contact Buttons -->
+                    <div class="nav__actions nav__actions--mobile">
+                    </div>
+                </div>
+
+                <div class="nav__actions nav__actions--desktop">
+                    <a href="tel:+923013127332" class="nav__phone">
+                        <i class="fas fa-phone"></i>
+                        +92 301 3127332
+                    </a>
+                    <a href="get-quote.html" class="btn btn--primary btn--small">Get Quote</a>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <span class="nav__toggle-line"></span>
+                    <span class="nav__toggle-line"></span>
+                    <span class="nav__toggle-line"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="container">
+            <nav class="breadcrumb__nav">
+                <a href="index.html">Home</a>
+                <span class="breadcrumb__separator">/</span>
+                <a href="services.html">Services</a>
+                <span class="breadcrumb__separator">/</span>
+                <span class="breadcrumb__current">Loading & Unloading</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Service Hero -->
+    <section class="service-hero">
+        <div class="service-hero__container">
+            <div class="service-hero__content">
+                <div class="service-hero__icon">
+                    <i class="fas fa-dolly"></i>
+                </div>
+                <h1 class="service-hero__title">Professional Loading & Unloading Services</h1>
+                <p class="service-hero__description">
+                    Our expert loading and unloading teams ensure your goods are handled safely and efficiently. 
+                    Whether you're moving locally or need assistance with a large shipment, our trained professionals 
+                    use proper equipment and techniques to protect your valuable items.
+                </p>
+                <div class="service-hero__features">
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Trained Specialists</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Proper Equipment</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Damage Prevention</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Hourly Rates</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>24/7 Availability</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Insurance Coverage</span>
+                    </div>
+                </div>
+                <div class="service-hero__cta">
+                    <a href="get-quote.html" class="btn btn--primary btn--hero">
+                        <i class="fas fa-calculator"></i>
+                        Get Free Quote
+                    </a>
+                    <a href="tel:+923013127332" class="btn btn--secondary btn--hero">
+                        <i class="fas fa-phone"></i>
+                        Call Now
+                    </a>
+                </div>
+            </div>
+            <div class="service-hero__image">
+                <img src="https://images.unsplash.com/photo-1590698933947-a202b069a861?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Professional loading and unloading services">
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Details -->
+    <section class="service-details">
+        <div class="service-details__container">
+            <div class="service-details__main">
+                <h2>Comprehensive Loading & Unloading Solutions</h2>
+                <p>
+                    Our professional loading and unloading services are designed to provide you with expert assistance 
+                    when you need it most. Whether you're handling your own move and just need help with the heavy lifting, 
+                    or you require professional loading for commercial shipments, our team is equipped to handle all types 
+                    of items with care and efficiency.
+                </p>
+                <p>
+                    We understand that proper loading techniques can make all the difference in preventing damage during 
+                    transport. Our specialists are trained in weight distribution, securing methods, and proper handling 
+                    techniques to ensure your goods arrive at their destination in perfect condition.
+                </p>
+                
+                <h3>Our Loading & Unloading Services</h3>
+                <div class="loading-services-grid">
+                    <div class="loading-service">
+                        <div class="loading-service__icon">
+                            <i class="fas fa-arrow-up"></i>
+                        </div>
+                        <h3>Loading Services</h3>
+                        <p>
+                            Professional loading of your pre-packed items into trucks, containers, or storage units 
+                            with proper placement and securing techniques.
+                        </p>
+                        <ul>
+                            <li>Proper weight distribution</li>
+                            <li>Securing with straps and ties</li>
+                            <li>Fragile item protection</li>
+                            <li>Space optimization</li>
+                            <li>Inventory management</li>
+                        </ul>
+                    </div>
+                    <div class="loading-service">
+                        <div class="loading-service__icon">
+                            <i class="fas fa-arrow-down"></i>
+                        </div>
+                        <h3>Unloading Services</h3>
+                        <p>
+                            Careful unloading of your belongings from trucks or containers and placement in your 
+                            desired location according to your instructions.
+                        </p>
+                        <ul>
+                            <li>Careful handling and removal</li>
+                            <li>Room-by-room placement</li>
+                            <li>Damage inspection</li>
+                            <li>Assembly assistance</li>
+                            <li>Debris removal</li>
+                        </ul>
+                    </div>
+                    <div class="loading-service">
+                        <div class="loading-service__icon">
+                            <i class="fas fa-exchange-alt"></i>
+                        </div>
+                        <h3>Complete Loading & Unloading</h3>
+                        <p>
+                            Full-service package for your DIY move, providing professional help at both origin and 
+                            destination locations.
+                        </p>
+                        <ul>
+                            <li>Full loading at origin</li>
+                            <li>Complete unloading at destination</li>
+                            <li>Consistent professional team</li>
+                            <li>Package pricing available</li>
+                            <li>End-to-end coordination</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>Equipment We Provide</h3>
+                <p>
+                    Our teams arrive fully equipped with all the necessary tools to handle your loading and unloading 
+                    needs safely and efficiently. We maintain our equipment to the highest standards to ensure reliability 
+                    and safety on every job.
+                </p>
+                <div class="equipment-grid">
+                    <div class="equipment-item">
+                        <i class="fas fa-dolly"></i>
+                        <h4>Moving Dollies</h4>
+                        <p>Professional dollies for moving heavy furniture and appliances safely.</p>
+                    </div>
+                    <div class="equipment-item">
+                        <i class="fas fa-rope"></i>
+                        <h4>Straps & Ties</h4>
+                        <p>Heavy-duty straps and ties to secure items during transportation.</p>
+                    </div>
+                    <div class="equipment-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <h4>Protective Blankets</h4>
+                        <p>Furniture blankets and padding to protect items from scratches and damage.</p>
+                    </div>
+                    <div class="equipment-item">
+                        <i class="fas fa-hard-hat"></i>
+                        <h4>Safety Equipment</h4>
+                        <p>Safety gear including gloves, back supports, and protective clothing.</p>
+                    </div>
+                    <div class="equipment-item">
+                        <i class="fas fa-tools"></i>
+                        <h4>Basic Tools</h4>
+                        <p>Screwdrivers, wrenches, and other tools for basic disassembly if needed.</p>
+                    </div>
+                    <div class="equipment-item">
+                        <i class="fas fa-boxes"></i>
+                        <h4>Moving Boxes</h4>
+                        <p>Available for last-minute packing needs (additional charges may apply).</p>
+                    </div>
+                </div>
+
+                <h3>Our Loading Process</h3>
+                <p>
+                    We follow a systematic approach to ensure your items are loaded safely and efficiently. Our process 
+                    is designed to maximize space utilization while minimizing the risk of damage during transit.
+                </p>
+                <div class="process-steps">
+                    <div class="process-step">
+                        <h3>Assessment</h3>
+                        <p>We assess your items and vehicle/container to plan the most efficient loading strategy.</p>
+                    </div>
+                    <div class="process-step">
+                        <h3>Preparation</h3>
+                        <p>Equipment setup and protective materials preparation before we begin loading.</p>
+                    </div>
+                    <div class="process-step">
+                        <h3>Loading</h3>
+                        <p>Systematic loading with proper weight distribution and securing of all items.</p>
+                    </div>
+                    <div class="process-step">
+                        <h3>Securing</h3>
+                        <p>Final securing with straps and ties to ensure everything stays in place during transport.</p>
+                    </div>
+                </div>
+
+                <h3>Benefits of Professional Loading & Unloading</h3>
+                <p>
+                    Hiring professional loading and unloading services offers numerous advantages over attempting to 
+                    handle everything yourself. Our expertise and equipment can save you time, prevent injuries, and 
+                    protect your valuable possessions.
+                </p>
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <h3>Injury Prevention</h3>
+                        <p>Avoid back injuries and strains by letting our trained professionals handle the heavy lifting.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>Time Efficiency</h3>
+                        <p>Professional team completes loading and unloading much faster than DIY efforts.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Damage Prevention</h3>
+                        <p>Proper techniques and equipment minimize risk of damage to your belongings.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-puzzle-piece"></i>
+                        </div>
+                        <h3>Space Optimization</h3>
+                        <p>Professional loading maximizes truck space utilization for more efficient transport.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3>Proper Equipment</h3>
+                        <p>Access to professional moving equipment without the need to rent or purchase.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <h3>Cost Effective</h3>
+                        <p>Affordable hourly rates make professional help accessible for budget-conscious moves.</p>
+                    </div>
+                </div>
+
+                 <!-- FAQs -->
+    <section class="service-faqs">
+        <div class="container">
+            <h2 class="section-title">Long Distance Shipping FAQs</h2>
+            <div class="faqs-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How long does long distance shipping typically take?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Transit time varies by distance and service level. For example, Lahore to Karachi typically takes 2-3 days with standard service or 1-2 days with express service. Shorter distances like Lahore to Islamabad usually take 1 day. We provide accurate estimated delivery dates when you book your shipment.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I track my shipment during transit?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, all our long distance shipments are equipped with GPS tracking. You can monitor your shipment's progress in real-time through our customer portal or mobile app. We also provide regular updates via email or SMS at key milestones during the journey.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What if the recipient isn't available for delivery?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We offer several options for delivery attempts. Our driver will attempt delivery at the scheduled time. If no one is available, we can: 1) Leave the shipment in a secure location if authorized, 2) Attempt delivery again the next business day, or 3) Hold the shipment at our local facility for pickup. Additional fees may apply for multiple delivery attempts.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do you handle delays due to weather or other issues?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We monitor weather and road conditions continuously. If delays are anticipated, we'll notify you immediately and work to minimize the impact. Our drivers are trained to handle various conditions safely, and we have contingency plans including alternate routes and backup vehicles when needed. Your shipment's safety is our top priority.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What insurance options are available for long distance shipments?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>All shipments include basic coverage up to a specified amount per pound. We offer additional insurance options for valuable items including full-value protection and specialized coverage for fragile or high-value goods. Our team can help you determine the appropriate level of coverage for your specific shipment.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can you ship oversized or heavy items long distance?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we specialize in handling oversized, heavy, or awkwardly shaped items. Our fleet includes vehicles equipped with liftgates, ramps, and other specialized equipment to safely transport large items. We'll assess your specific requirements and assign the appropriate vehicle and handling team to ensure safe transport.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+            <div class="service-details__sidebar">
+                <div class="service-info-card">
+                    <h3>Service Options</h3>
+                    <ul class="service-highlights">
+                        <li><i class="fas fa-upload"></i> Loading only</li>
+                        <li><i class="fas fa-download"></i> Unloading only</li>
+                        <li><i class="fas fa-exchange-alt"></i> Loading & unloading</li>
+                        <li><i class="fas fa-clock"></i> Hourly rate options</li>
+                        <li><i class="fas fa-calendar"></i> Same-day availability</li>
+                        <li><i class="fas fa-weekend"></i> Weekend service</li>
+                        <li><i class="fas fa-users"></i> 2-4 person teams</li>
+                        <li><i class="fas fa-shield-alt"></i> Insurance coverage</li>
+                    </ul>
+                </div>
+
+                <div class="service-info-card">
+                    <h3>Get a Quote</h3>
+                    <p>
+                        Receive a customized quote for your loading and unloading needs based on your specific 
+                        requirements and inventory.
+                    </p>
+                    <a href="get-quote.html" class="btn btn--primary btn--full">Get Free Quote</a>
+                </div>
+
+                <div class="service-info-card">
+                    <h3>Immediate Assistance</h3>
+                    <p>
+                        Need loading help today? Call us to check availability for same-day service in your area.
+                    </p>
+                    <a href="tel:+923013127332" class="btn btn--secondary btn--full">
+                        <i class="fas fa-phone"></i> +92 301 3127332
+                    </a>
+                </div>
+
+                <div class="service-info-card">
+                    <h3>Service Areas</h3>
+                    <ul class="service-highlights">
+                        <li><i class="fas fa-map-marker-alt"></i> Karachi</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Lahore</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Islamabad</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Rawalpindi</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Faisalabad</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Peshawar</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Multan</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Nationwide</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Services -->
+    <section class="service-details" style="background-color: var(--light-color);">
+        <div class="service-details__container">
+            <div class="service-details__main">
+                <h2>Related Services</h2>
+                <p>
+                    Explore our other professional services that complement our loading and unloading solutions. 
+                    We offer comprehensive logistics services to meet all your transportation and moving needs.
+                </p>
+                <div class="related-services-grid">
+                    <div class="related-service">
+                        <div class="related-service__icon">
+                            <i class="fas fa-box"></i>
+                        </div>
+                        <h3>Packing Services</h3>
+                        <p>
+                            Professional packing to prepare your items for loading and transport with maximum protection.
+                        </p>
+                        <a href="packing-services.html" class="btn btn--outline">Learn More</a>
+                    </div>
+                    <div class="related-service">
+                        <div class="related-service__icon">
+                            <i class="fas fa-couch"></i>
+                        </div>
+                        <h3>Furniture Moving</h3>
+                        <p>
+                            Specialized furniture moving with loading and transport included for complete convenience.
+                        </p>
+                        <a href="furniture-moving.html" class="btn btn--outline">Learn More</a>
+                    </div>
+                    <div class="related-service">
+                        <div class="related-service__icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3>Home Relocation</h3>
+                        <p>
+                            Complete moving service including loading, transport, and unloading for stress-free relocation.
+                        </p>
+                        <a href="home-relocation.html" class="btn btn--outline">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2 class="cta-title">Ready for Professional Loading Assistance?</h2>
+            <p class="cta-description">
+                Get a personalized quote today and experience the Jiffy Logistics difference in loading and unloading services.
+            </p>
+            <div class="cta-actions">
+                <a href="get-quote.html" class="btn btn--cta btn--cta-primary">
+                    <i class="fas fa-calculator"></i>
+                    Get Free Quote
+                </a>
+                <a href="tel:+923013127332" class="btn btn--cta btn--cta-secondary">
+                    <i class="fas fa-phone"></i>
+                    Call +92 301 3127332
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer jiffy-footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <div class="footer__logo">
+                        <i class="fas fa-truck-fast"></i>
+                        <span>Jiffy Logistics</span>
+                    </div>
+                    <p class="footer__description">
+                        Pakistan's leading logistics provider offering reliable, secure, and timely transportation 
+                        solutions nationwide since 2010.
+                    </p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="footer__social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="footer__social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://wa.me/923013127332" class="footer__social-link"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="footer__social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer__section">
+                    <h3 class="footer__title">Quick Links</h3>
+                    <ul class="footer__links">
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="tracking.html"><i class="fas fa-chevron-right"></i> Tracking</a></li>
+                        <li><a href="testimonials.html"><i class="fas fa-chevron-right"></i> Reviews</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__section">
+                    <h3 class="footer__title">Services</h3>
+                    <ul class="footer__links">
+                        <li><a href="services/local-delivery.html"><i class="fas fa-chevron-right"></i> Local Delivery</a></li>
+                        <li><a href="services/national-shipping.html"><i class="fas fa-chevron-right"></i> National Shipping</a></li>
+                        <li><a href="services/warehousing.html"><i class="fas fa-chevron-right"></i> Warehousing</a></li>
+                        <li><a href="services/supply-chain.html"><i class="fas fa-chevron-right"></i> Supply Chain</a></li>
+                        <li><a href="services/cold-chain.html"><i class="fas fa-chevron-right"></i> Cold Chain Logistics</a></li>
+                        <li><a href="services/loading-unloading.html"><i class="fas fa-chevron-right"></i> Loading & Unloading</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__section">
+                    <h3 class="footer__title">Contact Info</h3>
+                    <div class="footer__contact">
+                        <div class="footer__contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="footer__contact-text">
+                                <strong>Head Office:</strong> 123 Logistics Plaza, Main Boulevard, Lahore, Pakistan
+                            </div>
+                        </div>
+                        <div class="footer__contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div class="footer__contact-text">
+                                <strong>Phone:</strong> +92 301 3127332
+                            </div>
+                        </div>
+                        <div class="footer__contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div class="footer__contact-text">
+                                <strong>Email:</strong> info@jiffylogistics.pk
+                            </div>
+                        </div>
+                        <div class="footer__contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div class="footer__contact-text">
+                                <strong>Hours:</strong> Mon-Sat: 8AM - 8PM
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <div class="footer__bottom-content">
+                    <p class="footer__copyright">
+                        © 2024 Jiffy Logistics. All rights reserved.
+                    </p>
+                    <div class="footer__legal">
+                        <a href="terms.html">Terms of Service</a>
+                        <a href="privacy.html">Privacy Policy</a>
+                        <a href="sitemap.html">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/923013127332" target="_blank" class="whatsapp-float__btn">
+            <i class="fab fa-whatsapp"></i>
+            <span>Chat Now</span>
+        </a>
+    </div>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script>
+        // Mobile Navigation Toggle
+        const navToggle = document.getElementById('nav-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+            navToggle.classList.toggle('active');
+        });
+        
+        // Dropdown for mobile
+        const dropdownItems = document.querySelectorAll('.nav__item--dropdown');
+        
+        dropdownItems.forEach(item => {
+            const link = item.querySelector('.nav__link');
+            
+            link.addEventListener('click', (e) => {
+                if (window.innerWidth <= 992) {
+                    e.preventDefault();
+                    item.classList.toggle('active');
+                }
+            });
+        });
+        
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                item.classList.toggle('active');
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.jiffy-header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+
+            // Back to top button
+// Back to top button
+    const backToTop = document.getElementById('back-to-top');
+    if (window.scrollY > 300) {
+        backToTop.classList.add('visible');
+    } else {
+        backToTop.classList.remove('visible');
+    }
+});
+
+const backToTop = document.getElementById('back-to-top');
+backToTop.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        // Update the dropdown click handler to this:
+dropdownItems.forEach(item => {
+    const link = item.querySelector('.nav__link');
+    const toggle = item.querySelector('.dropdown-toggle');
+    
+    // Create dropdown toggle if it doesn't exist
+    if (!toggle) {
+        const chevron = document.createElement('i');
+        chevron.className = 'fas fa-chevron-down dropdown-toggle';
+        link.appendChild(chevron);
+    }
+    
+    item.querySelector('.dropdown-toggle').addEventListener('click', (e) => {
+        if (window.innerWidth <= 992) {
+            e.preventDefault();
+            e.stopPropagation();
+            item.classList.toggle('active');
+        }
+    });
+    
+    link.addEventListener('click', (e) => {
+        if (window.innerWidth <= 992 && e.target !== item.querySelector('.dropdown-toggle')) {
+            // Allow normal navigation if not clicking the toggle
+            if (!item.classList.contains('active')) {
+                return;
+            }
+            e.preventDefault();
+            item.classList.remove('active');
+            window.location.href = link.getAttribute('href');
+        }
+    });
+});
+    </script>
+</body>
+</html>

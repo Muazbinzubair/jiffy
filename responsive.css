@@ -1,0 +1,98 @@
+/* Mobile-specific optimizations */
+@media (max-width: 767px) {
+  /* Typography adjustments */
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.75rem; }
+  h3 { font-size: 1.5rem; }
+  
+  /* Section padding */
+  section {
+    padding: 2.5rem 0;
+  }
+  
+  /* Service cards */
+  .service-card {
+    padding: 1.5rem;
+  }
+  
+  /* Testimonial author layout */
+  .testimonial__author {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .testimonial__info {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  /* FAQ items */
+  .faq-item {
+    margin-bottom: 0.75rem;
+  }
+  
+  /* Form elements */
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Navigation enhancements */
+  .nav__logo a {
+    font-size: 1.25rem;
+  }
+  
+  .nav__logo i {
+    font-size: 1.5rem;
+  }
+  
+  /* WhatsApp button */
+  .whatsapp-float {
+    bottom: 15px;
+    right: 15px;
+  }
+  
+  .whatsapp-float__btn {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.9rem;
+  }
+  
+  .whatsapp-float__btn span {
+    display: none;
+  }
+  
+  /* Back to top button */
+  .back-to-top {
+    bottom: 80px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+}
+
+/* Tablet-specific adjustments */
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Typography */
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 2rem; }
+  
+  /* Section padding */
+  section {
+    padding: 3rem 0;
+  }
+  
+  /* Service cards */
+  .service-card {
+    padding: 1.75rem;
+  }
+  
+  /* Testimonial slider */
+  .testimonials-slider {
+    padding: 1rem;
+  }
+  
+  /* Navigation */
+  .nav__logo a {
+    font-size: 1.3rem;
+  }
+}

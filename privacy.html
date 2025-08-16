@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Jiffy Logistics | Premium Logistics & Supply Chain Solutions</title>
+    <meta name="description" content="Jiffy Logistics privacy policy outlines how we collect, use, and protect your personal information when using our logistics services or website. Learn about your privacy rights.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+
+    <style>
+        /* Modern Color Scheme */
+        :root {
+            --primary-color: #000000;
+            --primary-dark: #113f5a;
+            --primary-light: #3498DB;
+            --secondary-color: #0f275e6c;
+            --secondary-light: #EC7063;
+            --accent-color: #F39C12;
+            --accent-dark: #D35400;
+            --light-color: #ECF0F1;
+            --dark-color: #2C3E50;
+            --text-color: #647C95;
+            --text-light:#113f5a;
+            --success-color: #27AE60;
+            --warning-color: #F1C40F;
+            --danger-color: #E74C3C;
+            --border-color: #BDC3C7;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 25px rgba(0,0,0,0.1);
+            --shadow-xl: 0 20px 40px rgba(0,0,0,0.15);
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --border-radius: 8px;
+            --border-radius-lg: 12px;
+            --border-radius-xl: 16px;
+        }
+
+        /* Header Styles */
+        .jiffy-header {
+            background-color: #1b355c;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+        }
+
+        .jiffy-header.scrolled {
+            background-color: rgba(44, 62, 80, 0.98);
+            backdrop-filter: blur(10px);
+        }
+
+        .nav__logo a {
+            color: white;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .nav__logo i {
+            color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .nav__logo:hover i {
+            transform: rotate(15deg);
+        }
+
+        .nav__link {
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 500;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav__link::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .nav__link:hover::before,
+        .nav__link--active::before {
+            width: 100%;
+        }
+
+        .nav__link:hover,
+        .nav__link--active {
+            color: white;
+        }
+
+        .nav__phone {
+            color: white;
+            transition: var(--transition);
+        }
+
+        .nav__phone:hover {
+            color: rgb(0, 122, 230);
+        }
+
+        .nav__phone i {
+            color: inherit;
+        }
+
+        /* Hero Section for Privacy Page */
+        .privacy-hero {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-dark) 100%);
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+            color: white;
+        }
+
+        .privacy-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+            opacity: 0.15;
+            z-index: 0;
+        }
+
+        .privacy-hero__content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .privacy-hero__title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            color: white;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .privacy-hero__title--highlight {
+            color: var(--primary-color);
+            display: inline-block;
+            position: relative;
+        }
+
+        .privacy-hero__title--highlight::after {
+            content: '';
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            right: 0;
+            height: 8px;
+            background-color: white;
+            z-index: -1;
+            transform: skewX(-15deg);
+        }
+
+        .privacy-hero__description {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .privacy-hero__breadcrumb {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .privacy-hero__breadcrumb a {
+            color: white;
+            transition: var(--transition);
+        }
+
+        .privacy-hero__breadcrumb a:hover {
+            color: var(--primary-color);
+        }
+
+        .privacy-hero__breadcrumb .separator {
+            margin: 0 0.5rem;
+        }
+
+        /* Privacy Content Styles */
+        .privacy-content {
+            padding: 4rem 0;
+            background-color: white;
+        }
+
+        .privacy-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .privacy-wrapper {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 3rem;
+        }
+
+        .privacy-main {
+            background: white;
+            padding: 3rem;
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color);
+        }
+
+        .privacy-toc {
+            background: rgba(52, 152, 219, 0.05);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 3rem;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .privacy-toc h3 {
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            position: relative;
+            padding-bottom: 0.75rem;
+        }
+
+        .privacy-toc h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+        }
+
+        .privacy-toc ul {
+            columns: 2;
+            padding-left: 1.5rem;
+            margin: 0;
+        }
+
+        .privacy-toc li {
+            margin-bottom: 0.75rem;
+            break-inside: avoid;
+        }
+
+        .privacy-toc a {
+            color: var(--primary-color);
+            font-weight: 500;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .privacy-toc a:hover {
+            color: var(--primary-dark);
+            transform: translateX(5px);
+        }
+
+        .privacy-toc a i {
+            font-size: 0.8rem;
+        }
+
+        .privacy-section h2 {
+            color: var(--secondary-color);
+            font-size: 1.75rem;
+            margin: 3rem 0 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid rgba(52, 152, 219, 0.2);
+            position: relative;
+        }
+
+        .privacy-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+        }
+
+        .privacy-section h3 {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            margin: 2rem 0 1rem;
+        }
+
+        .privacy-section p {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .privacy-section ul, 
+        .privacy-section ol {
+            margin-bottom: 2rem;
+            padding-left: 1.5rem;
+        }
+
+        .privacy-section li {
+            margin-bottom: 0.75rem;
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        .privacy-section strong {
+            color: var(--secondary-color);
+            font-weight: 600;
+        }
+
+        .privacy-note {
+            background: rgba(52, 152, 219, 0.1);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--primary-color);
+            margin: 2rem 0;
+        }
+
+        .privacy-note i {
+            color: var(--primary-color);
+            margin-right: 0.5rem;
+        }
+
+        .privacy-update {
+            background: rgba(243, 156, 18, 0.1);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--accent-color);
+            margin: 2rem 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .privacy-update i {
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            margin-top: 0.2rem;
+        }
+
+        .privacy-update p {
+            margin: 0;
+        }
+
+        /* Privacy Sidebar */
+        .privacy-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .privacy-widget {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+
+        .privacy-widget:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .privacy-widget h3 {
+            color: var(--secondary-color);
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid rgba(52, 152, 219, 0.2);
+            position: relative;
+        }
+
+        .privacy-widget h3::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+        }
+
+        .privacy-widget ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        .privacy-widget li {
+            margin-bottom: 0.75rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px dashed var(--border-color);
+        }
+
+        .privacy-widget li:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .privacy-widget a {
+            color: var(--primary-color);
+            font-weight: 500;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .privacy-widget a:hover {
+            color: var(--primary-dark);
+            transform: translateX(5px);
+        }
+
+        .privacy-widget a i {
+            font-size: 0.8rem;
+        }
+
+        .privacy-contact .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .privacy-contact .contact-item i {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            margin-top: 0.25rem;
+        }
+
+        .privacy-contact .contact-text {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .privacy-contact .btn {
+            width: 100%;
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .privacy-wrapper {
+                grid-template-columns: 1fr;
+            }
+            
+            .privacy-hero__title {
+                font-size: 2.5rem;
+            }
+            
+            .privacy-toc ul {
+                columns: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .privacy-hero {
+                padding: 100px 0 60px;
+            }
+            
+            .privacy-hero__title {
+                font-size: 2rem;
+            }
+            
+            .privacy-main {
+                padding: 2rem;
+            }
+            
+            .privacy-section h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .privacy-hero {
+                padding: 80px 0 40px;
+            }
+            
+            .privacy-hero__title {
+                font-size: 1.75rem;
+            }
+            
+            .privacy-hero__description {
+                font-size: 1rem;
+            }
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Mobile Navigation Enhancements */
+@media (max-width: 992px) {
+    .nav__menu {
+        background-color: var(--secondary-color);
+        top: 70px;
+        padding: 1rem;
+        width: 100%;
+    }
+
+    .nav__list {
+        gap: 0.5rem;
+    }
+
+    .nav__link {
+        color: white;
+        padding: 1rem;
+        border-radius: var(--border-radius);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav__link:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .nav__item--dropdown .nav__link {
+        padding-right: 0.5rem;
+    }
+
+    .nav__dropdown {
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: var(--border-radius);
+        margin-top: 0.5rem;
+        padding: 0;
+        display: none;
+    }
+
+    .nav__item--dropdown.active .nav__dropdown {
+        display: block;
+    }
+
+    .nav__dropdown a {
+        color: white;
+        padding: 0.75rem 1.5rem;
+        display: block;
+    }
+
+    .nav__dropdown a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        padding-left: 1.75rem;
+    }
+
+    .dropdown-toggle {
+        padding: 0.5rem;
+        margin-left: auto;
+        transition: transform 0.3s ease;
+    }
+
+    .nav__item--dropdown.active .dropdown-toggle {
+        transform: rotate(180deg);
+    }
+
+    .nav__actions--mobile {
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .nav__actions--mobile .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Header height adjustment for mobile */
+.jiffy-header {
+    padding: 0.5rem 0;
+}
+
+.nav__toggle {
+    color: white;
+}
+
+.nav__toggle-line {
+    background-color: white;
+}
+
+/* Enhanced Mobile Dropdown Styles */
+@media (max-width: 992px) {
+    .nav__dropdown {
+        background-color: var(--primary-dark) !important;
+        border-radius: var(--border-radius) !important;
+        margin-top: 0.5rem !important;
+        padding: 0.5rem 0 !important;
+        box-shadow: var(--shadow-md) !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+    
+    .nav__dropdown a {
+        color: rgba(255, 255, 255, 0.9) !important;
+        padding: 0.75rem 1.5rem !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+    }
+    
+    .nav__dropdown a:hover {
+        background-color: rgba(255, 255, 255, 0.1) !important;
+        color: white !important;
+        padding-left: 1.75rem !important;
+    }
+    
+    .nav__dropdown li:last-child a {
+        border-bottom: none !important;
+    }
+    
+    .dropdown-toggle {
+        color: white !important;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+    }
+    
+    .nav__item--dropdown.active .dropdown-toggle {
+        background: rgba(255, 255, 255, 0.2);
+    }
+}
+
+/* Mobile Navigation Enhancements */
+@media (max-width: 992px) {
+    .nav__menu {
+        background-color: var(--secondary-color);
+        top: 70px;
+        padding: 1rem;
+        width: 100%;
+    }
+
+    .nav__list {
+        gap: 0.5rem;
+    }
+
+    .nav__link {
+        color: white;
+        padding: 1rem;
+        border-radius: var(--border-radius);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav__link:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .nav__item--dropdown .nav__link {
+        padding-right: 0.5rem;
+    }
+
+    .nav__dropdown {
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: var(--border-radius);
+        margin-top: 0.5rem;
+        padding: 0;
+        display: none;
+    }
+
+    .nav__item--dropdown.active .nav__dropdown {
+        display: block;
+    }
+
+    .nav__dropdown a {
+        color: white;
+        padding: 0.75rem 1.5rem;
+        display: block;
+    }
+
+    .nav__dropdown a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        padding-left: 1.75rem;
+    }
+
+    .dropdown-toggle {
+        padding: 0.5rem;
+        margin-left: auto;
+        transition: transform 0.3s ease;
+    }
+
+    .nav__item--dropdown.active .dropdown-toggle {
+        transform: rotate(180deg);
+    }
+
+    .nav__actions--mobile {
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .nav__actions--mobile .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Header height adjustment for mobile */
+.jiffy-header {
+    padding: 0.5rem 0;
+}
+
+.nav__toggle {
+    color: white;
+}
+
+.nav__toggle-line {
+    background-color: white;
+}
+
+/* Enhanced Mobile Dropdown Styles */
+@media (max-width: 992px) {
+    .nav__dropdown {
+        background-color: var(--primary-dark) !important;
+        border-radius: var(--border-radius) !important;
+        margin-top: 0.5rem !important;
+        padding: 0.5rem 0 !important;
+        box-shadow: var(--shadow-md) !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+    
+    .nav__dropdown a {
+        color: rgba(255, 255, 255, 0.9) !important;
+        padding: 0.75rem 1.5rem !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+    }
+    
+    .nav__dropdown a:hover {
+        background-color: rgba(255, 255, 255, 0.1) !important;
+        color: white !important;
+        padding-left: 1.75rem !important;
+    }
+    
+    .nav__dropdown li:last-child a {
+        border-bottom: none !important;
+    }
+    
+    .dropdown-toggle {
+        color: white !important;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+    }
+    
+    .nav__item--dropdown.active .dropdown-toggle {
+        background: rgba(255, 255, 255, 0.2);
+    }
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 90px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+    box-shadow: var(--shadow-md);
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Mobile version adjustments */
+@media (max-width: 768px) {
+    .back-to-top {
+        width: 45px;
+        height: 45px;
+        bottom: 70px;
+        right: 20px;
+        font-size: 1rem;
+    }
+}
+
+        .animate {
+            opacity: 0;
+            animation: fadeIn 0.8s ease forwards;
+        }
+
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        .delay-4 { animation-delay: 0.8s; }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header jiffy-header">
+        <nav class="nav">
+            <div class="nav__container">
+                <div class="nav__logo">
+                    <a href="index.html">
+                        <i class="fas fa-truck-fast"></i>
+                        <span>Jiffy Logistics</span>
+                    </a>
+                </div>
+                
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="index.html" class="nav__link">Home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="about.html" class="nav__link">About</a>
+                        </li>
+<!-- In your header section, update the dropdown part to this: -->
+<li class="nav__item nav__item--dropdown">
+    <a href="services.html" class="nav__link">
+        <span>Services</span>
+        <i class="fas fa-chevron-down dropdown-toggle"></i>
+    </a>
+    <ul class="nav__dropdown">
+        <li><a href="home-relocation.html">Home Relocation</a></li>
+        <li><a href="office-shifting.html">Office Shifting</a></li>
+        <li><a href="furniture-moving.html">Furniture & Appliance Moving</a></li>
+        <li><a href="packing-services.html">Packing Services</a></li>
+        <li><a href="long-distance.html">Long Distance Moves (City-to-City)</a></li>
+        <li><a href="storage.html">Storage & Warehousing</a></li>
+        <li><a href="loading-unloading.html">Loading & Unloading</a></li>
+        <li><a href="international.html">International Moving</a></li>
+    </ul>
+</li>
+                        <li class="nav__item">
+                            <a href="gallery.html" class="nav__link">Gallery</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="faqs.html" class="nav__link">FAQs</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="contact.html" class="nav__link">Contact</a>
+                        </li>
+                    </ul>
+                    
+                    <!-- Mobile Contact Buttons -->
+                    <div class="nav__actions nav__actions--mobile">
+                    </div>
+                </div>
+
+                <div class="nav__actions nav__actions--desktop">
+                    <a style="color: white;" href="tel:+923013127332" class="nav__phone">
+                        <i class="fas fa-phone"></i>
+                        +92 301 3127332
+                    </a>
+                    <a href="get-quote.html" class="btn btn--primary btn--small">Get Quote</a>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <span class="nav__toggle-line"></span>
+                    <span class="nav__toggle-line"></span>
+                    <span class="nav__toggle-line"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="privacy-hero">
+        <div class="privacy-hero__content animate">
+            <h1 class="privacy-hero__title">
+                Privacy <span class="privacy-hero__title--highlight">Policy</span>
+            </h1>
+            <p class="privacy-hero__description">
+                Your privacy is important to us. Learn how we collect, use, and protect your personal information.
+            </p>
+            <div class="privacy-hero__breadcrumb">
+                <a href="index.html">Home</a>
+                <span class="separator">/</span>
+                <span>Privacy Policy</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Privacy Content -->
+    <section class="privacy-content">
+        <div class="privacy-container">
+            <div class="privacy-wrapper">
+                <main class="privacy-main">
+                    <!-- Table of Contents -->
+                    <div class="privacy-toc animate">
+                        <h3>Table of Contents</h3>
+                        <ul>
+                            <li><a href="#introduction"><i class="fas fa-chevron-right"></i> 1. Introduction</a></li>
+                            <li><a href="#collect"><i class="fas fa-chevron-right"></i> 2. Information We Collect</a></li>
+                            <li><a href="#use"><i class="fas fa-chevron-right"></i> 3. How We Use Information</a></li>
+                            <li><a href="#sharing"><i class="fas fa-chevron-right"></i> 4. Information Sharing</a></li>
+                            <li><a href="#security"><i class="fas fa-chevron-right"></i> 5. Data Security</a></li>
+                            <li><a href="#retention"><i class="fas fa-chevron-right"></i> 6. Data Retention</a></li>
+                            <li><a href="#rights"><i class="fas fa-chevron-right"></i> 7. Your Rights</a></li>
+                            <li><a href="#cookies"><i class="fas fa-chevron-right"></i> 8. Cookies & Tracking</a></li>
+                            <li><a href="#third-party"><i class="fas fa-chevron-right"></i> 9. Third-Party Links</a></li>
+                            <li><a href="#children"><i class="fas fa-chevron-right"></i> 10. Children's Privacy</a></li>
+                            <li><a href="#changes"><i class="fas fa-chevron-right"></i> 11. Policy Changes</a></li>
+                            <li><a href="#contact"><i class="fas fa-chevron-right"></i> 12. Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Update Notification -->
+                    <div class="privacy-update animate delay-1">
+                        <i class="fas fa-info-circle"></i>
+                        <p><strong>Last Updated:</strong> January 1, 2024. We regularly review and update our privacy practices to ensure compliance with changing privacy laws and regulations.</p>
+                    </div>
+
+                    <!-- Privacy Sections -->
+                    <div class="privacy-section animate delay-2">
+                        <h2 id="introduction">1. Introduction</h2>
+                        <p>Jiffy Logistics ("we," "our," or "us") is committed to protecting your privacy and personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our logistics services or visit our website.</p>
+                        <p>By accessing or using our services, you agree to the collection and use of information in accordance with this policy. If you do not agree with our policies and practices, please do not use our services.</p>
+                        
+                        <div class="privacy-note">
+                            <i class="fas fa-lock"></i>
+                            <p><strong>Our Commitment:</strong> We are dedicated to maintaining the confidentiality and security of your personal information while providing premium logistics services across Pakistan.</p>
+                        </div>
+                    </div>
+
+                    <div class="privacy-section animate delay-2">
+                        <h2 id="collect">2. Information We Collect</h2>
+                        <p>We collect several types of information to provide and improve our services to you:</p>
+                        
+                        <h3>2.1 Personal Information</h3>
+                        <p>When you use our services, we may ask you to provide certain personally identifiable information that can be used to contact or identify you, including:</p>
+                        <ul>
+                            <li>Full name, contact details (email, phone number, address)</li>
+                            <li>Business information (company name, tax ID, etc.)</li>
+                            <li>Shipping details (pickup/delivery addresses, contact persons)</li>
+                            <li>Payment information (credit card details, billing address)</li>
+                            <li>Identification documents (for customs clearance when required)</li>
+                        </ul>
+                        
+                        <h3>2.2 Usage Data</h3>
+                        <p>We may automatically collect information about how you access and use our services ("Usage Data"), including:</p>
+                        <ul>
+                            <li>IP address, browser type and version</li>
+                            <li>Pages visited, time spent on pages, and navigation paths</li>
+                            <li>Device information and operating system</li>
+                            <li>Location data (for tracking shipments)</li>
+                        </ul>
+                        
+                        <h3>2.3 Tracking & Cookies</h3>
+                        <p>We use cookies and similar tracking technologies to track activity on our website and hold certain information to improve your experience.</p>
+                    </div>
+
+                    <div class="privacy-section animate delay-3">
+                        <h2 id="use">3. How We Use Information</h2>
+                        <p>We use the collected data for various purposes:</p>
+                        <ul>
+                            <li><strong>Service Delivery:</strong> To provide, maintain, and improve our logistics services</li>
+                            <li><strong>Customer Support:</strong> To respond to inquiries and provide assistance</li>
+                            <li><strong>Tracking & Updates:</strong> To monitor shipments and provide real-time updates</li>
+                            <li><strong>Payment Processing:</strong> To process transactions and prevent fraud</li>
+                            <li><strong>Analytics:</strong> To analyze usage patterns and improve our services</li>
+                            <li><strong>Marketing:</strong> To send promotional communications (with your consent)</li>
+                            <li><strong>Legal Compliance:</strong> To comply with applicable laws and regulations</li>
+                        </ul>
+                        
+                        <div class="privacy-note">
+                            <i class="fas fa-shield-alt"></i>
+                            <p><strong>Data Minimization:</strong> We only collect information that is necessary for the purposes outlined in this policy and retain it only as long as needed.</p>
+                        </div>
+                    </div>
+
+                    <div class="privacy-section animate delay-3">
+                        <h2 id="sharing">4. Information Sharing</h2>
+                        <p>We may share your personal information in the following situations:</p>
+                        
+                        <h3>4.1 Service Providers</h3>
+                        <p>We may employ third-party companies and individuals to facilitate our services ("Service Providers"), including:</p>
+                        <ul>
+                            <li>Payment processors</li>
+                            <li>Transportation partners</li>
+                            <li>Warehousing facilities</li>
+                            <li>IT service providers</li>
+                            <li>Marketing agencies</li>
+                        </ul>
+                        <p>These third parties have access to your information only to perform these tasks on our behalf and are obligated not to disclose or use it for any other purpose.</p>
+                        
+                        <h3>4.2 Business Transfers</h3>
+                        <p>If we are involved in a merger, acquisition, or asset sale, your personal information may be transferred as part of that transaction.</p>
+                        
+                        <h3>4.3 Legal Requirements</h3>
+                        <p>We may disclose your information when required by law or in response to valid requests by public authorities (e.g., court orders, government agencies).</p>
+                    </div>
+
+                    <div class="privacy-section animate delay-4">
+                        <h2 id="security">5. Data Security</h2>
+                        <p>We implement appropriate technical and organizational measures to protect your personal information, including:</p>
+                        <ul>
+                            <li>Encryption of sensitive data in transit and at rest</li>
+                            <li>Regular security assessments and penetration testing</li>
+                            <li>Access controls and authentication mechanisms</li>
+                            <li>Employee training on data protection</li>
+                            <li>Secure disposal of data when no longer needed</li>
+                        </ul>
+                        <p>While we strive to use commercially acceptable means to protect your information, no method of transmission over the Internet or electronic storage is 100% secure.</p>
+                        
+                        <div class="privacy-note">
+                            <i class="fas fa-user-shield"></i>
+                            <p><strong>Security Tip:</strong> Always protect your account credentials and notify us immediately of any unauthorized access to your account.</p>
+                        </div>
+                    </div>
+
+                    <div class="privacy-section animate delay-4">
+                        <h2 id="retention">6. Data Retention</h2>
+                        <p>We retain personal information only for as long as necessary to fulfill the purposes outlined in this policy, including:</p>
+                        <ul>
+                            <li>Active customer records: 5 years after last activity</li>
+                            <li>Financial transactions: 7 years for tax purposes</li>
+                            <li>Shipment records: 3 years for customer service</li>
+                            <li>Website analytics: 2 years</li>
+                        </ul>
+                        <p>After the retention period, we will securely delete or anonymize your information.</p>
+                    </div>
+
+                    <div class="privacy-section">
+                        <h2 id="rights">7. Your Rights</h2>
+                        <p>Depending on your jurisdiction, you may have certain rights regarding your personal information:</p>
+                        <ul>
+                            <li><strong>Access:</strong> Request a copy of your personal data</li>
+                            <li><strong>Correction:</strong> Request correction of inaccurate data</li>
+                            <li><strong>Deletion:</strong> Request deletion of your data under certain circumstances</li>
+                            <li><strong>Restriction:</strong> Request restriction of processing</li>
+                            <li><strong>Objection:</strong> Object to certain processing activities</li>
+                            <li><strong>Portability:</strong> Request transfer of your data to another service provider</li>
+                            <li><strong>Withdraw Consent:</strong> Withdraw previously given consent</li>
+                        </ul>
+                        <p>To exercise these rights, please contact us using the information in the "Contact Us" section.</p>
+                    </div>
+
+                    <div class="privacy-section">
+                        <h2 id="cookies">8. Cookies & Tracking</h2>
+                        <p>We use cookies and similar tracking technologies to enhance your experience:</p>
+                        
+                        <h3>8.1 Essential Cookies</h3>
+                        <p>Necessary for the website to function and cannot be switched off.</p>
+                        
+                        <h3>8.2 Performance Cookies</h3>
+                        <p>Help us understand how visitors interact with our website.</p>
+                        
+                        <h3>8.3 Functional Cookies</h3>
+                        <p>Enable enhanced functionality and personalization.</p>
+                        
+                        <h3>8.4 Targeting Cookies</h3>
+                        <p>Used to deliver relevant advertising (with your consent).</p>
+                        
+                        <p>You can manage your cookie preferences through your browser settings.</p>
+                    </div>
+
+                    <div class="privacy-section">
+                        <h2 id="third-party">9. Third-Party Links</h2>
+                        <p>Our website may contain links to third-party websites that are not operated by us. We strongly advise you to review the privacy policy of every site you visit.</p>
+                        <p>We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.</p>
+                    </div>
+
+                    <div class="privacy-section">
+                        <h2 id="children">10. Children's Privacy</h2>
+                        <p>Our services are not directed to individuals under 18 ("Children"). We do not knowingly collect personal information from children.</p>
+                        <p>If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact us.</p>
+                    </div>
+
+                    <div class="privacy-section">
+                        <h2 id="changes">11. Policy Changes</h2>
+                        <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new policy on this page and updating the "Last Updated" date.</p>
+                        <p>You are advised to review this policy periodically for any changes. Changes are effective when posted.</p>
+                    </div>
+
+                    <div class="privacy-section">
+                        <h2 id="contact">12. Contact Us</h2>
+                        <p>If you have any questions about this Privacy Policy, please contact us:</p>
+                        <ul>
+                            <li><strong>By email:</strong> privacy@jiffylogistics.pk</li>
+                            <li><strong>By phone:</strong> +92 301 3127332</li>
+                            <li><strong>By mail:</strong> 123 Logistics Plaza, Main Boulevard, Lahore, Pakistan</li>
+                        </ul>
+                        
+                        <div class="privacy-note">
+                            <i class="fas fa-headset"></i>
+                            <p><strong>Data Protection Officer:</strong> For privacy-specific concerns, you may contact our Data Protection Officer at dpo@jiffylogistics.pk</p>
+                        </div>
+                    </div>
+                </main>
+
+                <!-- Sidebar -->
+                <aside class="privacy-sidebar">
+                    <div class="privacy-widget animate delay-1">
+                        <h3>Quick Summary</h3>
+                        <ul>
+                            <li>We collect data to provide logistics services</li>
+                            <li>We don't sell your personal information</li>
+                            <li>We implement strong security measures</li>
+                            <li>You have rights over your data</li>
+                            <li>We comply with applicable laws</li>
+                        </ul>
+                    </div>
+
+                    <div class="privacy-widget privacy-contact animate delay-2">
+                        <h3>Contact Privacy Team</h3>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div class="contact-text">privacy@jiffylogistics.pk</div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div class="contact-text">+92 301 3127332</div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="contact-text">123 Logistics Plaza, Lahore, Pakistan</div>
+                        </div>
+                        <a href="contact.html" class="btn btn--primary">Contact Form</a>
+                    </div>
+
+                    <div class="privacy-widget animate delay-3">
+                        <h3>Your Rights</h3>
+                        <ul>
+                            <li><a href="#rights"><i class="fas fa-chevron-right"></i> Access your data</a></li>
+                            <li><a href="#rights"><i class="fas fa-chevron-right"></i> Correct inaccuracies</a></li>
+                            <li><a href="#rights"><i class="fas fa-chevron-right"></i> Request deletion</a></li>
+                            <li><a href="#rights"><i class="fas fa-chevron-right"></i> Object to processing</a></li>
+                            <li><a href="#rights"><i class="fas fa-chevron-right"></i> Data portability</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="privacy-widget animate delay-4">
+                        <h3>Related Documents</h3>
+                        <ul>
+                            <li><a href="terms.html"><i class="fas fa-chevron-right"></i> Terms of Service</a></li>
+                            <li><a href="cookies.html"><i class="fas fa-chevron-right"></i> Cookie Policy</a></li>
+                            <li><a href="data-protection.html"><i class="fas fa-chevron-right"></i> Data Protection</a></li>
+                            <li><a href="security.html"><i class="fas fa-chevron-right"></i> Security Policy</a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer jiffy-footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <div class="footer__logo">
+                        <i class="fas fa-truck-fast"></i>
+                        <span>Jiffy Logistics</span>
+                    </div>
+                    <p class="footer__description">
+                        Pakistan's leading logistics provider offering reliable, secure, and timely transportation solutions nationwide since 2010.
+                    </p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="footer__social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="footer__social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://wa.me/923013127332" class="footer__social-link"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="footer__social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer__section">
+                    <h3 class="footer__title">Quick Links</h3>
+                    <ul class="footer__links">
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="tracking.html"><i class="fas fa-chevron-right"></i> Tracking</a></li>
+                        <li><a href="testimonials.html"><i class="fas fa-chevron-right"></i> Reviews</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__section">
+                    <h3 class="footer__title">Services</h3>
+                    <ul class="footer__links">
+                        <li><a href="services/local-delivery.html"><i class="fas fa-chevron-right"></i> Local Delivery</a></li>
+                        <li><a href="services/national-shipping.html"><i class="fas fa-chevron-right"></i> National Shipping</a></li>
+                        <li><a href="services/warehousing.html"><i class="fas fa-chevron-right"></i> Warehousing</a></li>
+                        <li><a href="services/supply-chain.html"><i class="fas fa-chevron-right"></i> Supply Chain</a></li>
+                        <li><a href="services/cold-chain.html"><i class="fas fa-chevron-right"></i> Cold Chain Logistics</a></li>
+                        <li><a href="services/ecommerce-fulfillment.html"><i class="fas fa-chevron-right"></i> E-commerce Fulfillment</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__section">
+                    <h3 class="footer__title">Contact Info</h3>
+                    <div class="footer__contact">
+                        <div class="footer__contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="footer__contact-text">
+                                <strong>Head Office:</strong> 123 Logistics Plaza, Main Boulevard, Lahore, Pakistan
+                            </div>
+                        </div>
+                        <div class="footer__contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div class="footer__contact-text">
+                                <strong>Phone:</strong> +92 301 3127332
+                            </div>
+                        </div>
+                        <div class="footer__contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div class="footer__contact-text">
+                                <strong>Email:</strong> info@jiffylogistics.pk
+                            </div>
+                        </div>
+                        <div class="footer__contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div class="footer__contact-text">
+                                <strong>Hours:</strong> Mon-Sat: 8AM - 8PM
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <div class="footer__bottom-content">
+                    <p class="footer__copyright">
+                        © 2024 Jiffy Logistics. All rights reserved.
+                    </p>
+                    <div class="footer__legal">
+                        <a href="terms.html">Terms of Service</a>
+                        <a href="privacy.html">Privacy Policy</a>
+                        <a href="sitemap.html">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/923013127332" target="_blank" class="whatsapp-float__btn">
+            <i class="fab fa-whatsapp"></i>
+            <span>Chat Now</span>
+        </a>
+    </div>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script>
+        // Mobile Navigation Toggle
+        const navToggle = document.getElementById('nav-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+            navToggle.classList.toggle('active');
+        });
+        
+        // Dropdown for mobile
+        const dropdownItems = document.querySelectorAll('.nav__item--dropdown');
+        
+        dropdownItems.forEach(item => {
+            const link = item.querySelector('.nav__link');
+            
+            link.addEventListener('click', (e) => {
+                if (window.innerWidth <= 992) {
+                    e.preventDefault();
+                    item.classList.toggle('active');
+                }
+            });
+        });
+        
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.jiffy-header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+
+            // Back to top button
+            const backToTop = document.getElementById('back-to-top');
+            if (window.scrollY > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        // Back to top button click
+        document.getElementById('back-to-top').addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Animation on scroll
+        const animateElements = document.querySelectorAll('.animate');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        animateElements.forEach(el => {
+            observer.observe(el);
+        });
+        // Update the dropdown click handler to this:
+dropdownItems.forEach(item => {
+    const link = item.querySelector('.nav__link');
+    const toggle = item.querySelector('.dropdown-toggle');
+    
+    // Create dropdown toggle if it doesn't exist
+    if (!toggle) {
+        const chevron = document.createElement('i');
+        chevron.className = 'fas fa-chevron-down dropdown-toggle';
+        link.appendChild(chevron);
+    }
+    
+    item.querySelector('.dropdown-toggle').addEventListener('click', (e) => {
+        if (window.innerWidth <= 992) {
+            e.preventDefault();
+            e.stopPropagation();
+            item.classList.toggle('active');
+        }
+    });
+    
+    link.addEventListener('click', (e) => {
+        if (window.innerWidth <= 992 && e.target !== item.querySelector('.dropdown-toggle')) {
+            // Allow normal navigation if not clicking the toggle
+            if (!item.classList.contains('active')) {
+                return;
+            }
+            e.preventDefault();
+            item.classList.remove('active');
+            window.location.href = link.getAttribute('href');
+        }
+    });
+});
+    </script>
+</body>
+</html>

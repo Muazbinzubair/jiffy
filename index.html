@@ -1,0 +1,2279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jiffy Logistics - Premium Logistics & Supply Chain Solutions</title>
+    <meta name="description" content="Professional logistics and transportation services with nationwide coverage. Fast, reliable, and secure solutions for all your shipping needs.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+
+    <style>
+        /* Modern Color Scheme */
+/* Modern Color Scheme */
+:root {
+    --primary-color: #000000;
+    --primary-dark: #113f5a;
+    --primary-light: #3498DB;
+    --secondary-color: #0f275e6c;
+    --secondary-light: #EC7063;
+    --accent-color: #F39C12;
+    --accent-dark: #D35400;
+    --light-color: #ECF0F1;
+    --dark-color: #2C3E50;
+    --text-color: #647C95;
+    --text-light:#113f5a ;
+    --success-color: #27AE60;
+    --warning-color: #F1C40F;
+    --danger-color: #E74C3C;
+    --border-color: #BDC3C7;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
+    --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+    --shadow-lg: 0 10px 25px rgba(0,0,0,0.1);
+    --shadow-xl: 0 20px 40px rgba(0,0,0,0.15);
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    --border-radius: 8px;
+    --border-radius-lg: 12px;
+    --border-radius-xl: 16px;
+}
+
+    .nav__phone {
+    color: white; /* Change this to whatever color you want */
+    transition: var(--transition);
+}
+
+.nav__phone:hover {
+    color: rgb(0, 122, 230); /* Change this to whatever hover color you want */
+}
+
+.nav__phone i {
+    color: inherit; /* This will make the icon match the text color */
+}
+
+/* Improved Typography */
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-dark) 100%);
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--secondary-color);
+}
+
+h1 { font-size: 2.75rem; }
+h2 { font-size: 2.25rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1.125rem; }
+
+@media (min-width: 992px) {
+    h1 { font-size: 3.5rem; }
+    h2 { font-size: 2.75rem; }
+    h3 { font-size: 2rem; }
+}
+
+/* Enhanced Header */
+.jiffy-header {
+    background-color: var(--secondary-color);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+}
+
+.jiffy-header.scrolled {
+    background-color: rgba(44, 62, 80, 0.98);
+    backdrop-filter: blur(10px);
+}
+
+.nav__logo a {
+    color: white;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.nav__logo i {
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+.nav__logo:hover i {
+    transform: rotate(15deg);
+}
+
+.nav__link {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.nav__link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: var(--transition);
+}
+
+.nav__link:hover::before,
+.nav__link--active::before {
+    width: 100%;
+}
+
+.nav__link:hover,
+.nav__link--active {
+    color: white;
+}
+
+/* Hero Section Improvements */
+.jiffy-hero {
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-dark) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero__bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+    opacity: 0.15;
+    z-index: -1;
+}
+
+.hero__title {
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 2px 4px rgb(255, 255, 255);
+}
+
+.hero__title--highlight {
+    color: var(--primary-color);
+    display: inline-block;
+    position: relative;
+}
+
+.hero__title--highlight::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    right: 0;
+    height: 8px;
+    background-color: rgb(255, 255, 255);
+    z-index: -1;
+    transform: skewX(-15deg);
+}
+
+.hero__description {
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin-bottom: 2.5rem;
+    color: white;
+}
+
+.hero__cta {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.btn--hero {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+}
+
+.btn--hero:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+
+.hero__stats {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.hero__stat {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: var(--border-radius);
+    padding: 1rem 1.5rem;
+    text-align: center;
+    min-width: 120px;
+    transition: var(--transition);
+}
+
+.hero__stat:hover {
+    background: rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.hero__stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0.25rem;
+    display: block;
+}
+
+.hero__stat-label {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Tracking Widget Enhancements */
+.tracking-widget {
+    background: white;
+    border-radius: var(--border-radius-lg);
+    padding: 2rem;
+    box-shadow: var(--shadow-lg);
+    margin-top: -80px;
+    position: relative;
+    z-index: 10;
+    border: 1px solid var(--border-color);
+}
+
+.tracking-widget__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.tracking-widget__header h3 {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.tracking-widget__header i {
+    color: var(--primary-color);
+}
+
+.tracking-widget__form {
+    display: flex;
+    gap: 1rem;
+}
+
+.tracking-widget__input {
+    flex: 1;
+    padding: 1rem;
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.tracking-widget__input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.tracking-widget__btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 0 2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.tracking-widget__btn:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+/* Services Section Enhancements */
+.services-overview {
+    background-color: var(--light-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.services-overview::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(52, 152, 219, 0.285) 0%, rgba(255, 0, 0, 0) 70%);
+    z-index: 0;
+}
+
+.section-header {
+    position: relative;
+    z-index: 1;
+}
+
+.section-title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    border-radius: 2px;
+}
+
+.section-description {
+    font-size: 1.1rem;
+    color: white;
+    max-width: 700px;
+    margin: 0 auto 3rem;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.service-card {
+    background: white;
+    border-radius: var(--border-radius-lg);
+    padding: 2.5rem 2rem;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    border: 1px solid var(--border-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 0;
+    background: linear-gradient(to bottom, var(--primary-color), var(--accent-color));
+    transition: var(--transition);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-xl);
+}
+
+.service-card:hover::before {
+    height: 100%;
+}
+
+.service-card__icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+}
+
+.service-card:hover .service-card__icon {
+    transform: rotate(15deg) scale(1.1);
+}
+
+.service-card__title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+    transition: var(--transition);
+}
+
+.service-card:hover .service-card__title {
+    color: var(--primary-color);
+}
+
+.service-card__description {
+    margin-bottom: 1.5rem;
+    color: var(--text-light);
+}
+
+.service-card__link {
+    color: var(--primary-color);
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: var(--transition);
+}
+
+.service-card__link:hover {
+    color: var(--primary-dark);
+    gap: 1rem;
+}
+
+/* Service Highlights */
+.service-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 4rem 0;
+}
+
+.highlight-card {
+    background: white;
+    border-radius: var(--border-radius);
+    padding: 2rem 1.5rem;
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+    transition: var(--transition);
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.highlight-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-color);
+}
+
+.highlight-card__icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    color: white;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+}
+
+.highlight-card:hover .highlight-card__icon {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, var(--accent-color), var(--accent-dark));
+}
+
+.highlight-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: var(--secondary-color);
+}
+
+.highlight-card p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+    position: relative;
+    overflow: hidden;
+    background-color: #113f5a;
+}
+
+.why-choose-us::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(52, 152, 219, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+    z-index: 0;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.feature {
+    background: white;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    border: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-color);
+}
+
+.feature__icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 1.5rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    color: white;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+}
+
+.feature:hover .feature__icon {
+    transform: rotate(15deg) scale(1.1);
+    background: linear-gradient(135deg, var(--accent-color), var(--accent-dark));
+}
+
+.feature__title {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: var(--secondary-color);
+}
+
+.feature__description {
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+/* Stats Counter */
+.stats-counter {
+    background: linear-gradient(135deg, var(--secondary-color), var(--dark-color));
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.stats-counter::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(241, 196, 15, 0.2) 0%, rgba(255, 255, 255, 0) 70%);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.stat-item {
+    padding: 1.5rem;
+    position: relative;
+}
+
+.stat-item::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.stat-item:last-child::after {
+    display: none;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+/* Testimonials Section */
+.testimonials {
+    background-color: var(--light-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonials::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(52, 152, 219, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+    z-index: 0;
+}
+
+.testimonials-slider {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.testimonial {
+    display: none;
+    background: white;
+    border-radius: var(--border-radius-lg);
+    padding: 3rem;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.testimonial.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+.testimonial__content {
+    position: relative;
+}
+
+.testimonial__content::before {
+    content: '"';
+    position: absolute;
+    top: -30px;
+    left: -20px;
+    font-size: 5rem;
+    color: rgba(52, 152, 219, 0.1);
+    font-family: Georgia, serif;
+    line-height: 1;
+    z-index: 0;
+}
+
+.testimonial__rating {
+    display: flex;
+    justify-content: center;
+    gap: 0.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.testimonial__rating i {
+    color: var(--accent-color);
+    font-size: 1.25rem;
+}
+
+.testimonial__text {
+    font-size: 1.1rem;
+    font-style: italic;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+    position: relative;
+    z-index: 1;
+    line-height: 1.8;
+}
+
+.testimonial__author {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.testimonial__avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--primary-color);
+}
+
+.testimonial__avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.testimonial__info {
+    text-align: left;
+}
+
+.testimonial__name {
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+}
+
+.testimonial__location {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.testimonials-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.testimonials-btn {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.testimonials-btn:hover {
+    background-color: var(--primary-dark);
+    transform: scale(1.1);
+}
+
+.testimonials-cta {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* Partners Section - New */
+.partners-section {
+    padding: 4rem 0;
+    background-color: white;
+}
+
+.partners-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.partners-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    align-items: center;
+    justify-items: center;
+}
+
+.partner-logo {
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: var(--transition);
+    max-width: 120px;
+    max-height: 60px;
+    object-fit: contain;
+}
+
+.partner-logo:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* CTA Section */
+.jiffy-cta {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: white;
+    text-align: center;
+    padding: 5rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.jiffy-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.cta-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+.cta-description {
+    font-size: 1.25rem;
+    margin-bottom: 2.5rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.cta-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.btn--cta {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    min-width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.btn--cta:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn--cta-primary {
+    background-color: white;
+    color: var(--primary-color);
+}
+
+.btn--cta-primary:hover {
+    background-color: var(--light-color);
+    color: var(--primary-dark);
+}
+
+.btn--cta-secondary {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.btn--cta-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* FAQ Section - New */
+.faq-section {
+    background-color: var(--light-color);
+    padding: 4rem 0;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.faq-item {
+    background: white;
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+}
+
+.faq-question {
+    padding: 1.5rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: var(--transition);
+}
+
+.faq-question:hover {
+    color: var(--primary-color);
+}
+
+.faq-question i {
+    transition: var(--transition);
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    padding: 0 1.5rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    color: var(--text-light);
+}
+
+.faq-item.active .faq-answer {
+    padding: 0 1.5rem 1.5rem;
+    max-height: 500px;
+}
+
+/* Footer Enhancements */
+.jiffy-footer {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 4rem 0 1rem;
+    position: relative;
+}
+
+.jiffy-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+}
+
+.footer__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+}
+
+.footer__logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+.footer__logo i {
+    color: var(--primary-color);
+    font-size: 2rem;
+}
+
+.footer__description {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+.footer__social {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer__social-link {
+    width: 45px;
+    height: 45px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: var(--transition);
+    font-size: 1.1rem;
+}
+
+.footer__social-link:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.footer__title {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    color: white;
+    position: relative;
+    padding-bottom: 0.75rem;
+}
+
+.footer__title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+}
+
+.footer__links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer__links li {
+    margin-bottom: 0.75rem;
+}
+
+.footer__links a {
+    color: rgba(255, 255, 255, 0.8);
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer__links a:hover {
+    color: var(--primary-color);
+    padding-left: 5px;
+}
+
+.footer__links a i {
+    font-size: 0.8rem;
+    color: var(--primary-color);
+}
+
+.footer__contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer__contact-item i {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-top: 0.25rem;
+}
+
+.footer__contact-text {
+    line-height: 1.6;
+}
+
+.footer__bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 3rem;
+    padding-top: 2rem;
+}
+
+.footer__bottom-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .footer__bottom-content {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+}
+
+.footer__copyright {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+}
+
+.footer__legal {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer__legal a {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.footer__legal a:hover {
+    color: var(--primary-color);
+}
+
+/* WhatsApp Float Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+}
+
+.whatsapp-float__btn {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: #25d366;
+    color: white;
+    padding: 1rem 1.75rem;
+    border-radius: 50px;
+    box-shadow: var(--shadow-lg);
+    transition: var(--transition);
+    font-weight: 600;
+    text-decoration: none;
+    animation: pulse 2s infinite;
+}
+
+.whatsapp-float__btn:hover {
+    background-color: #128c7e;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.5);
+}
+
+.whatsapp-float__btn i {
+    font-size: 1.5rem;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+    z-index: 999;
+    box-shadow: var(--shadow-md);
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-3px);
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+.delay-4 { animation-delay: 0.8s; }
+.delay-5 { animation-delay: 1s; }
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .hero__title {
+        font-size: 2.75rem;
+    }
+    
+    .hero__cta {
+        flex-direction: column;
+    }
+    
+    .tracking-widget__form {
+        flex-direction: column;
+    }
+    
+    .tracking-widget__btn {
+        padding: 1rem;
+        justify-content: center;
+    }
+
+    .service-card {
+        padding: 2rem 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero__title {
+        font-size: 2.25rem;
+    }
+
+    .hero__description {
+        font-size: 1.1rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .section-description {
+        font-size: 1rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .stat-item:nth-child(2n)::after {
+        display: none;
+    }
+
+    .cta-title {
+        font-size: 2rem;
+    }
+
+    .cta-description {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero__title {
+        font-size: 2rem;
+    }
+
+    .hero__stats {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .hero__stat {
+        width: 100%;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-item::after {
+        display: none;
+    }
+
+    .testimonial {
+        padding: 2rem 1.5rem;
+    }
+
+    .testimonial__author {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .testimonial__info {
+        text-align: center;
+    }
+}
+/* Mobile Navigation Enhancements */
+@media (max-width: 992px) {
+    .nav__menu {
+        background-color: var(--secondary-color);
+        top: 70px;
+        padding: 1rem;
+        width: 100%;
+    }
+
+    .nav__list {
+        gap: 0.5rem;
+    }
+
+    .nav__link {
+        color: white;
+        padding: 1rem;
+        border-radius: var(--border-radius);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav__link:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .nav__item--dropdown .nav__link {
+        padding-right: 0.5rem;
+    }
+
+    .nav__dropdown {
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: var(--border-radius);
+        margin-top: 0.5rem;
+        padding: 0;
+        display: none;
+    }
+
+    .nav__item--dropdown.active .nav__dropdown {
+        display: block;
+    }
+
+    .nav__dropdown a {
+        color: white;
+        padding: 0.75rem 1.5rem;
+        display: block;
+    }
+
+    .nav__dropdown a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        padding-left: 1.75rem;
+    }
+
+    .dropdown-toggle {
+        padding: 0.5rem;
+        margin-left: auto;
+        transition: transform 0.3s ease;
+    }
+
+    .nav__item--dropdown.active .dropdown-toggle {
+        transform: rotate(180deg);
+    }
+
+    .nav__actions--mobile {
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .nav__actions--mobile .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+/* Enhanced Mobile Dropdown Styles */
+@media (max-width: 992px) {
+    .nav__dropdown {
+        background-color: var(--primary-dark) !important;
+        border-radius: var(--border-radius) !important;
+        margin-top: 0.5rem !important;
+        padding: 0.5rem 0 !important;
+        box-shadow: var(--shadow-md) !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+    
+    .nav__dropdown a {
+        color: rgba(255, 255, 255, 0.9) !important;
+        padding: 0.75rem 1.5rem !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+    }
+    
+    .nav__dropdown a:hover {
+        background-color: rgba(255, 255, 255, 0.1) !important;
+        color: white !important;
+        padding-left: 1.75rem !important;
+    }
+    
+    .nav__dropdown li:last-child a {
+        border-bottom: none !important;
+    }
+    
+    .dropdown-toggle {
+        color: white !important;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+    }
+    
+    .nav__item--dropdown.active .dropdown-toggle {
+        background: rgba(255, 255, 255, 0.2);
+    }
+}
+
+/* Header height adjustment for mobile */
+.jiffy-header {
+    padding: 0.5rem 0;
+}
+
+.nav__toggle {
+    color: white;
+}
+
+.nav__toggle-line {
+    background-color: white;
+}
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header jiffy-header">
+        <nav class="nav">
+            <div class="nav__container">
+                <div class="nav__logo">
+                    <a href="index.html">
+                        <i class="fas fa-truck-fast"></i>
+                        <span>Jiffy Logistics</span>
+                    </a>
+                </div>
+                
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="index.html" class="nav__link nav__link--active">Home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="about.html" class="nav__link">About</a>
+                        </li>
+                        <li class="nav__item nav__item--dropdown">
+                            <a href="services.html" class="nav__link">
+                                Services</i>
+                            </a>
+                            <ul class="nav__dropdown">
+                                <li><a href="home-relocation.html">Home Relocation</a></li>
+                                <li><a href="office-shifting.html">Office Shifting</a></li>
+                                <li><a href="furniture-moving.html">Furniture & Appliance Moving</a></li>
+                                <li><a href="packing-services.html">Packing Services</a></li>
+                                <li><a href="long-distance.html">Long Distance Moves (City-to-City)</a></li>
+                                <li><a href="storage.html">Storage & Warehousing</a></li>
+                                <li><a href="loading-unloading.html">Loading & Unloading</a></li>
+                                <li><a href="international.html">International Moving</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav__item">
+                            <a href="gallery.html" class="nav__link">Gallery</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="faqs.html" class="nav__link">FAQs</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="contact.html" class="nav__link">Contact</a>
+                        </li>
+                    </ul>
+                    
+                    <!-- Mobile Contact Buttons -->
+                    <div class="nav__actions nav__actions--mobile">
+                    </div>
+                </div>
+
+                <div class="nav__actions nav__actions--desktop">
+                    <a href="tel:+923013127332" class="nav__phone">
+                        <i class="fas fa-phone"></i>
+                        +92 301 3127332
+                    </a>
+                    <a href="get-quote.html" class="btn btn--primary btn--small">Get Quote</a>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <span class="nav__toggle-line"></span>
+                    <span class="nav__toggle-line"></span>
+                    <span class="nav__toggle-line"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero jiffy-hero">
+        <div class="hero__bg">
+            <div class="hero__overlay"></div>
+        </div>
+        <div class="hero__container">
+            <div class="hero__content animate">
+                <h1 style="color: white;" class="hero__title">
+                    Premium Logistics Solutions <span class="hero__title--highlight">Across Pakistan</span>
+                </h1>
+                <div class="hero__cta">
+                    <a href="get-quote.html" class="btn btn--primary btn--hero delay-1">
+                        <i class="fas fa-calculator"></i>
+                        Get Free Quote
+                    </a>
+                    <a href="tel:+923013127332" class="btn btn--secondary btn--hero delay-2">
+                        <i class="fas fa-phone"></i>
+                        Call Now
+                    </a>
+                </div>
+                <div class="hero__stats delay-3">
+                    <div class="hero__stat">
+                        <span class="hero__stat-number">10+</span>
+                        <span class="hero__stat-label">Years Experience</span>
+                    </div>
+                    <div class="hero__stat">
+                        <span class="hero__stat-number">5000+</span>
+                        <span class="hero__stat-label">Happy Clients</span>
+                    </div>
+                    <div class="hero__stat">
+                        <span class="hero__stat-number">50+</span>
+                        <span class="hero__stat-label">Cities Covered</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Services Overview -->
+    <section class="services-overview section">
+        <div class="container">
+            <div class="section-header animate">
+                <h2 style="color: #000000;" class="section-title">Comprehensive Logistics Solutions</h2>
+                <p  style="color:#113f5a ;" class="section-description">
+                    We offer a complete range of logistics services tailored to meet your specific transportation and supply chain needs.
+                </p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card animate delay-1">
+                    <div class="service-card__icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3 class="service-card__title">Local Delivery</h3>
+                    <p class="service-card__description">
+                        Fast and reliable same-day and next-day delivery services within your city with real-time tracking.
+                    </p>
+                    <a href="services/local-delivery.html" class="service-card__link">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="service-card animate delay-1">
+                    <div class="service-card__icon">
+                        <i class="fas fa-route"></i>
+                    </div>
+                    <h3 class="service-card__title">National Shipping</h3>
+                    <p class="service-card__description">
+                        Nationwide transportation services connecting all major cities with guaranteed delivery times.
+                    </p>
+                    <a href="services/national-shipping.html" class="service-card__link">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="service-card animate delay-2">
+                    <div class="service-card__icon">
+                        <i class="fas fa-warehouse"></i>
+                    </div>
+                    <h3 class="service-card__title">Warehousing</h3>
+                    <p class="service-card__description">
+                        Secure storage solutions with advanced inventory management and fulfillment services.
+                    </p>
+                    <a href="services/warehousing.html" class="service-card__link">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="service-card animate delay-2">
+                    <div class="service-card__icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3 class="service-card__title">Supply Chain</h3>
+                    <p class="service-card__description">
+                        End-to-end supply chain management solutions to optimize your logistics operations.
+                    </p>
+                    <a href="services/supply-chain.html" class="service-card__link">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="service-card animate delay-3">
+                    <div class="service-card__icon">
+                        <i class="fas fa-snowflake"></i>
+                    </div>
+                    <h3 class="service-card__title">Cold Chain</h3>
+                    <p class="service-card__description">
+                        Temperature-controlled logistics for perishable goods with 24/7 monitoring.
+                    </p>
+                    <a href="services/cold-chain.html" class="service-card__link">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="service-card animate delay-3">
+                    <div class="service-card__icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3 class="service-card__title">E-commerce</h3>
+                    <p class="service-card__description">
+                        Complete fulfillment solutions for online businesses including pick, pack, and ship services.
+                    </p>
+                    <a href="services/ecommerce-fulfillment.html" class="service-card__link">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Highlights -->
+    <section class="section">
+        <div class="container">
+            <div class="service-highlights">
+                <div class="highlight-card animate">
+                    <div class="highlight-card__icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Fast Delivery</h3>
+                    <p>Guaranteed timely deliveries with real-time tracking and notifications</p>
+                </div>
+                <div class="highlight-card animate delay-1">
+                    <div class="highlight-card__icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Secure Handling</h3>
+                    <p>Your goods are protected with our careful handling and insurance options</p>
+                </div>
+                <div class="highlight-card animate delay-2">
+                    <div class="highlight-card__icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Dedicated customer service available round-the-clock for your needs</p>
+                </div>
+                <div class="highlight-card animate delay-3">
+                    <div class="highlight-card__icon">
+                        <i class="fas fa-tag"></i>
+                    </div>
+                    <h3>Competitive Pricing</h3>
+                    <p>Affordable rates without compromising on service quality or reliability</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-us section">
+        <div class="container">
+            <div class="section-header animate">
+                <h2 style="color: white;" class="section-title">Your Trusted Logistics Partner</h2>
+                <p class="section-description">
+                    We go above and beyond to ensure your shipments arrive safely and on time, every time.
+                </p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature animate">
+                    <div class="feature__icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="feature__title">Fully Insured</h3>
+                    <p class="feature__description">
+                        Complete insurance coverage for your shipments during transit with flexible options.
+                    </p>
+                </div>
+
+                <div class="feature animate delay-1">
+                    <div class="feature__icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="feature__title">Trained Professionals</h3>
+                    <p class="feature__description">
+                        Experienced staff dedicated to handling your goods with the utmost care.
+                    </p>
+                </div>
+
+                <div class="feature animate delay-2">
+                    <div class="feature__icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="feature__title">Timely Service</h3>
+                    <p class="feature__description">
+                        Industry-leading 99% on-time delivery rate with guaranteed service levels.
+                    </p>
+                </div>
+
+                <div class="feature animate">
+                    <div class="feature__icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3 class="feature__title">Nationwide Coverage</h3>
+                    <p class="feature__description">
+                        Serving all major cities across Pakistan with our extensive logistics network.
+                    </p>
+                </div>
+
+                <div class="feature animate delay-1">
+                    <div class="feature__icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="feature__title">Modern Fleet</h3>
+                    <p class="feature__description">
+                        State-of-the-art vehicles equipped with GPS and safety features.
+                    </p>
+                </div>
+
+                <div class="feature animate delay-2">
+                    <div class="feature__icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 class="feature__title">24/7 Support</h3>
+                    <p class="feature__description">
+                        Dedicated account managers and round-the-clock customer support.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Counter -->
+    <section class="stats-counter">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item animate">
+                    <div class="stat-number" data-count="5000">0</div>
+                    <div class="stat-label">Successful Deliveries</div>
+                </div>
+                <div class="stat-item animate delay-1">
+                    <div class="stat-number" data-count="150">0</div>
+                    <div class="stat-label">Vehicles in Fleet</div>
+                </div>
+                <div class="stat-item animate delay-2">
+                    <div class="stat-number" data-count="50">0</div>
+                    <div class="stat-label">Cities Covered</div>
+                </div>
+                <div class="stat-item animate delay-3">
+                    <div class="stat-number" data-count="24">0</div>
+                    <div class="stat-label">Hour Support</div>
+                </div>
+                <div class="stat-item animate delay-4">
+                    <div class="stat-number" data-count="99">0</div>
+                    <div class="stat-label">On-Time Rate</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section - New -->
+    <section class="partners-section section">
+        <div class="container">
+            <div class="section-header animate">
+                <h2 class="section-title">Our Valued Partners</h2>
+                <p class="section-description">
+                    We're proud to work with leading businesses across various industries.
+                </p>
+            </div>
+            
+            <div class="partners-grid">
+                <img src="https://via.placeholder.com/150x60?text=Partner+1" alt="Partner Logo" class="partner-logo animate">
+                <img src="https://via.placeholder.com/150x60?text=Partner+2" alt="Partner Logo" class="partner-logo animate delay-1">
+                <img src="https://via.placeholder.com/150x60?text=Partner+3" alt="Partner Logo" class="partner-logo animate delay-2">
+                <img src="https://via.placeholder.com/150x60?text=Partner+4" alt="Partner Logo" class="partner-logo animate delay-3">
+                <img src="https://via.placeholder.com/150x60?text=Partner+5" alt="Partner Logo" class="partner-logo animate delay-4">
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials section">
+        <div class="container">
+            <div class="section-header animate">
+                <h2 class="section-title">What Our Customers Say</h2>
+                <p style="color: #113f5a;" class="section-description">
+                    Don't just take our word for it - hear from our satisfied clients across Pakistan.
+                </p>
+            </div>
+            
+            <div class="testimonials-slider" id="testimonials-slider">
+                <div class="testimonial active">
+                    <div class="testimonial__content">
+                        <div class="testimonial__rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial__text">
+                            "Jiffy Logistics has transformed our e-commerce operations. Their same-day delivery service in Karachi is unmatched, and their tracking system gives us and our customers complete peace of mind. The customer service team is always responsive and helpful."
+                        </p>
+                        <div class="testimonial__author">
+                            <div class="testimonial__avatar">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Ahmed Hassan">
+                            </div>
+                            <div class="testimonial__info">
+                                <h4 class="testimonial__name">Ahmed Hassan</h4>
+                                <span class="testimonial__location">Karachi</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial">
+                    <div class="testimonial__content">
+                        <div class="testimonial__rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial__text">
+                            "As a pharmaceutical distributor, we rely on Jiffy's cold chain logistics for our temperature-sensitive products. Their monitoring system and professional handling ensure our products arrive in perfect condition every time. Their rates are competitive too."
+                        </p>
+                        <div class="testimonial__author">
+                            <div class="testimonial__avatar">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Fatima Khan">
+                            </div>
+                            <div class="testimonial__info">
+                                <h4 class="testimonial__name">Fatima Khan</h4>
+                                <span class="testimonial__location">Islamabad</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial">
+                    <div class="testimonial__content">
+                        <div class="testimonial__rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial__text">
+                            "We've been using Jiffy Logistics for all our intercity shipments for over 3 years now. Their reliability and professionalism have made them an indispensable partner for our business. The online portal makes booking and tracking shipments a breeze."
+                        </p>
+                        <div class="testimonial__author">
+                            <div class="testimonial__avatar">
+                                <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Muhammad Ali">
+                            </div>
+                            <div class="testimonial__info">
+                                <h4 class="testimonial__name">Muhammad Ali</h4>
+                                <span class="testimonial__location">Faisalabad</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonials-controls">
+                <button class="testimonials-btn testimonials-btn--prev" id="prev-btn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="testimonials-btn testimonials-btn--next" id="next-btn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <div class="testimonials-cta">
+                <a href="testimonials.html" class="btn btn--outline">View All Reviews</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section - New -->
+    <section class="faq-section section">
+        <div class="container">
+            <div class="section-header animate">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p style="color: #113f5a;" class="section-description">
+                    Find answers to common questions about our logistics services.
+                </p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item animate">
+                    <div class="faq-question">
+                        <span>What areas do you serve for local deliveries?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We provide local delivery services in all major cities across Pakistan, including Karachi, Lahore, Islamabad, Rawalpindi, Faisalabad, Peshawar, and more. Our coverage is constantly expanding to serve more areas.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item animate delay-1">
+                    <div class="faq-question">
+                        <span>How can I track my shipment?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can track your shipment using the tracking widget on our website or mobile app by entering your tracking number. You'll receive real-time updates via SMS and email as well.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item animate delay-2">
+                    <div class="faq-question">
+                        <span>What are your delivery timeframes?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Local deliveries typically arrive within 24 hours. National shipments usually take 2-3 business days depending on the destination. We also offer express options for faster delivery.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item animate delay-3">
+                    <div class="faq-question">
+                        <span>Do you offer insurance for shipments?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we offer comprehensive insurance options for all shipments. Basic coverage is included, and you can purchase additional protection for valuable items.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item animate delay-4">
+                    <div class="faq-question">
+                        <span>What payment methods do you accept?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We accept cash on delivery, bank transfers, credit/debit cards, and mobile payments. Business clients can also set up monthly billing accounts.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section jiffy-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Ship With Confidence?</h2>
+                <p class="cta-description">
+                    Get a personalized quote today and experience the Jiffy Logistics difference.
+                </p>
+                <div class="cta-actions">
+                    <a href="get-quote.html" class="btn btn--cta btn--cta-primary">
+                        <i class="fas fa-calculator"></i>
+                        Get Free Quote
+                    </a>
+                    <a href="tel:+923013127332" class="btn btn--cta btn--cta-secondary">
+                        <i class="fas fa-phone"></i>
+                        Call +92 301 3127332
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer jiffy-footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <div class="footer__logo">
+                        <i class="fas fa-truck-fast"></i>
+                        <span>Jiffy Logistics</span>
+                    </div>
+                    <p class="footer__description">
+                        Pakistan's leading logistics provider offering reliable, secure, and timely transportation solutions nationwide since 2010.
+                    </p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="footer__social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="footer__social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://wa.me/923013127332" class="footer__social-link"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="footer__social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer__section">
+                    <h3 class="footer__title">Quick Links</h3>
+                    <ul class="footer__links">
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="tracking.html"><i class="fas fa-chevron-right"></i> Tracking</a></li>
+                        <li><a href="testimonials.html"><i class="fas fa-chevron-right"></i> Reviews</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__section">
+                    <h3 class="footer__title">Services</h3>
+                    <ul class="footer__links">
+                        <li><a href="services/local-delivery.html"><i class="fas fa-chevron-right"></i> Local Delivery</a></li>
+                        <li><a href="services/national-shipping.html"><i class="fas fa-chevron-right"></i> National Shipping</a></li>
+                        <li><a href="services/warehousing.html"><i class="fas fa-chevron-right"></i> Warehousing</a></li>
+                        <li><a href="services/supply-chain.html"><i class="fas fa-chevron-right"></i> Supply Chain</a></li>
+                        <li><a href="services/cold-chain.html"><i class="fas fa-chevron-right"></i> Cold Chain Logistics</a></li>
+                        <li><a href="services/ecommerce-fulfillment.html"><i class="fas fa-chevron-right"></i> E-commerce Fulfillment</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__section">
+                    <h3 class="footer__title">Contact Info</h3>
+                    <div class="footer__contact">
+                        <div class="footer__contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="footer__contact-text">
+                                <strong>Head Office:</strong> 123 Logistics Plaza, Main Boulevard, Lahore, Pakistan
+                            </div>
+                        </div>
+                        <div class="footer__contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div class="footer__contact-text">
+                                <strong>Phone:</strong> +92 301 3127332
+                            </div>
+                        </div>
+                        <div class="footer__contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div class="footer__contact-text">
+                                <strong>Email:</strong> info@jiffylogistics.pk
+                            </div>
+                        </div>
+                        <div class="footer__contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div class="footer__contact-text">
+                                <strong>Hours:</strong> Mon-Sat: 8AM - 8PM
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <div class="footer__bottom-content">
+                    <p class="footer__copyright">
+                        © 2024 Jiffy Logistics. All rights reserved.
+                    </p>
+                    <div class="footer__legal">
+                        <a href="terms.html">Terms of Service</a>
+                        <a href="privacy.html">Privacy Policy</a>
+                        <a href="sitemap.html">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/923013127332" target="_blank" class="whatsapp-float__btn">
+            <i class="fab fa-whatsapp"></i>
+            <span>Chat Now</span>
+        </a>
+    </div>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script>
+        // Mobile Navigation Toggle
+        const navToggle = document.getElementById('nav-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+            navToggle.classList.toggle('active');
+        });
+        
+        // Dropdown for mobile
+        const dropdownItems = document.querySelectorAll('.nav__item--dropdown');
+        
+        dropdownItems.forEach(item => {
+            const link = item.querySelector('.nav__link');
+            
+            link.addEventListener('click', (e) => {
+                if (window.innerWidth <= 992) {
+                    e.preventDefault();
+                    item.classList.toggle('active');
+                }
+            });
+        });
+        
+        // Testimonial Slider
+        let currentTestimonial = 0;
+        const testimonials = document.querySelectorAll('.testimonial');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        
+        function showTestimonial(index) {
+            testimonials.forEach(testimonial => testimonial.classList.remove('active'));
+            testimonials[index].classList.add('active');
+        }
+        
+        prevBtn.addEventListener('click', () => {
+            currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
+            showTestimonial(currentTestimonial);
+        });
+        
+        nextBtn.addEventListener('click', () => {
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            showTestimonial(currentTestimonial);
+        });
+        
+        // Auto-rotate testimonials
+        setInterval(() => {
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            showTestimonial(currentTestimonial);
+        }, 8000);
+        
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.jiffy-header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+
+            // Back to top button
+            const backToTop = document.getElementById('back-to-top');
+            if (window.scrollY > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        // Back to top button click
+        document.getElementById('back-to-top').addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Stats counter animation
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-number');
+            const speed = 200;
+            
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-count');
+                const count = +counter.innerText;
+                const increment = target / speed;
+                
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(animateCounters, 1);
+                } else {
+                    counter.innerText = target;
+                }
+            });
+        }
+        
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                item.classList.toggle('active');
+            });
+        });
+
+        // Intersection Observer for animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                    
+                    // Start counter animation when stats section is visible
+                    if (entry.target.classList.contains('stats-counter')) {
+                        animateCounters();
+                    }
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('.animate').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+// Update the dropdown click handler to this:
+dropdownItems.forEach(item => {
+    const link = item.querySelector('.nav__link');
+    const toggle = item.querySelector('.dropdown-toggle');
+    
+    // Create dropdown toggle if it doesn't exist
+    if (!toggle) {
+        const chevron = document.createElement('i');
+        chevron.className = 'fas fa-chevron-down dropdown-toggle';
+        link.appendChild(chevron);
+    }
+    
+    item.querySelector('.dropdown-toggle').addEventListener('click', (e) => {
+        if (window.innerWidth <= 992) {
+            e.preventDefault();
+            e.stopPropagation();
+            item.classList.toggle('active');
+        }
+    });
+    
+    link.addEventListener('click', (e) => {
+        if (window.innerWidth <= 992 && e.target !== item.querySelector('.dropdown-toggle')) {
+            // Allow normal navigation if not clicking the toggle
+            if (!item.classList.contains('active')) {
+                return;
+            }
+            e.preventDefault();
+            item.classList.remove('active');
+            window.location.href = link.getAttribute('href');
+        }
+    });
+});
+    </script>
+</body>
+</html>

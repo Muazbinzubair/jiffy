@@ -1,0 +1,1839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Work Gallery | Jiffy Logistics - Premium Logistics Solutions</title>
+    <meta name="description" content="View our gallery of professional logistics and transportation services. See our fleet, team, and successful deliveries across Pakistan.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Modern Color Scheme */
+        :root {
+            --primary-color: #000000;
+            --primary-dark: #113f5a;
+            --primary-light: #3498DB;
+            --secondary-color: #0f275e6c;
+            --secondary-light: #EC7063;
+            --accent-color: #F39C12;
+            --accent-dark: #D35400;
+            --light-color: #ECF0F1;
+            --dark-color: #2C3E50;
+            --text-color: #647C95;
+            --text-light:#113f5a ;
+            --success-color: #27AE60;
+            --warning-color: #F1C40F;
+            --danger-color: #E74C3C;
+            --border-color: #BDC3C7;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 25px rgba(0,0,0,0.1);
+            --shadow-xl: 0 20px 40px rgba(0,0,0,0.15);
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --border-radius: 8px;
+            --border-radius-lg: 12px;
+            --border-radius-xl: 16px;
+        }
+
+        /* Header Styles */
+        .jiffy-header {
+            background-color: var(--secondary-color);
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+        }
+
+        .jiffy-header.scrolled {
+            background-color: rgba(44, 62, 80, 0.98);
+            backdrop-filter: blur(10px);
+        }
+
+        .nav__logo a {
+            color: white;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .nav__logo i {
+            color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .nav__logo:hover i {
+            transform: rotate(15deg);
+        }
+
+        .nav__link {
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 500;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav__link::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .nav__link:hover::before,
+        .nav__link--active::before {
+            width: 100%;
+        }
+
+        .nav__link:hover,
+        .nav__link--active {
+            color: white;
+        }
+
+        /* Hero Section */
+        .gallery-hero {
+            background: linear-gradient(135deg, #394662 0%, #143f5a 100%);
+            position: relative;
+            overflow: hidden;
+            height: 60vh;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+
+        .gallery-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+            opacity: 0.15;
+            z-index: -1;
+        }
+
+        .gallery-hero__content {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            color: white;
+        }
+
+        .gallery-hero__title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgb(0, 255, 225);
+        }
+
+        .gallery-hero__subtitle {
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            color: rgb(255, 255, 255);
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            background-color: var(--light-color);
+            padding: 1rem 0;
+            margin-top: 80px;
+        }
+
+        .breadcrumb__nav {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb__nav a {
+            color: var(--text-light);
+            transition: var(--transition);
+        }
+
+        .breadcrumb__nav a:hover {
+            color: var(--primary-color);
+        }
+
+        .breadcrumb__separator {
+            color: var(--text-light);
+        }
+
+        .breadcrumb__current {
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+
+        /* Gallery Filter */
+        .gallery-filter {
+            background-color: var(--light-color);
+            padding: 2rem 0;
+        }
+
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.75rem 1.5rem;
+            border: 2px solid var(--primary-color);
+            background: white;
+            color: var(--primary-color);
+            border-radius: 25px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 600;
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* Gallery Grid */
+        .gallery-section {
+            padding: 4rem 0;
+            background-color: white;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .gallery-card {
+            position: relative;
+            height: 100%;
+        }
+
+        .gallery-image {
+            height: 250px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .image-placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .image-placeholder i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .image-placeholder span {
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: white;
+            padding: 2rem 1.5rem 1.5rem;
+            transform: translateY(100%);
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+
+        .gallery-overlay h3 {
+            color: white;
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+
+        .gallery-overlay p {
+            margin-bottom: 1rem;
+            color: rgba(255,255,255,0.9);
+            font-size: 0.95rem;
+        }
+
+        .gallery-view-btn {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.9);
+            border: none;
+            border-radius: 50%;
+            color: var(--primary-color);
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .gallery-view-btn:hover {
+            background: white;
+            transform: scale(1.1);
+        }
+
+        /* Stats Section */
+        .gallery-stats {
+            background: linear-gradient(135deg, var(--secondary-color), var(--dark-color));
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gallery-stats::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(241, 196, 15, 0.2) 0%, rgba(255, 255, 255, 0) 70%);
+        }
+
+        .stats-title {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: white;
+            position: relative;
+            display: inline-block;
+        }
+
+        .stats-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            border-radius: 2px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .stat-item {
+            padding: 1.5rem;
+            position: relative;
+        }
+
+        .stat-item::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .stat-item:last-child::after {
+            display: none;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.9);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            color: white;
+            text-align: center;
+            padding: 5rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+
+        .cta-description {
+            font-size: 1.25rem;
+            margin-bottom: 2.5rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .cta-actions {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .btn--cta {
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            min-width: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+        }
+
+        .btn--cta:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn--cta-primary {
+            background-color: white;
+            color: var(--primary-color);
+        }
+
+        .btn--cta-primary:hover {
+            background-color: var(--light-color);
+            color: var(--primary-dark);
+        }
+
+        .btn--cta-secondary {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn--cta-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Lightbox Modal */
+        .lightbox-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            z-index: 3000;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .lightbox-modal.show {
+            display: flex;
+            opacity: 1;
+        }
+
+        .lightbox-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90%;
+            width: 800px;
+            background: white;
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+        }
+
+        .lightbox-modal.show .lightbox-content {
+            transform: scale(1);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 10;
+            transition: var(--transition);
+        }
+
+        .lightbox-close:hover {
+            background: var(--primary-color);
+            transform: rotate(90deg);
+        }
+
+        .lightbox-image {
+            width: 100%;
+            height: 500px;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .lightbox-image i {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .lightbox-info {
+            padding: 2rem;
+            background: white;
+        }
+
+        .lightbox-info h3 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .lightbox-info p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
+
+        .lightbox-category {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .gallery-hero__title {
+                font-size: 2.75rem;
+            }
+            
+            .gallery-hero__subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .stat-item:nth-child(2n)::after {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .gallery-hero {
+                height: 50vh;
+            }
+            
+            .gallery-hero__title {
+                font-size: 2.25rem;
+            }
+            
+            .cta-title {
+                font-size: 2rem;
+            }
+
+            .cta-description {
+                font-size: 1.1rem;
+            }
+            
+            .lightbox-image {
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .gallery-hero {
+                height: 40vh;
+                min-height: 300px;
+            }
+            
+            .gallery-hero__title {
+                font-size: 2rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stat-item::after {
+                display: none;
+            }
+            
+            .cta-actions {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .btn--cta {
+                width: 100%;
+            }
+            
+            .lightbox-image {
+                height: 250px;
+            }
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Mobile Navigation Enhancements */
+@media (max-width: 992px) {
+    .nav__menu {
+        background-color: var(--secondary-color);
+        top: 70px;
+        padding: 1rem;
+        width: 100%;
+    }
+
+    .nav__list {
+        gap: 0.5rem;
+    }
+
+    .nav__link {
+        color: white;
+        padding: 1rem;
+        border-radius: var(--border-radius);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav__link:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .nav__item--dropdown .nav__link {
+        padding-right: 0.5rem;
+    }
+
+    .nav__dropdown {
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: var(--border-radius);
+        margin-top: 0.5rem;
+        padding: 0;
+        display: none;
+    }
+
+    .nav__item--dropdown.active .nav__dropdown {
+        display: block;
+    }
+
+    .nav__dropdown a {
+        color: white;
+        padding: 0.75rem 1.5rem;
+        display: block;
+    }
+
+    .nav__dropdown a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        padding-left: 1.75rem;
+    }
+
+    .dropdown-toggle {
+        padding: 0.5rem;
+        margin-left: auto;
+        transition: transform 0.3s ease;
+    }
+
+    .nav__item--dropdown.active .dropdown-toggle {
+        transform: rotate(180deg);
+    }
+
+    .nav__actions--mobile {
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .nav__actions--mobile .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Header height adjustment for mobile */
+.jiffy-header {
+    padding: 0.5rem 0;
+}
+
+.nav__toggle {
+    color: white;
+}
+
+.nav__toggle-line {
+    background-color: white;
+}
+
+/* Enhanced Mobile Dropdown Styles */
+@media (max-width: 992px) {
+    .nav__dropdown {
+        background-color: var(--primary-dark) !important;
+        border-radius: var(--border-radius) !important;
+        margin-top: 0.5rem !important;
+        padding: 0.5rem 0 !important;
+        box-shadow: var(--shadow-md) !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+    
+    .nav__dropdown a {
+        color: rgba(255, 255, 255, 0.9) !important;
+        padding: 0.75rem 1.5rem !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+    }
+    
+    .nav__dropdown a:hover {
+        background-color: rgba(255, 255, 255, 0.1) !important;
+        color: white !important;
+        padding-left: 1.75rem !important;
+    }
+    
+    .nav__dropdown li:last-child a {
+        border-bottom: none !important;
+    }
+    
+    .dropdown-toggle {
+        color: white !important;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+    }
+    
+    .nav__item--dropdown.active .dropdown-toggle {
+        background: rgba(255, 255, 255, 0.2);
+    }
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 90px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+    box-shadow: var(--shadow-md);
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Mobile version adjustments */
+@media (max-width: 768px) {
+    .back-to-top {
+        width: 45px;
+        height: 45px;
+        bottom: 70px;
+        right: 20px;
+        font-size: 1rem;
+    }
+}
+/* Mobile Navigation Enhancements */
+@media (max-width: 992px) {
+    .nav__menu {
+        background-color: var(--secondary-color);
+        top: 70px;
+        padding: 1rem;
+        width: 100%;
+    }
+
+    .nav__list {
+        gap: 0.5rem;
+    }
+
+    .nav__link {
+        color: white;
+        padding: 1rem;
+        border-radius: var(--border-radius);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav__link:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .nav__item--dropdown .nav__link {
+        padding-right: 0.5rem;
+    }
+
+    .nav__dropdown {
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: var(--border-radius);
+        margin-top: 0.5rem;
+        padding: 0;
+        display: none;
+    }
+
+    .nav__item--dropdown.active .nav__dropdown {
+        display: block;
+    }
+
+    .nav__dropdown a {
+        color: white;
+        padding: 0.75rem 1.5rem;
+        display: block;
+    }
+
+    .nav__dropdown a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        padding-left: 1.75rem;
+    }
+
+    .dropdown-toggle {
+        padding: 0.5rem;
+        margin-left: auto;
+        transition: transform 0.3s ease;
+    }
+
+    .nav__item--dropdown.active .dropdown-toggle {
+        transform: rotate(180deg);
+    }
+
+    .nav__actions--mobile {
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .nav__actions--mobile .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Header height adjustment for mobile */
+.jiffy-header {
+    padding: 0.5rem 0;
+}
+
+.nav__toggle {
+    color: white;
+}
+
+.nav__toggle-line {
+    background-color: white;
+}
+
+/* Enhanced Mobile Dropdown Styles */
+@media (max-width: 992px) {
+    .nav__dropdown {
+        background-color: var(--primary-dark) !important;
+        border-radius: var(--border-radius) !important;
+        margin-top: 0.5rem !important;
+        padding: 0.5rem 0 !important;
+        box-shadow: var(--shadow-md) !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+    
+    .nav__dropdown a {
+        color: rgba(255, 255, 255, 0.9) !important;
+        padding: 0.75rem 1.5rem !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+    }
+    
+    .nav__dropdown a:hover {
+        background-color: rgba(255, 255, 255, 0.1) !important;
+        color: white !important;
+        padding-left: 1.75rem !important;
+    }
+    
+    .nav__dropdown li:last-child a {
+        border-bottom: none !important;
+    }
+    
+    .dropdown-toggle {
+        color: white !important;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+    }
+    
+    .nav__item--dropdown.active .dropdown-toggle {
+        background: rgba(255, 255, 255, 0.2);
+    }
+}
+
+.animate {
+    opacity: 0;
+    animation: fadeIn 0.8s ease forwards;
+}
+
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        .delay-4 { animation-delay: 0.8s; }
+        .delay-5 { animation-delay: 1s; }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header jiffy-header">
+        <nav class="nav">
+            <div class="nav__container">
+                <div class="nav__logo">
+                    <a href="index.html">
+                        <i class="fas fa-truck-fast"></i>
+                        <span>Jiffy Logistics</span>
+                    </a>
+                </div>
+                
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="index.html" class="nav__link">Home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="about.html" class="nav__link">About</a>
+                        </li>
+<!-- In your header section, update the dropdown part to this: -->
+<li class="nav__item nav__item--dropdown">
+    <a href="services.html" class="nav__link">
+        <span>Services</span>
+        <i class="fas fa-chevron-down dropdown-toggle"></i>
+    </a>
+    <ul class="nav__dropdown">
+        <li><a href="home-relocation.html">Home Relocation</a></li>
+        <li><a href="office-shifting.html">Office Shifting</a></li>
+        <li><a href="furniture-moving.html">Furniture & Appliance Moving</a></li>
+        <li><a href="packing-services.html">Packing Services</a></li>
+        <li><a href="long-distance.html">Long Distance Moves (City-to-City)</a></li>
+        <li><a href="storage.html">Storage & Warehousing</a></li>
+        <li><a href="loading-unloading.html">Loading & Unloading</a></li>
+        <li><a href="international.html">International Moving</a></li>
+    </ul>
+</li>
+                        <li class="nav__item">
+                            <a href="gallery.html" class="nav__link nav__link--active">Gallery</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="faqs.html" class="nav__link">FAQs</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="contact.html" class="nav__link">Contact</a>
+                        </li>
+                    </ul>
+                    
+                    <!-- Mobile Contact Buttons -->
+                    <div class="nav__actions nav__actions--mobile">
+                    </div>
+                </div>
+
+                <div class="nav__actions nav__actions--desktop">
+                    <a style="color: white;" href="tel:+923013127332" class="nav__phone">
+                        <i class="fas fa-phone"></i>
+                        +92 301 3127332
+                    </a>
+                    <a href="get-quote.html" class="btn btn--primary btn--small">Get Quote</a>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <span class="nav__toggle-line"></span>
+                    <span class="nav__toggle-line"></span>
+                    <span class="nav__toggle-line"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="gallery-hero">
+        <div class="container">
+            <div class="gallery-hero__content animate">
+                <h1 style="color: white;" class="gallery-hero__title">Our Work Gallery</h1>
+                <p class="gallery-hero__subtitle">Explore our professional logistics services in action across Pakistan</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="container">
+            <nav class="breadcrumb__nav">
+                <a href="index.html">Home</a>
+                <span class="breadcrumb__separator">/</span>
+                <span class="breadcrumb__current">Gallery</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Gallery Filter -->
+    <section class="gallery-filter">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Photos</button>
+                <button class="filter-btn" data-filter="fleet">Our Fleet</button>
+                <button class="filter-btn" data-filter="team">Our Team</button>
+                <button class="filter-btn" data-filter="deliveries">Successful Deliveries</button>
+                <button class="filter-btn" data-filter="warehouses">Warehouses</button>
+                <button class="filter-btn" data-filter="clients">Happy Clients</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="gallery-grid" id="gallery-grid">
+                <!-- Fleet Category -->
+                <div class="gallery-item animate" data-category="fleet">
+                    <div class="gallery-card">
+                        <div class="gallery-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-truck"></i>
+                                <span>Modern Delivery Trucks</span>
+                            </div>
+                        </div>
+                        <div class="gallery-overlay">
+                            <h3>Our Delivery Fleet</h3>
+                            <p>State-of-the-art trucks equipped with GPS tracking and safety features</p>
+                            <button class="gallery-view-btn" onclick="openLightbox('fleet-1')">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item animate delay-1" data-category="fleet">
+                    <div class="gallery-card">
+                        <div class="gallery-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-truck-pickup"></i>
+                                <span>Light Delivery Vehicles</span>
+                            </div>
+                        </div>
+                        <div class="gallery-overlay">
+                            <h3>Light Delivery Vehicles</h3>
+                            <p>Perfect for quick urban deliveries and last-mile logistics</p>
+                            <button class="gallery-view-btn" onclick="openLightbox('fleet-2')">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item animate delay-2" data-category="fleet">
+                    <div class="gallery-card">
+                        <div class="gallery-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-temperature-low"></i>
+                                <span>Refrigerated Trucks</span>
+                            </div>
+                        </div>
+                        <div class="gallery-overlay">
+                            <h3>Cold Chain Fleet</h3>
+                            <p>Temperature-controlled vehicles for perishable goods</p>
+                            <button class="gallery-view-btn" onclick="openLightbox('fleet-3')">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Category -->
+                <div class="gallery-item animate" data-category="team">
+                    <div class="gallery-card">
+                        <div class="gallery-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-users"></i>
+                                <span>Professional Team</span>
+                            </div>
+                        </div>
+                        <div class="gallery-overlay">
+                            <h3>Our Logistics Team</h3>
+                            <p>Experienced professionals dedicated to your shipments</p>
+                            <button class="gallery-view-btn" onclick="openLightbox('team-1')">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item animate delay-1" data-category="team">
+                    <div class="gallery-card">
+                        <div class="gallery-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-user-tie"></i>
+                                <span>Customer Support</span>
+                            </div>
+                        </div>
+                        <div class="gallery-overlay">
+                            <h3>Customer Service Team</h3>
+                            <p>24/7 support for all your logistics needs</p>
+                            <button class="gallery-view-btn" onclick="openLightbox('team-2')">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item animate delay-2" data-category="team">
+                    <div class="gallery-card">
+                        <div class="gallery-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-people-carry"></i>
+                                <span>Loading Crew</span>
+                            </div>
+                        </div>
+                        <div class="gallery-overlay">
+                            <h3>Loading Specialists</h3>
+                            <p>Trained professionals handling your goods with care</p>
+                            <button class="gallery-view-btn" onclick="openLightbox('team-3')">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Deliveries Category -->
+                <div class="gallery-item animate" data-category="deliveries">
+                    <div class="gallery-card">
+                        <div class="gallery-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-box-open"></i>
+                                <span>Package Delivery</span>
+                            </div>
+                        </div>
+                        <div class="gallery-overlay">
+                            <h3>Timely Deliveries</h3>
+                            <p>Our 99% on-time delivery rate speaks for itself</p>
+                            <button class="gallery-view-btn" onclick="openLightbox('deliveries-1')">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item animate delay-1" data-category="deliveries">
+                    <div class="gallery-card">
+                        <div class="gallery-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-shipping-fast"></i>
+                                <span>Express Delivery</span>
+                            </div>
+                        </div>
+                        <div class="gallery-overlay">
+                            <h3>Express Services</h3>
+                            <p>Same-day and next-day delivery options available</p>
+                            <button class="gallery-view-btn" onclick="openLightbox('deliveries-2')">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item animate delay-2" data-category="deliveries">
+                    <div class="gallery-card">
+                        <div class="gallery-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-map-marked-alt"></i>
+                                <span>Nationwide Coverage</span>
+                            </div>
+                        </div>
+                        <div class="gallery-overlay">
+                            <h3>National Network</h3>
+                            <p>Serving all major cities across Pakistan</p>
+                            <button class="gallery-view-btn" onclick="openLightbox('deliveries-3')">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Warehouses Category -->
+                <div class="gallery-item animate" data-category="warehouses">
+                    <div class="gallery-card">
+                        <div class="gallery-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-warehouse"></i>
+                                <span>Storage Facilities</span>
+                            </div>
+                        </div>
+                        <div class="gallery-overlay">
+                            <h3>Secure Warehousing</h3>
+                            <p>Modern storage solutions with 24/7 security</p>
+                            <button class="gallery-view-btn" onclick="openLightbox('warehouses-1')">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item animate delay-1" data-category="warehouses">
+                    <div class="gallery-card">
+                        <div class="gallery-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-pallet"></i>
+                                <span>Inventory Management</span>
+                            </div>
+                        </div>
+                        <div class="gallery-overlay">
+                            <h3>Organized Storage</h3>
+                            <p>Advanced inventory tracking and management</p>
+                            <button class="gallery-view-btn" onclick="openLightbox('warehouses-2')">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item animate delay-2" data-category="warehouses">
+                    <div class="gallery-card">
+                        <div class="gallery-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-snowflake"></i>
+                                <span>Cold Storage</span>
+                            </div>
+                        </div>
+                        <div class="gallery-overlay">
+                            <h3>Temperature-Controlled</h3>
+                            <p>Specialized storage for perishable goods</p>
+                            <button class="gallery-view-btn" onclick="openLightbox('warehouses-3')">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Clients Category -->
+                <div class="gallery-item animate" data-category="clients">
+                    <div class="gallery-card">
+                        <div class="gallery-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-handshake"></i>
+                                <span>Client Partnerships</span>
+                            </div>
+                        </div>
+                        <div class="gallery-overlay">
+                            <h3>Business Partnerships</h3>
+                            <p>Trusted by businesses across industries</p>
+                            <button class="gallery-view-btn" onclick="openLightbox('clients-1')">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item animate delay-1" data-category="clients">
+                    <div class="gallery-card">
+                        <div class="gallery-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-smile"></i>
+                                <span>Satisfied Customers</span>
+                            </div>
+                        </div>
+                        <div class="gallery-overlay">
+                            <h3>Happy Clients</h3>
+                            <p>Our customers love our reliable services</p>
+                            <button class="gallery-view-btn" onclick="openLightbox('clients-2')">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item animate delay-2" data-category="clients">
+                    <div class="gallery-card">
+                        <div class="gallery-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-award"></i>
+                                <span>Industry Recognition</span>
+                            </div>
+                        </div>
+                        <div class="gallery-overlay">
+                            <h3>Awards & Recognition</h3>
+                            <p>Recognized for excellence in logistics services</p>
+                            <button class="gallery-view-btn" onclick="openLightbox('clients-3')">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="gallery-stats">
+        <div class="container">
+            <h2 class="stats-title animate">Our Logistics Achievements</h2>
+            <div class="stats-grid">
+                <div class="stat-item animate">
+                    <div class="stat-number" data-count="5000">0</div>
+                    <div class="stat-label">Successful Deliveries</div>
+                </div>
+                <div class="stat-item animate delay-1">
+                    <div class="stat-number" data-count="150">0</div>
+                    <div class="stat-label">Vehicles in Fleet</div>
+                </div>
+                <div class="stat-item animate delay-2">
+                    <div class="stat-number" data-count="50">0</div>
+                    <div class="stat-label">Cities Covered</div>
+                </div>
+                <div class="stat-item animate delay-3">
+                    <div class="stat-number" data-count="24">0</div>
+                    <div class="stat-label">Hour Support</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Experience Premium Logistics Services?</h2>
+                <p class="cta-description">
+                    Join thousands of satisfied clients who trust Jiffy Logistics for their shipping needs.
+                </p>
+                <div class="cta-actions">
+                    <a href="get-quote.html" class="btn btn--cta btn--cta-primary">
+                        <i class="fas fa-calculator"></i>
+                        Get Free Quote
+                    </a>
+                    <a href="tel:+923013127332" class="btn btn--cta btn--cta-secondary">
+                        <i class="fas fa-phone"></i>
+                        Call +92 301 3127332
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer jiffy-footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <div class="footer__logo">
+                        <i class="fas fa-truck-fast"></i>
+                        <span>Jiffy Logistics</span>
+                    </div>
+                    <p class="footer__description">
+                        Pakistan's leading logistics provider offering reliable, secure, and timely transportation solutions nationwide since 2010.
+                    </p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="footer__social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="footer__social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://wa.me/923013127332" class="footer__social-link"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="footer__social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer__section">
+                    <h3 class="footer__title">Quick Links</h3>
+                    <ul class="footer__links">
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="tracking.html"><i class="fas fa-chevron-right"></i> Tracking</a></li>
+                        <li><a href="testimonials.html"><i class="fas fa-chevron-right"></i> Reviews</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__section">
+                    <h3 class="footer__title">Services</h3>
+                    <ul class="footer__links">
+                        <li><a href="services/local-delivery.html"><i class="fas fa-chevron-right"></i> Local Delivery</a></li>
+                        <li><a href="services/national-shipping.html"><i class="fas fa-chevron-right"></i> National Shipping</a></li>
+                        <li><a href="services/warehousing.html"><i class="fas fa-chevron-right"></i> Warehousing</a></li>
+                        <li><a href="services/supply-chain.html"><i class="fas fa-chevron-right"></i> Supply Chain</a></li>
+                        <li><a href="services/cold-chain.html"><i class="fas fa-chevron-right"></i> Cold Chain Logistics</a></li>
+                        <li><a href="services/ecommerce-fulfillment.html"><i class="fas fa-chevron-right"></i> E-commerce Fulfillment</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__section">
+                    <h3 class="footer__title">Contact Info</h3>
+                    <div class="footer__contact">
+                        <div class="footer__contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="footer__contact-text">
+                                <strong>Head Office:</strong> 123 Logistics Plaza, Main Boulevard, Lahore, Pakistan
+                            </div>
+                        </div>
+                        <div class="footer__contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div class="footer__contact-text">
+                                <strong>Phone:</strong> +92 301 3127332
+                            </div>
+                        </div>
+                        <div class="footer__contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div class="footer__contact-text">
+                                <strong>Email:</strong> info@jiffylogistics.pk
+                            </div>
+                        </div>
+                        <div class="footer__contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div class="footer__contact-text">
+                                <strong>Hours:</strong> Mon-Sat: 8AM - 8PM
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <div class="footer__bottom-content">
+                    <p class="footer__copyright">
+                        © 2024 Jiffy Logistics. All rights reserved.
+                    </p>
+                    <div class="footer__legal">
+                        <a href="terms.html">Terms of Service</a>
+                        <a href="privacy.html">Privacy Policy</a>
+                        <a href="sitemap.html">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/923013127332" target="_blank" class="whatsapp-float__btn">
+            <i class="fab fa-whatsapp"></i>
+            <span>Chat Now</span>
+        </a>
+    </div>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox-modal" class="lightbox-modal">
+        <div class="lightbox-content">
+            <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+            <div class="lightbox-image">
+                <div id="lightbox-placeholder" class="lightbox-placeholder">
+                    <i class="fas fa-image"></i>
+                    <h3 id="lightbox-title">Image Title</h3>
+                    <p id="lightbox-description">Image description</p>
+                </div>
+            </div>
+            <div class="lightbox-info">
+                <span id="lightbox-category" class="lightbox-category">Category</span>
+                <h3 id="lightbox-info-title">Image Title</h3>
+                <p id="lightbox-info-description">Detailed description of the image content and context.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile Navigation Toggle
+        const navToggle = document.getElementById('nav-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+            navToggle.classList.toggle('active');
+        });
+        
+        // Dropdown for mobile
+        const dropdownItems = document.querySelectorAll('.nav__item--dropdown');
+        
+        dropdownItems.forEach(item => {
+            const link = item.querySelector('.nav__link');
+            
+            link.addEventListener('click', (e) => {
+                if (window.innerWidth <= 992) {
+                    e.preventDefault();
+                    item.classList.toggle('active');
+                }
+            });
+        });
+        
+        // Gallery Filter
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                button.classList.add('active');
+                
+                const filterValue = button.getAttribute('data-filter');
+                
+                galleryItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+        // Lightbox
+        function openLightbox(itemId) {
+            const modal = document.getElementById('lightbox-modal');
+            const title = document.getElementById('lightbox-title');
+            const description = document.getElementById('lightbox-description');
+            const category = document.getElementById('lightbox-category');
+            const infoTitle = document.getElementById('lightbox-info-title');
+            const infoDescription = document.getElementById('lightbox-info-description');
+            
+            // These would be replaced with actual data from your images
+            const galleryData = {
+                'fleet-1': {
+                    title: 'Our Delivery Fleet',
+                    description: 'State-of-the-art trucks equipped with GPS tracking and safety features',
+                    category: 'Our Fleet',
+                    info: 'Our modern fleet of delivery trucks are equipped with the latest technology including GPS tracking, temperature control (where applicable), and advanced safety features to ensure your shipments arrive safely and on time.'
+                },
+                'fleet-2': {
+                    title: 'Light Delivery Vehicles',
+                    description: 'Perfect for quick urban deliveries and last-mile logistics',
+                    category: 'Our Fleet',
+                    info: 'Our light delivery vehicles are ideal for navigating city streets and making quick, efficient deliveries. Perfect for last-mile logistics and time-sensitive shipments.'
+                },
+                'fleet-3': {
+                    title: 'Cold Chain Fleet',
+                    description: 'Temperature-controlled vehicles for perishable goods',
+                    category: 'Our Fleet',
+                    info: 'Specialized refrigerated trucks maintain precise temperature control throughout transit, ensuring your perishable goods arrive in perfect condition.'
+                },
+                'team-1': {
+                    title: 'Our Logistics Team',
+                    description: 'Experienced professionals dedicated to your shipments',
+                    category: 'Our Team',
+                    info: 'Our team of logistics professionals undergoes rigorous training to handle all types of shipments with care and efficiency.'
+                },
+                'team-2': {
+                    title: 'Customer Service Team',
+                    description: '24/7 support for all your logistics needs',
+                    category: 'Our Team',
+                    info: 'Our customer service representatives are available around the clock to answer your questions and provide shipment updates.'
+                },
+                'team-3': {
+                    title: 'Loading Specialists',
+                    description: 'Trained professionals handling your goods with care',
+                    category: 'Our Team',
+                    info: 'Our loading crew is trained in proper handling techniques to ensure your items are loaded securely and safely for transport.'
+                },
+                'deliveries-1': {
+                    title: 'Timely Deliveries',
+                    description: 'Our 99% on-time delivery rate speaks for itself',
+                    category: 'Successful Deliveries',
+                    info: 'With our efficient routing and tracking systems, we maintain a 99% on-time delivery rate across all our services.'
+                },
+                'deliveries-2': {
+                    title: 'Express Services',
+                    description: 'Same-day and next-day delivery options available',
+                    category: 'Successful Deliveries',
+                    info: 'Our express delivery services ensure your time-sensitive shipments arrive when you need them, with same-day and next-day options available.'
+                },
+                'deliveries-3': {
+                    title: 'National Network',
+                    description: 'Serving all major cities across Pakistan',
+                    category: 'Successful Deliveries',
+                    info: 'Our nationwide network covers all major cities and many smaller towns, with reliable service throughout Pakistan.'
+                },
+                'warehouses-1': {
+                    title: 'Secure Warehousing',
+                    description: 'Modern storage solutions with 24/7 security',
+                    category: 'Warehouses',
+                    info: 'Our warehouses feature 24/7 security monitoring, climate control options, and advanced inventory management systems.'
+                },
+                'warehouses-2': {
+                    title: 'Organized Storage',
+                    description: 'Advanced inventory tracking and management',
+                    category: 'Warehouses',
+                    info: 'We use state-of-the-art inventory management systems to track your goods and ensure they\'re stored safely and efficiently.'
+                },
+                'warehouses-3': {
+                    title: 'Temperature-Controlled',
+                    description: 'Specialized storage for perishable goods',
+                    category: 'Warehouses',
+                    info: 'Our cold storage facilities maintain precise temperature ranges to protect your perishable inventory.'
+                },
+                'clients-1': {
+                    title: 'Business Partnerships',
+                    description: 'Trusted by businesses across industries',
+                    category: 'Happy Clients',
+                    info: 'We partner with businesses of all sizes across multiple industries to provide customized logistics solutions.'
+                },
+                'clients-2': {
+                    title: 'Happy Clients',
+                    description: 'Our customers love our reliable services',
+                    category: 'Happy Clients',
+                    info: 'Thousands of satisfied customers trust Jiffy Logistics for their shipping needs, from individuals to large corporations.'
+                },
+                'clients-3': {
+                    title: 'Awards & Recognition',
+                    description: 'Recognized for excellence in logistics services',
+                    category: 'Happy Clients',
+                    info: 'Our commitment to service excellence has been recognized with multiple industry awards and certifications.'
+                }
+            };
+            
+            const data = galleryData[itemId] || {
+                title: 'Image Title',
+                description: 'Image description',
+                category: 'Category',
+                info: 'Detailed description of the image content and context.'
+            };
+            
+            title.textContent = data.title;
+            description.textContent = data.description;
+            category.textContent = data.category;
+            infoTitle.textContent = data.title;
+            infoDescription.textContent = data.info;
+            
+            modal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeLightbox() {
+            const modal = document.getElementById('lightbox-modal');
+            modal.classList.remove('show');
+            document.body.style.overflow = '';
+        }
+        
+        // Close lightbox when clicking outside content
+        document.getElementById('lightbox-modal').addEventListener('click', (e) => {
+            if (e.target === document.getElementById('lightbox-modal')) {
+                closeLightbox();
+            }
+        });
+        
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.jiffy-header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+
+// Back to top button
+    const backToTop = document.getElementById('back-to-top');
+    if (window.scrollY > 300) {
+        backToTop.classList.add('visible');
+    } else {
+        backToTop.classList.remove('visible');
+    }
+});
+
+const backToTop = document.getElementById('back-to-top');
+backToTop.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+        // Stats counter animation
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-number');
+            const speed = 200;
+            
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-count');
+                const count = +counter.innerText;
+                const increment = target / speed;
+                
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(animateCounters, 1);
+                } else {
+                    counter.innerText = target;
+                }
+            });
+        }
+        
+        // Intersection Observer for animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                    
+                    // Start counter animation when stats section is visible
+                    if (entry.target.classList.contains('gallery-stats')) {
+                        animateCounters();
+                    }
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('.animate').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        // Update the dropdown click handler to this:
+dropdownItems.forEach(item => {
+    const link = item.querySelector('.nav__link');
+    const toggle = item.querySelector('.dropdown-toggle');
+    
+    // Create dropdown toggle if it doesn't exist
+    if (!toggle) {
+        const chevron = document.createElement('i');
+        chevron.className = 'fas fa-chevron-down dropdown-toggle';
+        link.appendChild(chevron);
+    }
+    
+    item.querySelector('.dropdown-toggle').addEventListener('click', (e) => {
+        if (window.innerWidth <= 992) {
+            e.preventDefault();
+            e.stopPropagation();
+            item.classList.toggle('active');
+        }
+    });
+    
+    link.addEventListener('click', (e) => {
+        if (window.innerWidth <= 992 && e.target !== item.querySelector('.dropdown-toggle')) {
+            // Allow normal navigation if not clicking the toggle
+            if (!item.classList.contains('active')) {
+                return;
+            }
+            e.preventDefault();
+            item.classList.remove('active');
+            window.location.href = link.getAttribute('href');
+        }
+    });
+});
+
+    </script>
+</body>
+</html>

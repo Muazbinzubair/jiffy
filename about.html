@@ -1,0 +1,1894 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Jiffy Logistics - Premium Logistics & Supply Chain Solutions</title>
+    <meta name="description" content="Learn about Jiffy Logistics - Pakistan's leading logistics provider with nationwide coverage. Discover our history, mission, and commitment to excellence.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+
+    <style>
+
+    /* Modern Color Scheme */
+    :root {
+        --primary-color: #000000;
+        --primary-dark: #113f5a;
+        --primary-light: #3498DB;
+        --secondary-color: #0f275e6c;
+        --secondary-light: #EC7063;
+        --accent-color: #F39C12;
+        --accent-dark: #D35400;
+        --light-color: #ECF0F1;
+        --dark-color: #2C3E50;
+        --text-color: #647C95;
+        --text-light:#113f5a ;
+        --success-color: #27AE60;
+        --warning-color: #F1C40F;
+        --danger-color: #E74C3C;
+        --border-color: #BDC3C7;
+        --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
+        --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+        --shadow-lg: 0 10px 25px rgba(0,0,0,0.1);
+        --shadow-xl: 0 20px 40px rgba(0,0,0,0.15);
+        --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        --border-radius: 8px;
+        --border-radius-lg: 12px;
+        --border-radius-xl: 16px;
+    }
+
+/* Enhanced Header */
+.jiffy-header {
+    background-color: var(--secondary-color);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+}
+
+.jiffy-header.scrolled {
+    background-color: rgba(44, 62, 80, 0.98);
+    backdrop-filter: blur(10px);
+}
+
+.nav__logo a {
+    color: white;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.nav__logo i {
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+.nav__logo:hover i {
+    transform: rotate(15deg);
+}
+
+.nav__link {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.nav__link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: var(--transition);
+}
+
+.nav__link:hover::before,
+.nav__link--active::before {
+    width: 100%;
+}
+
+.nav__link:hover,
+.nav__link--active {
+    color: white;
+}
+
+    /* About Hero Section - Matching index.html */
+    .about-hero {
+        background: linear-gradient(135deg, #394662 0%, #143f5a 100%);
+        color: white;
+        padding: 180px 0 100px;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    .about-hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+        opacity: 0.15;
+        z-index: -1;
+    }
+
+    .about-hero__title {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: white;
+        position: relative;
+        display: inline-block;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        text-align: center;
+    }
+
+    .about-hero__title::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+        border-radius: 2px;
+    }
+
+    .about-hero__subtitle {
+        font-size: 1.5rem;
+        color: rgba(255, 255, 255, 0.9);
+        max-width: 700px;
+        margin: 0 auto 2rem;
+    }
+
+    .breadcrumb {   
+        backdrop-filter: blur(5px);
+        padding: 1rem 0;
+        margin-top: 80px;
+    }
+
+    .breadcrumb__nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    .breadcrumb__nav a {
+        color: white;
+        transition: var(--transition);
+    }
+
+    .breadcrumb__nav a:hover {
+        color: var(--primary-color);
+    }
+
+    .breadcrumb__separator {
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    .breadcrumb__current {
+        color: var(--primary-color);
+        font-weight: 500;
+    }
+
+    /* Company History Section */
+    .company-history {
+        padding: 5rem 0;
+        background-color: white;
+        position: relative;
+    }
+
+    .company-history::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 300px;
+        height: 300px;
+        background: radial-gradient(circle, rgba(52, 152, 219, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+        z-index: 0;
+    }
+
+    .company-history__container {
+        position: relative;
+        z-index: 1;
+    }
+
+    .section-header {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+        color: var(--secondary-color);
+        margin-bottom: 1rem;
+        position: relative;
+        display: inline-block;
+    }
+
+    .section-title::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 4px;
+        background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+        border-radius: 2px;
+    }
+
+    .section-description {
+        font-size: 1.1rem;
+        color: var(--text-light);
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .history-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: center;
+    }
+
+    .history-text {
+        padding-right: 2rem;
+    }
+
+    .history-text p {
+        margin-bottom: 1.5rem;
+        color: var(--text-light);
+        line-height: 1.8;
+    }
+
+    .history-milestones {
+        margin-top: 2rem;
+    }
+
+    .milestone {
+        display: flex;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+        position: relative;
+        padding-left: 30px;
+    }
+
+    .milestone::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 5px;
+        width: 15px;
+        height: 15px;
+        background-color: var(--primary-color);
+        border-radius: 50%;
+    }
+
+    .milestone::after {
+        content: '';
+        position: absolute;
+        left: 7px;
+        top: 25px;
+        bottom: -25px;
+        width: 1px;
+        background-color: var(--border-color);
+    }
+
+    .milestone:last-child::after {
+        display: none;
+    }
+
+    .milestone__year {
+        font-weight: 700;
+        color: var(--primary-color);
+        min-width: 60px;
+    }
+
+    .milestone__content h3 {
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+        color: var(--secondary-color);
+    }
+
+    .milestone__content p {
+        color: var(--text-light);
+        font-size: 0.95rem;
+        margin-bottom: 0;
+    }
+
+    .history-image {
+        position: relative;
+        border-radius: var(--border-radius-lg);
+        overflow: hidden;
+        box-shadow: var(--shadow-lg);
+        height: 100%;
+        min-height: 400px;
+    }
+
+    .image-placeholder {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .image-placeholder i {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    .image-placeholder span {
+        font-size: 1.25rem;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+    }
+
+    .image-placeholder p {
+        font-size: 0.9rem;
+        opacity: 0.8;
+    }
+
+    /* Mission & Vision Section */
+    .mission-vision {
+        padding: 5rem 0;
+        background-color: var(--light-color);
+        position: relative;
+        overflow: hidden;
+    }
+
+        .mission-vision::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(52, 152, 219, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+            z-index: 0;
+        }
+
+        .mission-vision__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .mission-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 2.5rem 2rem;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            text-align: center;
+            border: 1px solid var(--border-color);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mission-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-color);
+        }
+
+        .mission-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 0;
+            background: linear-gradient(to bottom, var(--primary-color), var(--accent-color));
+            transition: var(--transition);
+        }
+
+        .mission-card:hover::before {
+            height: 100%;
+        }
+
+        .mission-card__icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+        }
+
+        .mission-card:hover .mission-card__icon {
+            transform: rotate(15deg) scale(1.1);
+            background: linear-gradient(135deg, var(--accent-color), var(--accent-dark));
+        }
+
+        .mission-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+
+        .mission-card p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
+
+        .mission-card ul {
+            text-align: left;
+            list-style: none;
+            padding: 0;
+        }
+
+        .mission-card ul li {
+            margin-bottom: 0.75rem;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--text-light);
+        }
+
+        .mission-card ul li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+        }
+
+        /* Team Section */
+        .team-section {
+            padding: 5rem 0;
+            background-color: white;
+            position: relative;
+        }
+
+        .team-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(52, 152, 219, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+            z-index: 0;
+        }
+
+        .team-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .team-stat {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+
+        .team-stat:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-color);
+        }
+
+        .team-stat__number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .team-stat__label {
+            font-size: 1rem;
+            color: var(--text-light);
+        }
+
+        .team-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .team-feature {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: var(--shadow-sm);
+            text-align: center;
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+
+        .team-feature:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-color);
+        }
+
+        .team-feature__icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 1.5rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+            color: white;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+        }
+
+        .team-feature:hover .team-feature__icon {
+            transform: scale(1.1);
+            background: linear-gradient(135deg, var(--accent-color), var(--accent-dark));
+        }
+
+        .team-feature h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            color: var(--secondary-color);
+        }
+
+        .team-feature p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Team Members Grid - New Section */
+        .team-members {
+            padding: 5rem 0;
+            background-color: var(--light-color);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .team-member {
+            background: white;
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .team-member__image {
+            height: 250px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .team-member__image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .team-member:hover .team-member__image img {
+            transform: scale(1.05);
+        }
+
+        .team-member__info {
+            padding: 1.5rem;
+        }
+
+        .team-member__name {
+            font-size: 1.25rem;
+            margin-bottom: 0.25rem;
+            color: var(--secondary-color);
+        }
+
+        .team-member__position {
+            color: var(--primary-color);
+            font-weight: 500;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .team-member__bio {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .team-member__social {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+        }
+
+        .team-member__social a {
+            width: 35px;
+            height: 35px;
+            background-color: var(--light-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .team-member__social a:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* Service Coverage Section */
+        .service-coverage {
+            padding: 5rem 0;
+            background-color: var(--light-color);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-coverage::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(52, 152, 219, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+            z-index: 0;
+        }
+
+        .coverage-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .coverage-text {
+            padding-right: 2rem;
+        }
+
+        .coverage-text p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .cities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .city-group h4 {
+            font-size: 1.1rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .city-group ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .city-group li {
+            margin-bottom: 0.5rem;
+            color: var(--text-light);
+            position: relative;
+            padding-left: 1.25rem;
+        }
+
+        .city-group li::before {
+            content: '\f054';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-size: 0.8rem;
+        }
+
+        .coverage-map {
+            position: relative;
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            height: 100%;
+            min-height: 400px;
+        }
+
+        /* Certifications Section */
+        .certifications {
+            padding: 5rem 0;
+            background-color: white;
+            position: relative;
+        }
+
+        .certifications::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(52, 152, 219, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+            z-index: 0;
+        }
+
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .certification-item {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: var(--shadow-sm);
+            text-align: center;
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+
+        .certification-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-color);
+        }
+
+        .certification-item__icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 1.5rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+            color: white;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+        }
+
+        .certification-item:hover .certification-item__icon {
+            transform: rotate(15deg) scale(1.1);
+            background: linear-gradient(135deg, var(--accent-color), var(--accent-dark));
+        }
+
+        .certification-item h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            color: var(--secondary-color);
+        }
+
+        .certification-item p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Partners Section - New */
+        .partners-section {
+            padding: 4rem 0;
+            background-color: white;
+        }
+
+        .partners-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+            align-items: center;
+            justify-items: center;
+        }
+
+        .partner-logo {
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: var(--transition);
+            max-width: 120px;
+            max-height: 60px;
+            object-fit: contain;
+        }
+
+        .partner-logo:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+            transform: scale(1.1);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            color: white;
+            text-align: center;
+            padding: 5rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+
+        .cta-description {
+            font-size: 1.25rem;
+            margin-bottom: 2.5rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .cta-actions {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .btn--cta {
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            min-width: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+        }
+
+        .btn--cta:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn--cta-primary {
+            background-color: white;
+            color: var(--primary-color);
+        }
+
+        .btn--cta-primary:hover {
+            background-color: var(--light-color);
+            color: var(--primary-dark);
+        }
+
+        .btn--cta-secondary {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn--cta-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .history-content,
+            .coverage-content {
+                grid-template-columns: 1fr;
+            }
+
+
+            .history-text,
+            .coverage-text {
+                padding-right: 0;
+            }
+            
+            .history-image,
+            .coverage-map {
+                min-height: 300px;
+                order: -1;
+            }
+            
+            .about-hero__title {
+                font-size: 2.75rem;
+            }
+            
+            .about-hero__subtitle {
+                font-size: 1.25rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .about-hero__title {
+                font-size: 2.25rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .section-description {
+                font-size: 1rem;
+            }
+            
+            .team-stats {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .cta-title {
+                font-size: 2rem;
+            }
+            
+            .cta-description {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .about-hero {
+                padding: 150px 0 80px;
+            }
+            
+            .about-hero__title {
+                font-size: 2rem;
+            }
+            
+            .team-stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-actions {
+                flex-direction: column;
+            }
+            
+            .btn--cta {
+                width: 100%;
+            }
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Mobile Navigation Enhancements */
+@media (max-width: 992px) {
+    .nav__menu {
+        background-color: var(--secondary-color);
+        top: 70px;
+        padding: 1rem;
+        width: 100%;
+    }
+
+    .nav__list {
+        gap: 0.5rem;
+    }
+
+    .nav__link {
+        color: white;
+        padding: 1rem;
+        border-radius: var(--border-radius);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav__link:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .nav__item--dropdown .nav__link {
+        padding-right: 0.5rem;
+    }
+
+    .nav__dropdown {
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: var(--border-radius);
+        margin-top: 0.5rem;
+        padding: 0;
+        display: none;
+    }
+
+    .nav__item--dropdown.active .nav__dropdown {
+        display: block;
+    }
+
+    .nav__dropdown a {
+        color: white;
+        padding: 0.75rem 1.5rem;
+        display: block;
+    }
+
+    .nav__dropdown a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        padding-left: 1.75rem;
+    }
+
+    .dropdown-toggle {
+        padding: 0.5rem;
+        margin-left: auto;
+        transition: transform 0.3s ease;
+    }
+
+    .nav__item--dropdown.active .dropdown-toggle {
+        transform: rotate(180deg);
+    }
+
+    .nav__actions--mobile {
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .nav__actions--mobile .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Header height adjustment for mobile */
+.jiffy-header {
+    padding: 0.5rem 0;
+}
+
+.nav__toggle {
+    color: white;
+}
+
+.nav__toggle-line {
+    background-color: white;
+}
+
+/* Enhanced Mobile Dropdown Styles */
+@media (max-width: 992px) {
+    .nav__dropdown {
+        background-color: var(--primary-dark) !important;
+        border-radius: var(--border-radius) !important;
+        margin-top: 0.5rem !important;
+        padding: 0.5rem 0 !important;
+        box-shadow: var(--shadow-md) !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+    
+    .nav__dropdown a {
+        color: rgba(255, 255, 255, 0.9) !important;
+        padding: 0.75rem 1.5rem !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+    }
+    
+    .nav__dropdown a:hover {
+        background-color: rgba(255, 255, 255, 0.1) !important;
+        color: white !important;
+        padding-left: 1.75rem !important;
+    }
+    
+    .nav__dropdown li:last-child a {
+        border-bottom: none !important;
+    }
+    
+    .dropdown-toggle {
+        color: white !important;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+    }
+    
+    .nav__item--dropdown.active .dropdown-toggle {
+        background: rgba(255, 255, 255, 0.2);
+    }
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 90px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+    box-shadow: var(--shadow-md);
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Mobile version adjustments */
+@media (max-width: 768px) {
+    .back-to-top {
+        width: 45px;
+        height: 45px;
+        bottom: 70px;
+        right: 20px;
+        font-size: 1rem;
+    }
+}
+
+        .animate {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        .delay-4 { animation-delay: 0.8s; }
+        .delay-5 { animation-delay: 1s; }
+    </style>
+</head>
+<body>
+<!-- Header -->
+<header class="header jiffy-header">
+    <nav class="nav">
+        <div class="nav__container">
+            <div class="nav__logo">
+                <a href="index.html">
+                    <i class="fas fa-truck-fast"></i>
+                    <span>Jiffy Logistics</span>
+                </a>
+            </div>
+            
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="about.html" class="nav__link nav__link--active">About</a>
+                    </li>
+<!-- In your header section, update the dropdown part to this: -->
+<li class="nav__item nav__item--dropdown">
+    <a href="services.html" class="nav__link">
+        <span>Services</span>
+    </a>
+    <ul class="nav__dropdown">
+        <li><a href="home-relocation.html">Home Relocation</a></li>
+        <li><a href="office-shifting.html">Office Shifting</a></li>
+        <li><a href="furniture-moving.html">Furniture & Appliance Moving</a></li>
+        <li><a href="packing-services.html">Packing Services</a></li>
+        <li><a href="long-distance.html">Long Distance Moves (City-to-City)</a></li>
+        <li><a href="storage.html">Storage & Warehousing</a></li>
+        <li><a href="loading-unloading.html">Loading & Unloading</a></li>
+        <li><a href="international.html">International Moving</a></li>
+    </ul>
+</li>
+                    <li class="nav__item">
+                        <a href="gallery.html" class="nav__link">Gallery</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="faqs.html" class="nav__link">FAQs</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="contact.html" class="nav__link">Contact</a>
+                    </li>
+                </ul>
+                
+                <!-- Mobile Contact Buttons -->
+                <div class="nav__actions nav__actions--mobile">
+                </div>
+            </div>
+
+            <div class="nav__actions nav__actions--desktop">
+                <a style="color: white;" href="tel:+923013127332" class="nav__phone">
+                    <i class="fas fa-phone"></i>
+                    +92 301 3127332
+                </a>
+                <a href="get-quote.html" class="btn btn--primary btn--small">Get Quote</a>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <span class="nav__toggle-line"></span>
+                <span class="nav__toggle-line"></span>
+                <span class="nav__toggle-line"></span>
+            </div>
+        </div>
+    </nav>
+</header>
+    <!-- About Hero Section -->
+    <section class="about-hero">
+        <div class="container">
+            <nav class="breadcrumb__nav animate">
+                <a href="index.html">Home</a>
+                <span class="breadcrumb__separator">/</span>
+                <span class="breadcrumb__current">About Us</span>
+            </nav>
+            
+            <h1 class="about-hero__title animate delay-1">About Jiffy Logistics</h1>
+            <p class="about-hero__subtitle animate delay-2">Your Trusted Logistics Partner Since 2010</p>
+        </div>
+    </section>
+
+    <!-- Company History Section -->
+    <section class="company-history">
+        <div class="container company-history__container">
+            <div class="section-header animate">
+                <h2 class="section-title">Our Journey</h2>
+                <p class="section-description">
+                    From humble beginnings to becoming one of Pakistan's leading logistics providers
+                </p>
+            </div>
+            
+            <div class="history-content">
+                <div class="history-text animate delay-1">
+                    <p>
+                        Jiffy Logistics was founded in 2010 with a simple mission: to provide reliable, efficient, and affordable logistics solutions to businesses across Pakistan. What started as a small operation with just two vehicles has grown into a nationwide network serving thousands of satisfied customers.
+                    </p>
+                    <p>
+                        Over the past decade, we've continuously expanded our services and invested in technology to stay at the forefront of the logistics industry. Our commitment to excellence has earned us the trust of businesses ranging from small e-commerce stores to large multinational corporations.
+                    </p>
+                    
+                    <div class="history-milestones">
+                        <div class="milestone">
+                            <div class="milestone__year">2010</div>
+                            <div class="milestone__content">
+                                <h3>Company Founded</h3>
+                                <p>Started operations in Karachi with a team of 5 professionals and 2 vehicles</p>
+                            </div>
+                        </div>
+                        <div class="milestone">
+                            <div class="milestone__year">2013</div>
+                            <div class="milestone__content">
+                                <h3>Nationwide Expansion</h3>
+                                <p>Extended services to cover all major cities across Pakistan</p>
+                            </div>
+                        </div>
+                        <div class="milestone">
+                            <div class="milestone__year">2016</div>
+                            <div class="milestone__content">
+                                <h3>Modern Fleet</h3>
+                                <p>Upgraded to GPS-equipped vehicles with real-time tracking</p>
+                            </div>
+                        </div>
+                        <div class="milestone">
+                            <div class="milestone__year">2020</div>
+                            <div class="milestone__content">
+                                <h3>5000+ Successful Deliveries</h3>
+                                <p>Reached milestone of serving over 5,000 satisfied customers</p>
+                            </div>
+                        </div>
+                        <div class="milestone">
+                            <div class="milestone__year">2024</div>
+                            <div class="milestone__content">
+                                <h3>Technology Upgrade</h3>
+                                <p>Launched our customer portal with advanced tracking features</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="history-image animate delay-2">
+                    <div class="image-placeholder">
+                        <i class="fas fa-history"></i>
+                        <span>Our Journey Timeline</span>
+                        <p>From 2010 to Present</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section class="mission-vision">
+        <div class="container">
+            <div class="section-header animate">
+                <h2 class="section-title">Our Core Values</h2>
+                <p class="section-description">
+                    The principles that guide everything we do at Jiffy Logistics
+                </p>
+            </div>
+            
+            <div class="mission-vision__grid">
+                <div class="mission-card animate">
+                    <div class="mission-card__icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Our Mission</h3>
+                    <p>
+                        To revolutionize logistics in Pakistan by providing reliable, efficient, and technology-driven transportation solutions that exceed customer expectations.
+                    </p>
+                </div>
+                
+                <div class="mission-card animate delay-1">
+                    <div class="mission-card__icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Our Vision</h3>
+                    <p>
+                        To be Pakistan's most trusted logistics partner, recognized for our innovation, reliability, and commitment to customer satisfaction.
+                    </p>
+                </div>
+                
+                <div class="mission-card animate delay-2">
+                    <div class="mission-card__icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Our Values</h3>
+                    <ul>
+                        <li><strong>Integrity:</strong> Honest and transparent in all our dealings</li>
+                        <li><strong>Reliability:</strong> Consistent and dependable service delivery</li>
+                        <li><strong>Innovation:</strong> Continuously improving our services</li>
+                        <li><strong>Customer Focus:</strong> Your satisfaction is our priority</li>
+                        <li><strong>Teamwork:</strong> Collaborating for shared success</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <div class="section-header animate">
+                <h2 class="section-title">Our Professional Team</h2>
+                <p class="section-description">
+                    Meet the dedicated professionals who make your logistics experience exceptional
+                </p>
+            </div>
+            
+            <div class="team-stats">
+                <div class="team-stat animate">
+                    <div class="team-stat__number">100+</div>
+                    <div class="team-stat__label">Professional Staff</div>
+                </div>
+                <div class="team-stat animate delay-1">
+                    <div class="team-stat__number">150+</div>
+                    <div class="team-stat__label">Modern Vehicles</div>
+                </div>
+                <div class="team-stat animate delay-2">
+                    <div class="team-stat__number">24/7</div>
+                    <div class="team-stat__label">Customer Support</div>
+                </div>
+                <div class="team-stat animate delay-3">
+                    <div class="team-stat__number">100%</div>
+                    <div class="team-stat__label">Insured Services</div>
+                </div>
+            </div>
+
+            <div class="team-features">
+                <div class="team-feature animate">
+                    <div class="team-feature__icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Trained Professionals</h3>
+                    <p>All our team members undergo comprehensive training in logistics, safety, and customer service.</p>
+                </div>
+                <div class="team-feature animate delay-1">
+                    <div class="team-feature__icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Certified & Licensed</h3>
+                    <p>Our company is fully licensed and our staff is certified to handle professional logistics services.</p>
+                </div>
+                <div class="team-feature animate delay-2">
+                    <div class="team-feature__icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Experienced Staff</h3>
+                    <p>Our team has years of experience in handling different types of shipments with precision and care.</p>
+                </div>
+                <div class="team-feature animate delay-3">
+                    <div class="team-feature__icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Dedicated Support</h3>
+                    <p>24/7 customer service team ready to assist you with any questions or concerns.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Service Coverage Section -->
+    <section class="service-coverage">
+        <div class="container">
+            <div class="section-header animate">
+                <h2 class="section-title">Our Service Coverage</h2>
+                <p class="section-description">
+                    We provide comprehensive logistics services across all major cities and regions of Pakistan
+                </p>
+            </div>
+            
+            <div class="coverage-content">
+                <div class="coverage-text animate delay-1">
+                    <p>
+                        Based in Karachi, we've built an extensive network that covers all major cities and towns across Pakistan. Our strategically located hubs allow us to offer fast and efficient service nationwide.
+                    </p>
+                    <p>
+                        Whether you need local same-day delivery or nationwide shipping, we have the infrastructure and expertise to handle your logistics needs with precision and care.
+                    </p>
+                    
+                    <div class="cities-grid">
+                        <div class="city-group">
+                            <h4>Sindh</h4>
+                            <ul>
+                                <li>Karachi (Head Office)</li>
+                                <li>Hyderabad</li>
+                                <li>Sukkur</li>
+                                <li>Larkana</li>
+                                <li>Mirpur Khas</li>
+                            </ul>
+                        </div>
+                        <div class="city-group">
+                            <h4>Punjab</h4>
+                            <ul>
+                                <li>Lahore</li>
+                                <li>Faisalabad</li>
+                                <li>Rawalpindi</li>
+                                <li>Multan</li>
+                                <li>Gujranwala</li>
+                            </ul>
+                        </div>
+                        <div class="city-group">
+                            <h4>KPK</h4>
+                            <ul>
+                                <li>Peshawar</li>
+                                <li>Mardan</li>
+                                <li>Abbottabad</li>
+                                <li>Swat</li>
+                            </ul>
+                        </div>
+                        <div class="city-group">
+                            <h4>Federal Areas</h4>
+                            <ul>
+                                <li>Islamabad</li>
+                                <li>Rawalpindi</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="coverage-map animate delay-2">
+                    <div class="image-placeholder">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <span>Pakistan Coverage Map</span>
+                        <p>Serving 50+ cities nationwide</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="certifications">
+        <div class="container">
+            <div class="section-header animate">
+                <h2 class="section-title">Certifications & Licenses</h2>
+                <p class="section-description">
+                    Our commitment to quality and compliance is reflected in our certifications
+                </p>
+            </div>
+            
+            <div class="certifications-grid">
+                <div class="certification-item animate">
+                    <div class="certification-item__icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Licensed Operator</h3>
+                    <p>Fully licensed logistics company registered with all relevant authorities</p>
+                </div>
+                <div class="certification-item animate delay-1">
+                    <div class="certification-item__icon">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h3>Insured Services</h3>
+                    <p>Comprehensive insurance coverage for all logistics operations</p>
+                </div>
+                <div class="certification-item animate delay-2">
+                    <div class="certification-item__icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Quality Certified</h3>
+                    <p>ISO 9001:2015 certified for quality management systems</p>
+                </div>
+                <div class="certification-item animate delay-3">
+                    <div class="certification-item__icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Member Associations</h3>
+                    <p>Active member of Pakistan Logistics & Supply Chain Association</p>
+                </div>
+                <div class="certification-item animate">
+                    <div class="certification-item__icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Environmental Compliance</h3>
+                    <p>Certified for environmentally responsible logistics practices</p>
+                </div>
+                <div class="certification-item animate delay-1">
+                    <div class="certification-item__icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Data Security</h3>
+                    <p>GDPR compliant data protection for all customer information</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section - New -->
+    <section class="partners-section section">
+        <div class="container">
+            <div class="section-header animate">
+                <h2 class="section-title">Our Valued Partners</h2>
+                <p class="section-description">
+                    We're proud to work with leading businesses across various industries.
+                </p>
+            </div>
+            
+            <div class="partners-grid">
+                <img src="https://via.placeholder.com/150x60?text=Partner+1" alt="Partner Logo" class="partner-logo animate">
+                <img src="https://via.placeholder.com/150x60?text=Partner+2" alt="Partner Logo" class="partner-logo animate delay-1">
+                <img src="https://via.placeholder.com/150x60?text=Partner+3" alt="Partner Logo" class="partner-logo animate delay-2">
+                <img src="https://via.placeholder.com/150x60?text=Partner+4" alt="Partner Logo" class="partner-logo animate delay-3">
+                <img src="https://via.placeholder.com/150x60?text=Partner+5" alt="Partner Logo" class="partner-logo animate delay-4">
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Experience Premium Logistics?</h2>
+                <p class="cta-description">
+                    Join thousands of satisfied customers who trust us with their shipments.
+                </p>
+                <div class="cta-actions">
+                    <a href="get-quote.html" class="btn btn--cta btn--cta-primary">
+                        <i class="fas fa-calculator"></i>
+                        Get Free Quote
+                    </a>
+                    <a href="tel:+923013127332" class="btn btn--cta btn--cta-secondary">
+                        <i class="fas fa-phone"></i>
+                        Call +92 301 3127332
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer jiffy-footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <div class="footer__logo">
+                        <i class="fas fa-truck-fast"></i>
+                        <span>Jiffy Logistics</span>
+                    </div>
+                    <p class="footer__description">
+                        Pakistan's leading logistics provider offering reliable, secure, and timely transportation solutions nationwide since 2010.
+                    </p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="footer__social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="footer__social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://wa.me/923013127332" class="footer__social-link"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="footer__social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer__section">
+                    <h3 class="footer__title">Quick Links</h3>
+                    <ul class="footer__links">
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="gallery.html"><i class="fas fa-chevron-right"></i> Gallery</a></li>
+                        <li><a href="faqs.html"><i class="fas fa-chevron-right"></i> FAQs</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__section">
+                    <h3 class="footer__title">Services</h3>
+                    <ul class="footer__links">
+                        <li><a href="services/local-delivery.html"><i class="fas fa-chevron-right"></i> Local Delivery</a></li>
+                        <li><a href="services/national-shipping.html"><i class="fas fa-chevron-right"></i> National Shipping</a></li>
+                        <li><a href="services/warehousing.html"><i class="fas fa-chevron-right"></i> Warehousing</a></li>
+                        <li><a href="services/supply-chain.html"><i class="fas fa-chevron-right"></i> Supply Chain</a></li>
+                        <li><a href="services/cold-chain.html"><i class="fas fa-chevron-right"></i> Cold Chain Logistics</a></li>
+                        <li><a href="services/ecommerce-fulfillment.html"><i class="fas fa-chevron-right"></i> E-commerce Fulfillment</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__section">
+                    <h3 class="footer__title">Contact Info</h3>
+                    <div class="footer__contact">
+                        <div class="footer__contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="footer__contact-text">
+                                <strong>Head Office:</strong> 123 Logistics Plaza, Main Boulevard, Karachi, Pakistan
+                            </div>
+                        </div>
+                        <div class="footer__contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div class="footer__contact-text">
+                                <strong>Phone:</strong> +92 301 3127332
+                            </div>
+                        </div>
+                        <div class="footer__contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div class="footer__contact-text">
+                                <strong>Email:</strong> info@jiffylogistics.pk
+                            </div>
+                        </div>
+                        <div class="footer__contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div class="footer__contact-text">
+                                <strong>Hours:</strong> Mon-Sat: 8AM - 8PM
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <div class="footer__bottom-content">
+                    <p class="footer__copyright">
+                        © 2024 Jiffy Logistics. All rights reserved.
+                    </p>
+                    <div class="footer__legal">
+                        <a href="terms.html">Terms of Service</a>
+                        <a href="privacy.html">Privacy Policy</a>
+                        <a href="sitemap.html">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/923013127332" target="_blank" class="whatsapp-float__btn">
+            <i class="fab fa-whatsapp"></i>
+            <span>Chat Now</span>
+        </a>
+    </div>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <div class="back-to-top" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+
+    <script>
+        // Mobile Navigation Toggle
+        const navToggle = document.getElementById('nav-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+            navToggle.classList.toggle('active');
+        });
+        
+        // Dropdown for mobile
+        const dropdownItems = document.querySelectorAll('.nav__item--dropdown');
+        
+        dropdownItems.forEach(item => {
+            const link = item.querySelector('.nav__link');
+            
+            link.addEventListener('click', (e) => {
+                if (window.innerWidth <= 992) {
+                    e.preventDefault();
+                    item.classList.toggle('active');
+                }
+            });
+        });
+        
+// Header scroll effect
+window.addEventListener('scroll', () => {
+    const header = document.querySelector('.jiffy-header');
+    if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+
+    // Back to top button
+    const backToTop = document.getElementById('back-to-top');
+    if (window.scrollY > 300) {
+        backToTop.classList.add('visible');
+    } else {
+        backToTop.classList.remove('visible');
+    }
+});
+
+const backToTop = document.getElementById('back-to-top');
+backToTop.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+        // Stats counter animation
+        function animateCounters() {
+            const counters = document.querySelectorAll('.team-stat__number');
+            const speed = 200;
+            
+            counters.forEach(counter => {
+                const target = +counter.innerText.replace('+', '');
+                const count = +counter.innerText.replace('+', '');
+                const increment = target / speed;
+                
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment) + '+';
+                    setTimeout(animateCounters, 1);
+                } else {
+                    counter.innerText = target + '+';
+                }
+            });
+        }
+        
+        // Intersection Observer for animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                    
+                    // Start counter animation when team stats section is visible
+                    if (entry.target.classList.contains('team-stat')) {
+                        animateCounters();
+                    }
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('.animate').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        // Update the dropdown click handler to this:
+dropdownItems.forEach(item => {
+    const link = item.querySelector('.nav__link');
+    const toggle = item.querySelector('.dropdown-toggle');
+    
+    // Create dropdown toggle if it doesn't exist
+    if (!toggle) {
+        const chevron = document.createElement('i');
+        chevron.className = 'fas fa-chevron-down dropdown-toggle';
+        link.appendChild(chevron);
+    }
+    
+    item.querySelector('.dropdown-toggle').addEventListener('click', (e) => {
+        if (window.innerWidth <= 992) {
+            e.preventDefault();
+            e.stopPropagation();
+            item.classList.toggle('active');
+        }
+    });
+    
+    link.addEventListener('click', (e) => {
+        if (window.innerWidth <= 992 && e.target !== item.querySelector('.dropdown-toggle')) {
+            // Allow normal navigation if not clicking the toggle
+            if (!item.classList.contains('active')) {
+                return;
+            }
+            e.preventDefault();
+            item.classList.remove('active');
+            window.location.href = link.getAttribute('href');
+        }
+    });
+});
+    </script>
+</body>
+</html>
